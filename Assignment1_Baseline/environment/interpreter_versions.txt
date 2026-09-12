@@ -1,0 +1,8 @@
+Python 3.12.3
+/home/emmalee/SQLiFuzz-a1/venv/bin/python3
+Mitmproxy: 11.0.2
+Python:    3.12.3
+OpenSSL:   OpenSSL 3.4.1 11 Feb 2025
+Platform:  Linux-7.0.0-31-generic-x86_64-with-glibc2.39
+Docker version 29.8.0, build 88096ef
+Docker Compose version v5.5.1

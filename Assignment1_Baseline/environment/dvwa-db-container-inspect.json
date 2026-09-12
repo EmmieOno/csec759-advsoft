@@ -1,0 +1,290 @@
+[
+    {
+        "Id": "df921ce52201a1c9380bfbfbbf771a56105abeb750c9cf38efafa8b3759853ed",
+        "Created": "2026-09-12T22:04:58.219273998Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mysqld"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 78625,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-09-12T22:04:58.409454815Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-09-12T18:28:18.46213634-04:00",
+                        "End": "2026-09-12T18:28:18.522319775-04:00",
+                        "ExitCode": 0,
+                        "Output": "\u0007mysqladmin: connect to server at 'localhost' failed\nerror: 'Access denied for user 'root'@'localhost' (using password: NO)'\n"
+                    },
+                    {
+                        "Start": "2026-09-12T18:28:28.522911153-04:00",
+                        "End": "2026-09-12T18:28:28.601606613-04:00",
+                        "ExitCode": 0,
+                        "Output": "\u0007mysqladmin: connect to server at 'localhost' failed\nerror: 'Access denied for user 'root'@'localhost' (using password: NO)'\n"
+                    },
+                    {
+                        "Start": "2026-09-12T18:28:38.60340972-04:00",
+                        "End": "2026-09-12T18:28:38.676962735-04:00",
+                        "ExitCode": 0,
+                        "Output": "\u0007mysqladmin: connect to server at 'localhost' failed\nerror: 'Access denied for user 'root'@'localhost' (using password: NO)'\n"
+                    },
+                    {
+                        "Start": "2026-09-12T18:28:48.677969794-04:00",
+                        "End": "2026-09-12T18:28:48.758226489-04:00",
+                        "ExitCode": 0,
+                        "Output": "\u0007mysqladmin: connect to server at 'localhost' failed\nerror: 'Access denied for user 'root'@'localhost' (using password: NO)'\n"
+                    },
+                    {
+                        "Start": "2026-09-12T18:28:58.759179571-04:00",
+                        "End": "2026-09-12T18:28:58.830467645-04:00",
+                        "ExitCode": 0,
+                        "Output": "\u0007mysqladmin: connect to server at 'localhost' failed\nerror: 'Access denied for user 'root'@'localhost' (using password: NO)'\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:3ed75405a0d1112962ea86b813c18b23e34d83871df3d71100e7aa79afe02b03",
+        "ResolvConfPath": "/var/lib/docker/containers/df921ce52201a1c9380bfbfbbf771a56105abeb750c9cf38efafa8b3759853ed/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/df921ce52201a1c9380bfbfbbf771a56105abeb750c9cf38efafa8b3759853ed/hostname",
+        "HostsPath": "/var/lib/docker/containers/df921ce52201a1c9380bfbfbbf771a56105abeb750c9cf38efafa8b3759853ed/hosts",
+        "LogPath": "/var/lib/docker/containers/df921ce52201a1c9380bfbfbbf771a56105abeb750c9cf38efafa8b3759853ed/df921ce52201a1c9380bfbfbbf771a56105abeb750c9cf38efafa8b3759853ed-json.log",
+        "Name": "/dvwa-db-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "dvwa_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "35a5c15fc4bcf2278509e4c5fa6d59061901473a73e3c196a289a01fb4b5ad3f",
+                "Source": "/var/lib/docker/volumes/35a5c15fc4bcf2278509e4c5fa6d59061901473a73e3c196a289a01fb4b5ad3f/_data",
+                "Destination": "/var/lib/mysql",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "df921ce52201",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "3306/tcp": {},
+                "33060/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "MYSQL_ROOT_PASSWORD=password",
+                "MYSQL_ROOT_HOST=%",
+                "MYSQL_USER_HOST=%",
+                "MYSQL_DATABASE=db",
+                "MYSQL_USER=user",
+                "MYSQL_PASSWORD=password",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.17",
+                "MYSQL_MAJOR=8.4",
+                "MYSQL_VERSION=8.4.0-1.el9",
+                "MYSQL_SHELL_VERSION=8.4.0-1.el9"
+            ],
+            "Cmd": [
+                "mysqld"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "mysqladmin",
+                    "ping",
+                    "-h",
+                    "localhost"
+                ],
+                "Interval": 10000000000,
+                "Retries": 5
+            },
+            "Image": "dvwa-db",
+            "Volumes": {
+                "/var/lib/mysql": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "338801b56ecbac16e6d92dadc304f51b0f41c32356925cfe60f705af25ebf550",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:f7c0411582a781f699c3373bebcaece1610038c5d83dd89cf0238ce5b5d153d2",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "dvwa",
+                "com.docker.compose.project.config_files": "/home/emmalee/SQLiFuzz-a1/WUT/dvwa/docker-compose.yaml",
+                "com.docker.compose.project.environment_file": "/home/emmalee/SQLiFuzz-a1/.env",
+                "com.docker.compose.project.working_dir": "/home/emmalee/SQLiFuzz-a1/WUT/dvwa",
+                "com.docker.compose.service": "db",
+                "com.docker.compose.version": "5.5.1"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "36e2b4db7a766d29625c5db6df5bc2eb8adbded16ef7f8f825e67f13470c53c5",
+            "SandboxKey": "/var/run/docker/netns/36e2b4db7a76",
+            "Ports": {
+                "3306/tcp": null,
+                "33060/tcp": null
+            },
+            "Networks": {
+                "dvwa_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "dvwa-db-1",
+                        "db"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "1b674194a250d0bcd43ca921701da7ce6797bca613ea66cade76fd314bcfde9c",
+                    "EndpointID": "fd9a33da8b3cbb4b2737c9be38ed3377129f61bf28fa79662f88d7362a066627",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "MacAddress": "7a:32:d2:ac:b3:c2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "dvwa-db-1",
+                        "db",
+                        "df921ce52201"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:f7c0411582a781f699c3373bebcaece1610038c5d83dd89cf0238ce5b5d153d2",
+            "size": 2382,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

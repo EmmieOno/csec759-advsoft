@@ -1,0 +1,1475 @@
+[FUZZER] SET RUNNING TIME 5 hours
+[FUZZER] SET HOMEPAGE URL: http://localhost:8888
+[FUZZER] SET PROJECT_NAME: dvwa
+[FUZZER] SET USER_ROLES: ['Admin']
+[FUZZER] Only Running the Crawling Module. Turn off the driver and the checker
+[FUZZER] Without Login; Only Using the stored cookie
+STARTING TIME: 2026-09-12 17:37:56.584667
+[MAINDRIVER Admin] ----STARTING MAIN DRIVER-----
+[MAINDRIVER Admin] Login state: ../login_state/dvwa/Admin.json
+[MAINDRIVER Admin] -------MAIN DRIVER IS STARTING TO CRAWL-------
+[MAINDRIVER Admin] Opening http://localhost:8888
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/ ---
+[MAINDRIVER Admin] A new link is found and added: [Home] --> .
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Instructions] --> instructions.php
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/instructions.php? count: 1
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] A new link is found and added: [BruteForce] --> vulnerabilities/brute/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/brute/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [CommandInjection] --> vulnerabilities/exec/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/exec/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [CSRF] --> vulnerabilities/csrf/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/csrf/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [FileInclusion] --> vulnerabilities/fi/.?page=include.php
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/fi/?page count: 1
+[MAINDRIVER Admin] A new link is found and added: [FileUpload] --> vulnerabilities/upload/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/upload/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [InsecureCAPTCHA] --> vulnerabilities/captcha/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/captcha/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [SQLInjection] --> vulnerabilities/sqli/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/sqli/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [SQLInjectionBlind] --> vulnerabilities/sqli_blind/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/sqli_blind/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [WeakSessionIDs] --> vulnerabilities/weak_id/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/weak_id/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [XSSDOM] --> vulnerabilities/xss_d/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/xss_d/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [XSSReflected] --> vulnerabilities/xss_r/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/xss_r/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [XSSStored] --> vulnerabilities/xss_s/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/xss_s/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [CSPBypass] --> vulnerabilities/csp/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/csp/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [JavaScript] --> vulnerabilities/javascript/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/javascript/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [AuthorisationBypass] --> vulnerabilities/authbypass/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/authbypass/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [OpenHTTPRedirect] --> vulnerabilities/open_redirect/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/open_redirect/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Cryptography] --> vulnerabilities/cryptography/
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/cryptography/? count: 1
+[MAINDRIVER Admin] A new link is found and added: [DVWASecurity] --> security.php
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/security.php? count: 1
+[MAINDRIVER Admin] A new link is found and added: [PHPInfo] --> phpinfo.php
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/phpinfo.php? count: 1
+[MAINDRIVER Admin] A new link is found and added: [About] --> about.php
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/about.php? count: 1
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 22
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/ to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/
+[MAINDRIVER Admin] Selecting a link from the priority queue: 0
+[MAINDRIVER Admin] Execution number: 1/22 with link index: 0
+[MAINDRIVER Admin] Going to click [Home] with href: http://localhost:8888/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] URL is not changed. Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 22
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/ to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/
+[MAINDRIVER Admin] Drop the locator field in the link: Home because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: Home because it is visited
+[MAINDRIVER Admin] Execution number: 2/22 with link index: 1
+[MAINDRIVER Admin] Going to click [Instructions] with href: http://localhost:8888/instructions.php obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/instructions.php ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] A new link is found and added: [ReadMe] --> ?doc=readme
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/instructions.php?doc count: 1
+[MAINDRIVER Admin] A new link is found and added: [PDFGuide] --> ?doc=PDF
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/instructions.php?doc count: 2
+[MAINDRIVER Admin] A new link is found and added: [ChangeLog] --> ?doc=changelog
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/instructions.php?doc count: 3
+[MAINDRIVER Admin] A new link is found and added: [Copying] --> ?doc=copying
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/instructions.php?doc count: 4
+[MAINDRIVER Admin] A new link is found and added: [العربية] --> README.ar.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.ar.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [简体中文] --> README.zh.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.zh.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Français] --> README.fr.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.fr.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [한국어] --> README.ko.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.ko.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [فارسی] --> README.fa.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.fa.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Polski] --> README.pl.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.pl.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Português] --> README.pt.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.pt.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Español] --> README.es.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.es.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Türkçe] --> README.tr.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.tr.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Indonesia] --> README.id.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.id.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [Vietnamese] --> README.vi.md
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/README.vi.md? count: 1
+[MAINDRIVER Admin] A new link is found and added: [configconfigincphpdist] --> config/config.inc.php.dist
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/config/config.inc.php.dist? count: 1
+[MAINDRIVER Admin] A new link is found and added: [composeyml] --> ./compose.yml
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/compose.yml? count: 1
+[MAINDRIVER Admin] Link: [composeyml] http://localhost:8888/compose.yml is dropped because it existed
+[MAINDRIVER Admin] Link: [composeyml] http://localhost:8888/compose.yml is dropped because it existed
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/instructions.php
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Drop the locator field in the link: Instructions because it is visited
+[MAINDRIVER Admin] Selecting a link from the priority queue: 22
+[MAINDRIVER Admin] Execution number: 3/39 with link index: 22
+[MAINDRIVER Admin] Going to click [ReadMe] with href: http://localhost:8888/instructions.php?doc=readme obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/instructions.php?doc=readme ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [ReadMe] http://localhost:8888/instructions.php?doc=readme is dropped because it existed
+[MAINDRIVER Admin] Link: [PDFGuide] http://localhost:8888/instructions.php?doc=PDF is dropped because it existed
+[MAINDRIVER Admin] Link: [ChangeLog] http://localhost:8888/instructions.php?doc=changelog is dropped because it existed
+[MAINDRIVER Admin] Link: [Copying] http://localhost:8888/instructions.php?doc=copying is dropped because it existed
+[MAINDRIVER Admin] Link: [العربية] http://localhost:8888/README.ar.md is dropped because it existed
+[MAINDRIVER Admin] Link: [简体中文] http://localhost:8888/README.zh.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Français] http://localhost:8888/README.fr.md is dropped because it existed
+[MAINDRIVER Admin] Link: [한국어] http://localhost:8888/README.ko.md is dropped because it existed
+[MAINDRIVER Admin] Link: [فارسی] http://localhost:8888/README.fa.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Polski] http://localhost:8888/README.pl.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Português] http://localhost:8888/README.pt.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Español] http://localhost:8888/README.es.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Türkçe] http://localhost:8888/README.tr.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Indonesia] http://localhost:8888/README.id.md is dropped because it existed
+[MAINDRIVER Admin] Link: [Vietnamese] http://localhost:8888/README.vi.md is dropped because it existed
+[MAINDRIVER Admin] Link: [configconfigincphpdist] http://localhost:8888/config/config.inc.php.dist is dropped because it existed
+[MAINDRIVER Admin] Link: [composeyml] http://localhost:8888/compose.yml is dropped because it existed
+[MAINDRIVER Admin] Link: [composeyml] http://localhost:8888/compose.yml is dropped because it existed
+[MAINDRIVER Admin] Link: [composeyml] http://localhost:8888/compose.yml is dropped because it existed
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=readme to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/instructions.php?doc=readme
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=readme to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/instructions.php?doc=readme
+[MAINDRIVER Admin] Drop the locator field in the link: ReadMe because it is visited
+[MAINDRIVER Admin] Execution number: 4/39 with link index: 2
+[MAINDRIVER Admin] Going to click [BruteForce] with href: http://localhost:8888/vulnerabilities/brute/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/brute/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/brute/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/brute/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/brute/
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/brute/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/brute/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] username with type of text is identified
+[MAINDRIVER Admin] Filling text for username in the form with xicodzap
+[MAINDRIVER Admin] password with type of password is identified
+[MAINDRIVER Admin] Filling password for password in the form with rtabmzap
+[MAINDRIVER Admin] Login with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/brute/'> selector='form >> nth=0 >> input, textarea >> nth=2'>. Click it.
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/brute/?username=&password=&Login=Login# to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/brute/?username=&password=&Login=Login#
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/brute/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/brute/?username=&password=&Login=Login# to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/brute/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/brute/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: BruteForce because it is visited
+[MAINDRIVER Admin] Execution number: 5/39 with link index: 3
+[MAINDRIVER Admin] Going to click [CommandInjection] with href: http://localhost:8888/vulnerabilities/exec/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/exec/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/exec/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/exec/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/exec/
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/exec/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/exec/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] ip with type of text is identified
+[MAINDRIVER Admin] Filling text for ip in the form with amnawzap
+[MAINDRIVER Admin] Submit with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/exec/'> selector='form >> nth=0 >> input, textarea >> nth=1'>. Click it.
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/exec/# to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/exec/#
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/exec/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/exec/# to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/exec/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/exec/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: CommandInjection because it is visited
+[MAINDRIVER Admin] Skip the link: CSRF because it is prohibited
+[MAINDRIVER Admin] Execution number: 6/39 with link index: 5
+[MAINDRIVER Admin] Going to click [FileInclusion] with href: http://localhost:8888/vulnerabilities/fi/?page=include.php obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/fi/?page=include.php
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/fi/?page=include.php ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/vulnerabilities/fi/?page=include.php
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/fi/?page=include.php to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/fi/?page=include.php
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/fi/?page=include.php to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/fi/?page=include.php
+[MAINDRIVER Admin] Drop the locator field in the link: FileInclusion because it is visited
+[MAINDRIVER Admin] Execution number: 7/39 with link index: 6
+[MAINDRIVER Admin] Going to click [FileUpload] with href: http://localhost:8888/vulnerabilities/upload/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/upload/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/upload/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/upload/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/upload/
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/upload/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/upload/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] MAX_FILE_SIZE with type of hidden is identified
+<Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/upload/'> selector='form >> nth=0 >> input, textarea >> nth=0'> is not visible or enabled or editable
+[MAINDRIVER Admin] uploaded with type of file is identified
+[MAINDRIVER Admin] Found a file button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/upload/'> selector='form >> nth=0 >> input, textarea >> nth=1'>. Fill it with a file.
+[MAINDRIVER Admin] Upload with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/upload/'> selector='form >> nth=0 >> input, textarea >> nth=2'>. Click it.
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/upload/# to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/upload/#
+[MAINDRIVER Admin] Drop the locator field in the link: FileUpload because it is visited
+[MAINDRIVER Admin] Execution number: 8/39 with link index: 7
+[MAINDRIVER Admin] Going to click [InsecureCAPTCHA] with href: http://localhost:8888/vulnerabilities/captcha/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] Finding a web error: Missing required parameters: sitekey
+[MAINDRIVER Admin] The web error is from <Page url='http://localhost:8888/vulnerabilities/captcha/'>
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/captcha/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 39
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/captcha/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 0 button in the page http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/captcha/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] step with type of hidden is identified
+<Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/captcha/'> selector='form >> nth=0 >> input, textarea >> nth=0'> is not visible or enabled or editable
+[MAINDRIVER Admin] password_new with type of password is identified
+<Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/captcha/'> selector='form >> nth=0 >> input, textarea >> nth=1'> is not visible or enabled or editable
+[MAINDRIVER Admin] password_conf with type of password is identified
+<Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/captcha/'> selector='form >> nth=0 >> input, textarea >> nth=2'> is not visible or enabled or editable
+[MAINDRIVER Admin] Change with type of submit is identified
+<Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/captcha/'> selector='form >> nth=0 >> input, textarea >> nth=3'> is not visible or enabled or editable
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/captcha/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 2 button in the page http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/captcha/ to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/captcha/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: InsecureCAPTCHA because it is visited
+[MAINDRIVER Admin] Execution number: 9/39 with link index: 8
+[MAINDRIVER Admin] Going to click [SQLInjection] with href: http://localhost:8888/vulnerabilities/sqli/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/sqli/
+[MAINDRIVER Admin] OPENING A NEW TAB! CRAWLING THE NEW PAGE: http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en from http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] Save the new tab URL in the link to crawl later: http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en
+[MAINDRIVER Admin] A new link is found and added: http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/view_help.php?id,locale,security count: 1
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/sqli/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/sqli/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/sqli/
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/sqli/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] Submit with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/'> selector='form >> nth=0 >> input, textarea >> nth=0'>. Click it.
+[MAINDRIVER Admin] Identifying 1 select elements in the form. Start to iterate
+[MAINDRIVER Admin] id with type of None is identified
+[MAINDRIVER Admin] id with type of None is new. Process it.
+[MAINDRIVER Admin] Iterate all options: 5 in a select element
+[MAINDRIVER Admin] Selecting option number 0 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/#'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=0'>
+[FUNCTION Admin] Saving id: 1 to dict
+[MAINDRIVER Admin] Selecting option number 1 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/#'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=1'>
+[FUNCTION Admin] Saving id: 2 to dict
+[MAINDRIVER Admin] Selecting option number 2 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/#'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=2'>
+[FUNCTION Admin] Saving id: 3 to dict
+[MAINDRIVER Admin] Selecting option number 3 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/#'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=3'>
+[FUNCTION Admin] Saving id: 4 to dict
+[MAINDRIVER Admin] Selecting option number 4 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli/#'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=4'>
+[FUNCTION Admin] Saving id: 5 to dict
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/sqli/# to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/sqli/#
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/sqli/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/sqli/# to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/sqli/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/sqli/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: SQLInjection because it is visited
+[MAINDRIVER Admin] Selecting a link from the priority queue: 39
+[MAINDRIVER Admin] Execution number: 10/40 with link index: 39
+[MAINDRIVER Admin] Going to click [NewTab] with href: http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en obtained from page: http://localhost:8888/vulnerabilities/captcha/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en ---
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/view_help.php?id=captcha&security=medium&locale=en
+[MAINDRIVER Admin] Drop the locator field in the link: NewTab because it is visited
+[MAINDRIVER Admin] Removing a link index 39 from the priority queue because it is visited
+[MAINDRIVER Admin] Execution number: 11/40 with link index: 9
+[MAINDRIVER Admin] Going to click [SQLInjectionBlind] with href: http://localhost:8888/vulnerabilities/sqli_blind/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/sqli_blind/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/sqli_blind/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/sqli_blind/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/sqli_blind/
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/sqli_blind/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli_blind/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] Submit with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/sqli_blind/'> selector='form >> nth=0 >> input, textarea >> nth=0'>. Click it.
+[MAINDRIVER Admin] Identifying 1 select elements in the form. Start to iterate
+[MAINDRIVER Admin] id with type of None is identified
+[MAINDRIVER Admin] id with type of None has been processed before. Skip it.
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/sqli_blind/# to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/sqli_blind/#
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/sqli_blind/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/sqli_blind/# to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/sqli_blind/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/sqli_blind/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: SQLInjectionBlind because it is visited
+[MAINDRIVER Admin] Execution number: 12/40 with link index: 10
+[MAINDRIVER Admin] Going to click [WeakSessionIDs] with href: http://localhost:8888/vulnerabilities/weak_id/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/weak_id/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/weak_id/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/weak_id/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/weak_id/
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/weak_id/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/weak_id/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] None with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/weak_id/'> selector='form >> nth=0 >> input, textarea >> nth=0'>. Click it.
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/weak_id/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/weak_id/
+[MAINDRIVER Admin] Drop the locator field in the link: WeakSessionIDs because it is visited
+[MAINDRIVER Admin] Execution number: 13/40 with link index: 11
+[MAINDRIVER Admin] Going to click [XSSDOM] with href: http://localhost:8888/vulnerabilities/xss_d/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/xss_d/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/xss_d/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_d/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/xss_d/
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/xss_d/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] None with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/'> selector='form >> nth=0 >> input, textarea >> nth=0'>. Click it.
+[MAINDRIVER Admin] Identifying 1 select elements in the form. Start to iterate
+[MAINDRIVER Admin] default with type of None is identified
+[MAINDRIVER Admin] default with type of None is new. Process it.
+[MAINDRIVER Admin] Iterate all options: 6 in a select element
+[MAINDRIVER Admin] Selecting option number 0 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/?default=English'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=0'>
+[FUNCTION Admin] Saving default: English to dict
+[MAINDRIVER Admin] Selecting option number 1 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/?default=English'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=1'>
+[FUNCTION Admin] Cannot Saving default:  because it is NONE
+[MAINDRIVER Admin] Selecting option number 2 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/?default=English'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=2'>
+[FUNCTION Admin] Saving default: English to dict
+[MAINDRIVER Admin] Selecting option number 3 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/?default=English'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=3'>
+[FUNCTION Admin] Saving default: French to dict
+[MAINDRIVER Admin] Selecting option number 4 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/?default=English'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=4'>
+[FUNCTION Admin] Saving default: Spanish to dict
+[MAINDRIVER Admin] Selecting option number 5 --> <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_d/?default=English'> selector='form >> nth=0 >> internal:role=combobox  >> nth=0 >> internal:role=option >> nth=5'>
+[FUNCTION Admin] Saving default: German to dict
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_d/?default=German to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/xss_d/?default=German
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/xss_d/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_d/?default=German to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/xss_d/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/xss_d/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: XSSDOM because it is visited
+[MAINDRIVER Admin] Execution number: 14/40 with link index: 12
+[MAINDRIVER Admin] Going to click [XSSReflected] with href: http://localhost:8888/vulnerabilities/xss_r/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/xss_r/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/xss_r/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_r/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/xss_r/
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/xss_r/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_r/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] name with type of text is identified
+[MAINDRIVER Admin] Filling text for name in the form with pbsybzap
+[MAINDRIVER Admin] None with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_r/'> selector='form >> nth=0 >> input, textarea >> nth=1'>. Click it.
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_r/?name=# to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/xss_r/?name=#
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/xss_r/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_r/?name=# to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/xss_r/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/xss_r/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: XSSReflected because it is visited
+[MAINDRIVER Admin] Execution number: 15/40 with link index: 13
+[MAINDRIVER Admin] Going to click [XSSStored] with href: http://localhost:8888/vulnerabilities/xss_s/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/xss_s/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/xss_s/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_s/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/xss_s/
+[MAINDRIVER Admin] Finding 2 button in the page http://localhost:8888/vulnerabilities/xss_s/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_s/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] txtName with type of text is identified
+[MAINDRIVER Admin] Filling text for txtName in the form with gcubvzap
+[MAINDRIVER Admin] mtxMessage with type of None is identified
+[MAINDRIVER Admin] Filling text for mtxMessage in the form with dvxuazap
+[MAINDRIVER Admin] btnSign with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_s/'> selector='form >> nth=0 >> input, textarea >> nth=2'>. Click it.
+[MAINDRIVER Admin] Error in filling  <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/xss_s/'> selector='form >> nth=0 >> input, textarea >> nth=3'>
+[MAINDRIVER Admin] out 30000ms exceeded.
+Call log:
+waiting for locator("form").first.locator("input, textarea").nth(3)
+
+[MAINDRIVER Admin] cator.py", line 412, in get_attribute
+    return await self._frame.get_attribute(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emmalee/SQLiFuzz-a1/venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 628, in get_attribute
+    return await self._channel.send("getAttribute", locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emmalee/SQLiFuzz-a1/venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emmalee/SQLiFuzz-a1/venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.get_attribute: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("form").first.locator("input, textarea").nth(3)
+
+
+[MAINDRIVER Admin] Saving the error screenshot in ../data/input-rcexynugld.jpeg
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] Button is not in the viewport! Clicking action is failed
+[MAINDRIVER Admin] Saving the screenshot in ../data/button-uasrwfvwzg.jpeg
+[MAINDRIVER Admin] None
+[MAINDRIVER Admin] : Timeout 30000ms exceeded.
+Call log:
+waiting for locator("form").first.get_by_role("button").first
+
+[MAINDRIVER Admin] Error to locate element:  Locator.inner_text: Timeout 2000ms exceeded.
+Call log:
+waiting for locator("form").first.get_by_role("button").nth(1)
+
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/xss_s/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/xss_s/
+[MAINDRIVER Admin] Drop the locator field in the link: XSSStored because it is visited
+[MAINDRIVER Admin] Execution number: 16/40 with link index: 14
+[MAINDRIVER Admin] Going to click [CSPBypass] with href: http://localhost:8888/vulnerabilities/csp/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/csp/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/csp/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/csp/ to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/vulnerabilities/csp/
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/vulnerabilities/csp/
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/csp/'> selector='form >> nth=0'>
+[MAINDRIVER Admin] include with type of text is identified
+[MAINDRIVER Admin] Filling text for include in the form with xahvgzap
+[MAINDRIVER Admin] None with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/vulnerabilities/csp/'> selector='form >> nth=0 >> input, textarea >> nth=1'>. Click it.
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/csp/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 3 button in the page http://localhost:8888/vulnerabilities/csp/
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/csp/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/csp/ to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/csp/ because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/csp/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: CSPBypass because it is visited
+[MAINDRIVER Admin] Execution number: 17/40 with link index: 15
+[MAINDRIVER Admin] Going to click [JavaScript] with href: http://localhost:8888/vulnerabilities/javascript/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/javascript/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/javascript/ ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/vulnerabilities/javascript/
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/javascript/ to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/javascript/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/javascript/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/javascript/
+[MAINDRIVER Admin] Drop the locator field in the link: JavaScript because it is visited
+[MAINDRIVER Admin] Execution number: 18/40 with link index: 16
+[MAINDRIVER Admin] Going to click [AuthorisationBypass] with href: http://localhost:8888/vulnerabilities/authbypass/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/authbypass/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/authbypass/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 40
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/authbypass/ to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/authbypass/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/authbypass/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 2 button in the page http://localhost:8888/vulnerabilities/authbypass/
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/authbypass/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/authbypass/ to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/authbypass/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: AuthorisationBypass because it is visited
+[MAINDRIVER Admin] Execution number: 19/40 with link index: 17
+[MAINDRIVER Admin] Going to click [OpenHTTPRedirect] with href: http://localhost:8888/vulnerabilities/open_redirect/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] OPENING A NEW TAB! CRAWLING THE NEW PAGE: http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en from http://localhost:8888/vulnerabilities/authbypass/
+[MAINDRIVER Admin] Save the new tab URL in the link to crawl later: http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en
+[MAINDRIVER Admin] A new link is found and added: http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/view_help.php?id,locale,security count: 2
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/open_redirect/ ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] A new link is found and added: [Quote1] --> source/medium.php?redirect=info.php?id=1
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/open_redirect/source/medium.php?redirect count: 1
+[MAINDRIVER Admin] A new link is found and added: [Quote2] --> source/medium.php?redirect=info.php?id=2
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/open_redirect/source/medium.php?redirect count: 2
+[MAINDRIVER Admin] Total links stored: 43
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/ to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 2 button in the page http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/ to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/open_redirect/ because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: OpenHTTPRedirect because it is visited
+[MAINDRIVER Admin] Selecting a link from the priority queue: 40
+[MAINDRIVER Admin] Execution number: 20/43 with link index: 40
+[MAINDRIVER Admin] Going to click [NewTab] with href: http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en obtained from page: http://localhost:8888/vulnerabilities/authbypass/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en
+[MAINDRIVER Admin] OPENING A NEW TAB! CRAWLING THE NEW PAGE: http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en from http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] Save the new tab URL in the link to crawl later: http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en
+[MAINDRIVER Admin] A new link is found and added: http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/vulnerabilities/view_help.php?id,locale,security count: 3
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en ---
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/view_help.php?id=authbypass&security=medium&locale=en
+[MAINDRIVER Admin] Drop the locator field in the link: NewTab because it is visited
+[MAINDRIVER Admin] Removing a link index 40 from the priority queue because it is visited
+[MAINDRIVER Admin] Selecting a link from the priority queue: 42
+[MAINDRIVER Admin] Execution number: 21/44 with link index: 42
+[MAINDRIVER Admin] Going to click [Quote2] with href: http://localhost:8888/vulnerabilities/open_redirect/source/medium.php?redirect=info.php?id=2 obtained from page: http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/open_redirect/source/medium.php?redirect=info.php?id=2
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2 ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [Back] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2 to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2 to find and click buttons
+[MAINDRIVER Admin] In total, finding 2 button in the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2
+[MAINDRIVER Admin] Trying to click a button: http://localhost:8888/vulnerabilities/open_redirect/source/info.php
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2 to find overlay modals
+[MAINDRIVER Admin] No overlay modal
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/open_redirect/source/info.php because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: Quote2 because it is visited
+[MAINDRIVER Admin] Selecting a link from the priority queue: 41
+[MAINDRIVER Admin] Execution number: 22/44 with link index: 41
+[MAINDRIVER Admin] Going to click [Quote1] with href: http://localhost:8888/vulnerabilities/open_redirect/source/medium.php?redirect=info.php?id=1 obtained from page: http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/open_redirect/source/medium.php?redirect=info.php?id=1
+[MAINDRIVER Admin] OPENING A NEW TAB! CRAWLING THE NEW PAGE: http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en from http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=2
+[MAINDRIVER Admin] Save the new tab URL in the link to crawl later: http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en
+[MAINDRIVER Admin] Link: [None] http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en is dropped because it existed
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=1 ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[../../../setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[../../../logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [Back] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=1 to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=1
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=1 to find and click buttons
+[MAINDRIVER Admin] In total, finding 2 button in the page http://localhost:8888/vulnerabilities/open_redirect/source/info.php?id=1
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/open_redirect/source/info.php because it was clicked
+[MAINDRIVER Admin] Skip button http://localhost:8888/vulnerabilities/open_redirect/source/info.php because it was clicked
+[MAINDRIVER Admin] Drop the locator field in the link: Quote1 because it is visited
+[MAINDRIVER Admin] Removing a link index 41 from the priority queue because it is visited
+[MAINDRIVER Admin] Execution number: 23/44 with link index: 18
+[MAINDRIVER Admin] Going to click [Cryptography] with href: http://localhost:8888/vulnerabilities/cryptography/ obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/cryptography/
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/cryptography/ ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/vulnerabilities/cryptography/
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/cryptography/ to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/cryptography/
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/cryptography/ to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/cryptography/
+[MAINDRIVER Admin] Drop the locator field in the link: Cryptography because it is visited
+[MAINDRIVER Admin] Removing a link index 42 from the priority queue because it is visited
+[MAINDRIVER Admin] Execution number: 24/44 with link index: 19
+[MAINDRIVER Admin] Going to click [DVWASecurity] with href: http://localhost:8888/security.php obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/security.php
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/security.php ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/security.php to find and fill forms
+[MAINDRIVER Admin] Identifying 1 form in page:  http://localhost:8888/security.php
+[MAINDRIVER Admin] There is no form name. It is fine. Continue to fill in
+[MAINDRIVER Admin] Finding 1 button in the page http://localhost:8888/security.php
+[MAINDRIVER Admin] Filling a form: <Locator frame=<Frame name= url='http://localhost:8888/security.php'> selector='form >> nth=0'>
+[MAINDRIVER Admin] seclev_submit with type of submit is identified
+[MAINDRIVER Admin] Found a submit button <Locator frame=<Frame name= url='http://localhost:8888/security.php'> selector='form >> nth=0 >> input, textarea >> nth=0'>. Click it.
+[MAINDRIVER Admin] Error in filling  <Locator frame=<Frame name= url='http://localhost:8888/security.php'> selector='form >> nth=0 >> input, textarea >> nth=1'>
+[MAINDRIVER Admin] out 30000ms exceeded.
+Call log:
+waiting for locator("form").first.locator("input, textarea").nth(1)
+
+[MAINDRIVER Admin] cator.py", line 412, in get_attribute
+    return await self._frame.get_attribute(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emmalee/SQLiFuzz-a1/venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 628, in get_attribute
+    return await self._channel.send("getAttribute", locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emmalee/SQLiFuzz-a1/venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emmalee/SQLiFuzz-a1/venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.get_attribute: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("form").first.locator("input, textarea").nth(1)
+
+
+[MAINDRIVER Admin] Saving the error screenshot in ../data/input-oeeioexnza.jpeg
+[MAINDRIVER Admin] Identifying 0 select elements in the form. Start to iterate
+[MAINDRIVER Admin] Trying to click a button: 
+[MAINDRIVER Admin] Button is not in the viewport! Clicking action is failed
+[MAINDRIVER Admin] Saving the screenshot in ../data/button-zxypcucmgy.jpeg
+[MAINDRIVER Admin] None
+[MAINDRIVER Admin] : Timeout 30000ms exceeded.
+Call log:
+waiting for locator("form").first.get_by_role("button").first
+
+[MAINDRIVER Admin] Error to locate element:  Locator.press: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("form").first.locator("input, textarea").first
+
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/security.php to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/security.php
+[MAINDRIVER Admin] Drop the locator field in the link: DVWASecurity because it is visited
+[MAINDRIVER Admin] Execution number: 25/44 with link index: 20
+[MAINDRIVER Admin] Going to click [PHPInfo] with href: http://localhost:8888/phpinfo.php obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/phpinfo.php
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/phpinfo.php ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/phpinfo.php
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/phpinfo.php to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/phpinfo.php
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/phpinfo.php to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/phpinfo.php
+[MAINDRIVER Admin] Drop the locator field in the link: PHPInfo because it is visited
+[MAINDRIVER Admin] Execution number: 26/44 with link index: 21
+[MAINDRIVER Admin] Going to click [About] with href: http://localhost:8888/about.php obtained from page: http://localhost:8888/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/about.php
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/about.php ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Total links stored: 44
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/about.php to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/about.php
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/about.php to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/about.php
+[MAINDRIVER Admin] Drop the locator field in the link: About because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: ReadMe because it is visited
+[MAINDRIVER Admin] Execution number: 27/44 with link index: 23
+[MAINDRIVER Admin] Going to click [PDFGuide] with href: http://localhost:8888/instructions.php?doc=PDF obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/instructions.php?doc=PDF
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/instructions.php?doc=PDF ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [ReadMe] http://localhost:8888/instructions.php?doc=readme is dropped because it existed
+[MAINDRIVER Admin] Link: [PDFGuide] http://localhost:8888/instructions.php?doc=PDF is dropped because it existed
+[MAINDRIVER Admin] Link: [ChangeLog] http://localhost:8888/instructions.php?doc=changelog is dropped because it existed
+[MAINDRIVER Admin] Link: [Copying] http://localhost:8888/instructions.php?doc=copying is dropped because it existed
+[MAINDRIVER Admin] A new link is found and added: [OfficialDocumentationPDFv13] --> docs/DVWA_v1.3.pdf
+[MAINDRIVER Admin] parsed_url add http://localhost:8888/docs/DVWA_v1.3.pdf? count: 1
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=PDF to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/instructions.php?doc=PDF
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=PDF to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/instructions.php?doc=PDF
+[MAINDRIVER Admin] Drop the locator field in the link: PDFGuide because it is visited
+[MAINDRIVER Admin] Selecting a link from the priority queue: 44
+[MAINDRIVER Admin] Execution number: 28/45 with link index: 44
+[MAINDRIVER Admin] Going to click [OfficialDocumentationPDFv13] with href: http://localhost:8888/docs/DVWA_v1.3.pdf obtained from page: http://localhost:8888/instructions.php?doc=PDF
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/docs/DVWA_v1.3.pdf ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/docs/DVWA_v1.3.pdf
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/docs/DVWA_v1.3.pdf to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/docs/DVWA_v1.3.pdf
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/docs/DVWA_v1.3.pdf to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/docs/DVWA_v1.3.pdf
+[MAINDRIVER Admin] Drop the locator field in the link: OfficialDocumentationPDFv13 because it is visited
+[MAINDRIVER Admin] Removing a link index 44 from the priority queue because it is visited
+[MAINDRIVER Admin] Execution number: 29/45 with link index: 24
+[MAINDRIVER Admin] Going to click [ChangeLog] with href: http://localhost:8888/instructions.php?doc=changelog obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/instructions.php?doc=changelog
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/instructions.php?doc=changelog ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [ReadMe] http://localhost:8888/instructions.php?doc=readme is dropped because it existed
+[MAINDRIVER Admin] Link: [PDFGuide] http://localhost:8888/instructions.php?doc=PDF is dropped because it existed
+[MAINDRIVER Admin] Link: [ChangeLog] http://localhost:8888/instructions.php?doc=changelog is dropped because it existed
+[MAINDRIVER Admin] Link: [Copying] http://localhost:8888/instructions.php?doc=copying is dropped because it existed
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=changelog to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/instructions.php?doc=changelog
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=changelog to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/instructions.php?doc=changelog
+[MAINDRIVER Admin] Drop the locator field in the link: ChangeLog because it is visited
+[MAINDRIVER Admin] Execution number: 30/45 with link index: 25
+[MAINDRIVER Admin] Going to click [Copying] with href: http://localhost:8888/instructions.php?doc=copying obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/instructions.php?doc=copying
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/instructions.php?doc=copying ---
+[MAINDRIVER Admin] Link: [Home] http://localhost:8888/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Instructions] http://localhost:8888/instructions.php is dropped because it existed
+[MAINDRIVER Admin] SetupResetDB[setup.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [BruteForce] http://localhost:8888/vulnerabilities/brute/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CommandInjection] http://localhost:8888/vulnerabilities/exec/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSRF] http://localhost:8888/vulnerabilities/csrf/ is dropped because it existed
+[MAINDRIVER Admin] Link: [FileInclusion] http://localhost:8888/vulnerabilities/fi/?page=include.php is dropped because it existed
+[MAINDRIVER Admin] Link: [FileUpload] http://localhost:8888/vulnerabilities/upload/ is dropped because it existed
+[MAINDRIVER Admin] Link: [InsecureCAPTCHA] http://localhost:8888/vulnerabilities/captcha/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjection] http://localhost:8888/vulnerabilities/sqli/ is dropped because it existed
+[MAINDRIVER Admin] Link: [SQLInjectionBlind] http://localhost:8888/vulnerabilities/sqli_blind/ is dropped because it existed
+[MAINDRIVER Admin] Link: [WeakSessionIDs] http://localhost:8888/vulnerabilities/weak_id/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSDOM] http://localhost:8888/vulnerabilities/xss_d/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSReflected] http://localhost:8888/vulnerabilities/xss_r/ is dropped because it existed
+[MAINDRIVER Admin] Link: [XSSStored] http://localhost:8888/vulnerabilities/xss_s/ is dropped because it existed
+[MAINDRIVER Admin] Link: [CSPBypass] http://localhost:8888/vulnerabilities/csp/ is dropped because it existed
+[MAINDRIVER Admin] Link: [JavaScript] http://localhost:8888/vulnerabilities/javascript/ is dropped because it existed
+[MAINDRIVER Admin] Link: [AuthorisationBypass] http://localhost:8888/vulnerabilities/authbypass/ is dropped because it existed
+[MAINDRIVER Admin] Link: [OpenHTTPRedirect] http://localhost:8888/vulnerabilities/open_redirect/ is dropped because it existed
+[MAINDRIVER Admin] Link: [Cryptography] http://localhost:8888/vulnerabilities/cryptography/ is dropped because it existed
+[MAINDRIVER Admin] Link: [DVWASecurity] http://localhost:8888/security.php is dropped because it existed
+[MAINDRIVER Admin] Link: [PHPInfo] http://localhost:8888/phpinfo.php is dropped because it existed
+[MAINDRIVER Admin] Link: [About] http://localhost:8888/about.php is dropped because it existed
+[MAINDRIVER Admin] Logout[logout.php] is an avoided links! Drop it.
+[MAINDRIVER Admin] Link: [ReadMe] http://localhost:8888/instructions.php?doc=readme is dropped because it existed
+[MAINDRIVER Admin] Link: [PDFGuide] http://localhost:8888/instructions.php?doc=PDF is dropped because it existed
+[MAINDRIVER Admin] Link: [ChangeLog] http://localhost:8888/instructions.php?doc=changelog is dropped because it existed
+[MAINDRIVER Admin] Link: [Copying] http://localhost:8888/instructions.php?doc=copying is dropped because it existed
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=copying to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/instructions.php?doc=copying
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/instructions.php?doc=copying to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/instructions.php?doc=copying
+[MAINDRIVER Admin] Drop the locator field in the link: Copying because it is visited
+[MAINDRIVER Admin] Execution number: 31/45 with link index: 26
+[MAINDRIVER Admin] Going to click [العربية] with href: http://localhost:8888/README.ar.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.ar.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.ar.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.ar.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.ar.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.ar.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.ar.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.ar.md
+[MAINDRIVER Admin] Drop the locator field in the link: العربية because it is visited
+[MAINDRIVER Admin] Execution number: 32/45 with link index: 27
+[MAINDRIVER Admin] Going to click [简体中文] with href: http://localhost:8888/README.zh.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.zh.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.zh.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.zh.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.zh.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.zh.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.zh.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.zh.md
+[MAINDRIVER Admin] Drop the locator field in the link: 简体中文 because it is visited
+[MAINDRIVER Admin] Execution number: 33/45 with link index: 28
+[MAINDRIVER Admin] Going to click [Français] with href: http://localhost:8888/README.fr.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.fr.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.fr.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.fr.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.fr.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.fr.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.fr.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.fr.md
+[MAINDRIVER Admin] Drop the locator field in the link: Français because it is visited
+[MAINDRIVER Admin] Execution number: 34/45 with link index: 29
+[MAINDRIVER Admin] Going to click [한국어] with href: http://localhost:8888/README.ko.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.ko.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.ko.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.ko.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.ko.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.ko.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.ko.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.ko.md
+[MAINDRIVER Admin] Drop the locator field in the link: 한국어 because it is visited
+[MAINDRIVER Admin] Execution number: 35/45 with link index: 30
+[MAINDRIVER Admin] Going to click [فارسی] with href: http://localhost:8888/README.fa.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.fa.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.fa.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.fa.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.fa.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.fa.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.fa.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.fa.md
+[MAINDRIVER Admin] Drop the locator field in the link: فارسی because it is visited
+[MAINDRIVER Admin] Execution number: 36/45 with link index: 31
+[MAINDRIVER Admin] Going to click [Polski] with href: http://localhost:8888/README.pl.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.pl.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.pl.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.pl.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.pl.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.pl.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.pl.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.pl.md
+[MAINDRIVER Admin] Drop the locator field in the link: Polski because it is visited
+[MAINDRIVER Admin] Execution number: 37/45 with link index: 32
+[MAINDRIVER Admin] Going to click [Português] with href: http://localhost:8888/README.pt.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.pt.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.pt.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.pt.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.pt.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.pt.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.pt.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.pt.md
+[MAINDRIVER Admin] Drop the locator field in the link: Português because it is visited
+[MAINDRIVER Admin] Execution number: 38/45 with link index: 33
+[MAINDRIVER Admin] Going to click [Español] with href: http://localhost:8888/README.es.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.es.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.es.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.es.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.es.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.es.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.es.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.es.md
+[MAINDRIVER Admin] Drop the locator field in the link: Español because it is visited
+[MAINDRIVER Admin] Execution number: 39/45 with link index: 34
+[MAINDRIVER Admin] Going to click [Türkçe] with href: http://localhost:8888/README.tr.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.tr.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.tr.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.tr.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.tr.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.tr.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.tr.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.tr.md
+[MAINDRIVER Admin] Drop the locator field in the link: Türkçe because it is visited
+[MAINDRIVER Admin] Execution number: 40/45 with link index: 35
+[MAINDRIVER Admin] Going to click [Indonesia] with href: http://localhost:8888/README.id.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.id.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.id.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.id.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.id.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.id.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.id.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.id.md
+[MAINDRIVER Admin] Drop the locator field in the link: Indonesia because it is visited
+[MAINDRIVER Admin] Execution number: 41/45 with link index: 36
+[MAINDRIVER Admin] Going to click [Vietnamese] with href: http://localhost:8888/README.vi.md obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/README.vi.md
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/README.vi.md ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/README.vi.md
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.vi.md to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/README.vi.md
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/README.vi.md to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/README.vi.md
+[MAINDRIVER Admin] Drop the locator field in the link: Vietnamese because it is visited
+[MAINDRIVER Admin] Execution number: 42/45 with link index: 37
+[MAINDRIVER Admin] Going to click [configconfigincphpdist] with href: http://localhost:8888/config/config.inc.php.dist obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/config/config.inc.php.dist
+[MAINDRIVER Admin] EXCEPTION MSG: Page.goto: net::ERR_ABORTED at http://localhost:8888/config/config.inc.php.dist
+Call log:
+navigating to "http://localhost:8888/config/config.inc.php.dist", waiting until "load"
+
+[MAINDRIVER Admin] There is error when opening the link: configconfigincphpdist. We will try it later
+[MAINDRIVER Admin] Execution number: 43/45 with link index: 38
+[MAINDRIVER Admin] Going to click [composeyml] with href: http://localhost:8888/compose.yml obtained from page: http://localhost:8888/instructions.php
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/compose.yml
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/compose.yml ---
+[MAINDRIVER Admin] No <a> tag is found in http://localhost:8888/compose.yml
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/compose.yml to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/compose.yml
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/compose.yml to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/compose.yml
+[MAINDRIVER Admin] Drop the locator field in the link: composeyml because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: NewTab because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: NewTab because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: Quote1 because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: Quote2 because it is visited
+[MAINDRIVER Admin] Execution number: 44/45 with link index: 43
+[MAINDRIVER Admin] Going to click [NewTab] with href: http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en obtained from page: http://localhost:8888/vulnerabilities/open_redirect/
+[MAINDRIVER Admin] Link is not visible or enabled! Trying to go directly to the url
+[MAINDRIVER Admin] Go to http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en
+[MAINDRIVER Admin] --- GETTING CRAWLED LINKS FROM http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en ---
+[MAINDRIVER Admin] Total links stored: 45
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en to find and fill forms
+[MAINDRIVER Admin] Identifying 0 form in page:  http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en
+[MAINDRIVER Admin] --- Processing the page http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en to find and click buttons
+[MAINDRIVER Admin] In total, finding 0 button in the page http://localhost:8888/vulnerabilities/view_help.php?id=open_redirect&security=medium&locale=en
+[MAINDRIVER Admin] Drop the locator field in the link: NewTab because it is visited
+[MAINDRIVER Admin] Free up the locator field in the link: OfficialDocumentationPDFv13 because it is visited
+[MAINDRIVER Admin] All links have been visited. Completing the Driver.
+[MAINDRIVER Admin] Storing the crawled links to: ../result/Admin_175844649156.txt
+[MAINDRIVER Admin] Storing the captured requests to: ../result/[REQ]Admin_175844649527.txt
+[FUZZER] Campaign duration: 0:20:48.177778

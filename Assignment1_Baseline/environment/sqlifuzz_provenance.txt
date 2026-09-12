@@ -1,0 +1,8 @@
+Repository: https://github.com/websecfuzz/SQLiFuzz
+Commit cloned: 420121856e808f8a179228f91500137c9bc4b48e
+Deviations from this commit (see notes/deviations.md for full rationale):
+  - Restored a stub read_cov_from_file() in crawler/general_functions.py
+  - Reconstructed crawler/utils.py (originally missing from all commits, including HEAD)
+  - Added a bind-mounted volumes: entry to WUT/dvwa/docker-compose.yml for config.inc.php persistence
+  - Added #!/bin/bash shebang to sqlifuzz.sh and bacfuzz.sh
+  - auto_login/dvwa.py select_option("low") changed to select_option("medium") for the controlled variation run only (reverted afterward)

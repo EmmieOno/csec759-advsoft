@@ -1,0 +1,22 @@
+{'total_req': 29, 'sql_req': 2, 'null_req': 5, 'not_sql_req': 22, 'sql_injection_detected': 3, 'another_sql_error_detected': 1, 'sql_req_not_detected': 1, 'error_req': 0, 'fuzzed_req': 256, 'processing_time_total': 525.8971599999999, 'processing_time_ave': 2.0542857812499995, 'running_time': 'Not finished yet', 200: 27, 404: 2}
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQLi_DETECTED]
+1. GET | http://localhost:8081/vulnerabilities/brute/ | Login=Login&password=zfxuvzap&username=%27 |  ['] ==> select * from users where user = ''' and password = 'f5d2f5278cdb252459ac6a8ed1020597'; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near 'f5d2f5278cdb252459ac6a8ed1020597'' at line 1
+2. GET | http://localhost:8081/vulnerabilities/sqli_blind/ | Submit=Submit&id=%27 |  ['] ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+
+
+
+
+
+##################################################:
+
+###Matched but Different SQL Error:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###SQL Error but No Matched Strings:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+1. POST | http://localhost:8081/vulnerabilities/exec/ |  | Submit=Submit&ip=%21 ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = '''; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1"]
+
+###Matched Strings but No SQL error:
+1. GET | http://localhost:8081/vulnerabilities/brute/ | Login=Login&password=%27&username= |  ['] ==> ["select * from users where user = '' and password = '3590cb8af0bbb9e78c343b52b93773c9'; *#*#result set"] 
+2. POST | http://localhost:8081/vulnerabilities/exec/ |  | Submit=Submit&ip=%27 ['] ==> ["select * from users where user = '' and password = 'b15835f133ff2e27c7cb28117bfae8f4'; *#*#result set"] 

@@ -1,0 +1,32 @@
+{'total_req': 30, 'sql_req': 11, 'null_req': 5, 'not_sql_req': 14, 'sql_injection_detected': 10, 'another_sql_error_detected': 8, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 225, 'processing_time_total': 732.4918250000003, 'processing_time_ave': 3.2555192222222233, 'running_time': 'Not finished yet', 200: 30}
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQLi_DETECTED]
+1. POST | http://localhost:8081/vulnerabilities/exec/ |  | Submit=Submit&ip=%5C [\] ==> select first_name, last_name from users where user_id = \'; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'' at line 1
+2. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=%27 ['] ==> select first_name, last_name from users where user_id = \'; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'' at line 1
+3. POST | http://localhost:8081/vulnerabilities/upload/ |  | MAX_FILE_SIZE=100000&Upload=Upload [_] ==> select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+4. POST | http://localhost:8081/vulnerabilities/sqli_blind/ |  | Submit=Submit&id=1 ['] ==> select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+
+
+
+
+
+##################################################:
+
+###Matched but Different SQL Error:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###SQL Error but No Matched Strings:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+1. GET | http://localhost:8081/vulnerabilities/brute/ | Login=Login&password=%40&username= |  ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+2. POST | http://localhost:8081/vulnerabilities/exec/ |  | Submit=Submit&ip=%22 ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+3. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=1%27 ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+4. POST | http://localhost:8081/vulnerabilities/upload/ |  | MAX_FILE_SIZE=100000&Upload=Upload ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+5. POST | http://localhost:8081/vulnerabilities/sqli_blind/ |  | Submit=Submit&id=1%27 ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+
+###Matched Strings but No SQL error:
+1. GET | http://localhost:8081/vulnerabilities/brute/ | Login=Login&password=rtabmzap&username=%27 |  ['] ==> ["select * from users where user = '\\'' and password = '64f3c0ed9d3d30ca180505605f51f2d4'; *#*#result set", "select * from users where user = '' and password = 'd41d8cd98f00b204e9800998ecf8427e'; *#*#result set"] 
+2. POST | http://localhost:8081/vulnerabilities/exec/ |  | Submit=Submit&ip=%27 ['] ==> ["select * from users where user = '\\xicodzap' and password = '64f3c0ed9d3d30ca180505605f51f2d4'; *#*#result set", "select * from users where user = '' and password = '833344d5e1432da82ef02e1301477ce8'; *#*#result set"] 
+3. POST | http://localhost:8081/vulnerabilities/upload/ |  | MAX_FILE_SIZE=100000&Upload=Upload ['] ==> ["select * from users where user = '_xicodzap' and password = '64f3c0ed9d3d30ca180505605f51f2d4'; *#*#result set"] 
+4. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=1 ['] ==> ["select * from users where user = 'xico!dzap' and password = '64f3c0ed9d3d30ca180505605f51f2d4'; *#*#result set"] 
+5. GET | http://localhost:8081/vulnerabilities/view_help.php | id=captcha&locale=en&security=medium |  ['] ==> ["select * from users where user = '}' and password = '64f3c0ed9d3d30ca180505605f51f2d4'; *#*#result set", "select * from users where user = '' and password = '6cff047854f19ac2aa52aac51bf3af4a'; *#*#result set"] 
+6. POST | http://localhost:8081/vulnerabilities/sqli_blind/ |  | Submit=Submit&id=1 ['] ==> ["select * from users where user = '&' and password = '64f3c0ed9d3d30ca180505605f51f2d4'; *#*#result set", "select * from users where user = '' and password = '5058f1af8388633f609cadb75a75dc9d'; *#*#result set"] 
