@@ -1,0 +1,82 @@
+[CONFIG] A config file from configs/config-general.yaml is loaded.
+[HOOK] Idle shutdown monitor started. Will check after 60s initial wait...
+[HOOK] Idle shutdown monitor scheduled (timeout: 120s)
+Starting Time: 2026-09-11 21:12:55.698664
+Start MITM Addon with 10 max concurrent fuzzing tasks
+[HOOK] Number response: 0 | Memory usage (MB): 83.77734375 PID: 38736
+[STATS] {'total_req': 0, 'sql_req': 0, 'null_req': 0, 'not_sql_req': 0, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 0, 'processing_time_total': 0.0, 'processing_time_ave': 0.0, 'running_time': 'Not finished yet'}
+[HOOK 40d] Check GET http://localhost:8081/vulnerabilities/sqli/?id=1&Submit=Submit || 
+[HTTPREQUEST 40d] Converting Request Entry to HTTP Request: d083ed08-f693-4bcf-bcbf-276bb77e040d
+[HTTPREQUEST 40d] No content-type is found
+[SQLAnalysis] Read 29 new lines from SQL log file.
+[SQLAnalysis] Appended 20 parsed entries.
+[SQLAnalysis 40d] Extracted 20 Logs 2026-09-12 01:13:16.830351: [{'timestamp': '2026-09-12 01:13:15,824193', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 55436, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = '1'; *#*#Result Set"}]
+[SQLAnalysis 40d] Checking Request: GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[SQLAnalysis 40d] Updated param pairs: {'path1': 'sqli', 'id': '1', 'Submit': 'Submit'}
+[SQLAnalysis 40d] Looked timestamp 2026-09-12 01:13:15.812000 -- 2026-09-12 01:13:15.827000
+[SQLAnalysis 40d] query_array to be checked: ['use', 'db']
+[SQLAnalysis 40d] normalized_query_array: ['use', 'db']
+[SQLAnalysis 40d] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "'1'", '']
+[SQLAnalysis 40d] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[SQLAnalysis 40d] Getting id==>1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[HOOK 40d] Get matching queries: ["select first_name, last_name from users where user_id = '1'; *#*#result set"] from GET http://localhost:8081/vulnerabilities/sqli/?id=1&Submit=Submit || 
+[HOOK 40d] Async callback triggered for: http://localhost:8081/vulnerabilities/sqli/?id=1&Submit=Submit
+[HOOK 40d] Starting fuzz (pending: 1)
+[SQLiFuzz 40d] Calling send_requests for: http://localhost:8081/vulnerabilities/sqli/?id=1&Submit=Submit
+[SQLiFuzz 40d] DEBUG Captured request body (truncated): 
+[SQLiFuzz 40d] DEBUG Captured request headers: {'Host': 'localhost:8081', 'User-Agent': 'curl/8.5.0', 'Accept': '*/*', 'Cookie': 'PHPSESSID=d5d03f1f6de7d479d4d763e1e25e09e7; security=low'}
+[SQLiFuzz 40d] DEBUG Converted request.post_data_encoded (truncated): 
+[SQLiFuzz 40d] DEBUG Converted request.header: {'Host': 'localhost:8081', 'User-Agent': 'curl/8.5.0', 'Accept': '*/*', 'Cookie': 'PHPSESSID=d5d03f1f6de7d479d4d763e1e25e09e7; security=low'}
+[SQLiFuzz 40d] DEBUG Converted request.content_type: None
+[SQLiFuzz 40d] test_SQLi for GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[SQLiFuzz 40d] Getting prepared_target_request with ID 3c6 for test_SQLi iteration 1/70
+[SQLiFuzz 3c6] chosen_idx: 1 from 3
+[HTTPREQUEST 3c6] Getting matched paramval from found values: ['1']
+[HTTPREQUEST 3c6] Found matched paramval: [int (False)(None)] id=1
+[SQLiFuzz 3c6] Prioritize to fuzz matched SQL value first: [int (False)(None)] id=1
+[SQLiFuzz 3c6] Mutation applied. old='1' char=''' strategy='drop' new='''
+[HTTPREQUEST 3c6] Update url and body param from paramvals:
+[HTTPREQUEST None] New post_data_encoded: 
+[HTTPREQUEST None] New param encoded: Submit=Submit&id=%27
+[GENERALFUNCTION 3c6] ---SENDING THE REQUEST [1789175597-39cfee6a-3246-4bee-b7a9-5d665ad643c6] TO : [GET] http://localhost:8081/vulnerabilities/sqli/?Submit=Submit&id=%27
+[GENERALFUNCTION 3c6] Post data encoded: 
+[GENERALFUNCTION 3c6] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/?Submit=Submit&id=%27
+[GENERALFUNCTION 3c6] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'User-Agent': 'curl/8.5.0', 'Accept': '*/*', 'Cookie': 'PHPSESSID=d5d03f1f6de7d479d4d763e1e25e09e7; security=low'}
+[GENERALFUNCTION 3c6] DEBUG OUTGOING post_data_encoded (truncated): 
+[SQLiFuzz 3c6] Response status: 200
+[SQLiFuzz 3c6] Response URL: http://localhost:8081/vulnerabilities/sqli/?Submit=Submit&id=%27
+[SQLiFuzz 3c6] Was redirected: False
+[SQLiFuzz 3c6] Getting response: <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1 in /var/www/html/vulnerabilities/sqli/source/low.php:11
+Stack trace:
+#0 /var/www/html/vulnerabilities/sqli/source/low.php(11): mysqli_query(Object(mysqli), 'SELECT first_na...')
+#1 /var/www/h
+[SQLAnalysis] Read 2 new lines from SQL log file.
+[SQLAnalysis] Appended 2 parsed entries.
+[SQLAnalysis 3c6] Extracted 22 Logs 2026-09-12 01:13:18.085598: [{'timestamp': '2026-09-12 01:13:17,071100', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 55460, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = '''; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1"}]
+[SQLAnalysis 3c6] Updated param pairs: {'looked_value': "'"}
+[SQLAnalysis 3c6] Looked timestamp 2026-09-12 01:13:17.048980 -- 2026-09-12 01:13:17.080820
+[SQLAnalysis 3c6] query_array to be checked: ['use', 'db']
+[SQLAnalysis 3c6] normalized_query_array: ['use', 'db']
+[SQLAnalysis 3c6] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "'''", '']
+[SQLAnalysis 3c6] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '', '']
+[SQLAnalysis 3c6] Getting malformed looked_value==>' in select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+[GENERALFUNC 3c6] Found Error Query: ["SELECT first_name, last_name FROM users WHERE user_id = '''; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1"] from GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] path1=sqli', "[int (False)(None)] id='", '[string (False)(None)] Submit=Submit'] | None
+[GENERALFUNC 3c6] found_value: '
+[SQLiFuzz 3c6] Weird chars is detected: GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] path1=sqli', "[int (False)(None)] id='", '[string (False)(None)] Submit=Submit'] | None --> ["select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1"]
+[SQLiFuzz 3c6] SQL Injection is detected: GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] path1=sqli', "[int (False)(None)] id='", '[string (False)(None)] Submit=Submit'] | None ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+[SQLICollection] Result will be saved in final_result/dvwa-smoke-emmalee-VMware-Virtual-Platform-1789175575.txt
+[SQLICollection] Statistics: {'total_req': 1, 'sql_req': 1, 'null_req': 0, 'not_sql_req': 0, 'sql_injection_detected': 1, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 1, 'processing_time_total': 0.03184, 'processing_time_ave': 0.03184, 'running_time': 'Not finished yet', 200: 1}
+[HOOK 40d] Completed fuzz (remaining: 0)
+[HOOK] Idle timeout (120s) reached with no pending tasks. Initiating shutdown...
+
+
+
+-----FINAL RESULT------
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+1. GET | http://localhost:8081/vulnerabilities/sqli/ | Submit=Submit&id=%27 |  ['] ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+
+[SQLICollection] Result will be saved in final_result/FR/FR-dvwa-smoke-emmalee-VMware-Virtual-Platform-1789175575.txt
+[SQLICollection] Statistics: {'total_req': 1, 'sql_req': 1, 'null_req': 0, 'not_sql_req': 0, 'sql_injection_detected': 1, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 1, 'processing_time_total': 0.03184, 'processing_time_ave': 0.03184, 'running_time': '0:02:40.024937', 200: 1}
+[HOOK] FINISH on 2026-09-11 21:15:35.723601. Total run time: 0:02:40.024937

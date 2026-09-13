@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/emmalee/SQLiFuzz-a1/crawler/fuzzer.py", line 18, in <module>
+    from GlobalAttackSurfaces import global_attack_surfaces
+  File "/home/emmalee/SQLiFuzz-a1/crawler/GlobalAttackSurfaces.py", line 9, in <module>
+    from AttackSurface import AttackSurface
+  File "/home/emmalee/SQLiFuzz-a1/crawler/AttackSurface.py", line 11, in <module>
+    from Input import Input, VerificationLabel
+  File "/home/emmalee/SQLiFuzz-a1/crawler/Input.py", line 8, in <module>
+    from general_functions import read_cov_from_file
+ImportError: cannot import name 'read_cov_from_file' from 'general_functions' (/home/emmalee/SQLiFuzz-a1/crawler/general_functions.py)

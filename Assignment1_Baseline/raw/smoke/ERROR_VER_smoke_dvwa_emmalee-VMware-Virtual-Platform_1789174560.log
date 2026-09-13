@@ -1,0 +1,29 @@
+[CONFIG] A config file from configs/config-general.yaml is loaded.
+[HOOK] Idle shutdown monitor started. Will check after 60s initial wait...
+[HOOK] Idle shutdown monitor scheduled (timeout: 120s)
+Starting Time: 2026-09-11 20:56:00.233463
+Start MITM Addon with 10 max concurrent fuzzing tasks
+[HOOK] Number response: 0 | Memory usage (MB): 83.92578125 PID: 36487
+[STATS] {'total_req': 0, 'sql_req': 0, 'null_req': 0, 'not_sql_req': 0, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 0, 'processing_time_total': 0.0, 'processing_time_ave': 0.0, 'running_time': 'Not finished yet'}
+[HOOK 9f3] Check GET http://localhost:8081/vulnerabilities/sqli/?id=1&Submit=Submit || 
+[HTTPREQUEST 9f3] Converting Request Entry to HTTP Request: b43a0100-2d5a-4deb-b76f-bc9f60a869f3
+[HTTPREQUEST 9f3] No content-type is found
+[SQLAnalysis] Error reading log file /projects/fuzzing/SQLIFuzz/shared-data/mysql_proxy_dvwaemmalee-VMware-Virtual-Platform.log: [Errno 2] No such file or directory: '/projects/fuzzing/SQLIFuzz/shared-data/mysql_proxy_dvwaemmalee-VMware-Virtual-Platform.log'
+[SQLAnalysis 9f3] Extracted 0 Logs 2026-09-12 00:56:33.234133: []
+[SQLAnalysis 9f3] Checking Request: GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[SQLAnalysis 9f3] Updated param pairs: {'path1': 'sqli', 'id': '1', 'Submit': 'Submit'}
+[SQLAnalysis 9f3] Looked timestamp 2026-09-12 00:56:32.217000 -- 2026-09-12 00:56:32.231000
+[HTTPREQUEST 9f3] Getting null paramvals
+[HOOK 9f3] The request does not trigger SQL query. Drop it. GET http://localhost:8081/vulnerabilities/sqli/?id=1&Submit=Submit || 
+[HOOK] Idle timeout (120s) reached with no pending tasks. Initiating shutdown...
+
+
+
+-----FINAL RESULT------
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+No SQL Injection Detected.
+
+[SQLICollection] Result will be saved in final_result/FR/FR-dvwa-smoke-emmalee-VMware-Virtual-Platform-1789174560.txt
+[SQLICollection] Statistics: {'total_req': 1, 'sql_req': 0, 'null_req': 0, 'not_sql_req': 1, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 0, 'processing_time_total': 0.0, 'processing_time_ave': 0.0, 'running_time': '0:02:40.026856', 200: 1}
+[HOOK] FINISH on 2026-09-11 20:58:40.260319. Total run time: 0:02:40.026856
