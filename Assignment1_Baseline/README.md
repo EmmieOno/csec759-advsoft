@@ -9,7 +9,7 @@
   this module does not exist anywhere in the upstream repository's commit history)
   - Apply Assignment1_Baseline/scripts/general_functions.py to restore a stubbed ```read_cov_from_file()``` 
 function (the upstream version was removed without updating its caller in Input.py)
-  - Apply Assignment1_Baseline/scripts/docker-compose.dvwa.yaml to SQLiFuzz/WUT/dvwa/docker-compose.yml, adding a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist
+  - Apply Assignment1_Baseline/scripts/docker-compose.yaml to SQLiFuzz/WUT/dvwa/docker-compose.yml, adding a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist
 5. Create and activate a Python virtual environment, then install dependencies
 ```
 python3 -m venv venv 
