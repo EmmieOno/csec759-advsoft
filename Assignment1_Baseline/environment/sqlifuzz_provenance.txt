@@ -1,5 +1,5 @@
 Repository: https://github.com/websecfuzz/SQLiFuzz
-Commit cloned: 420121856e808f8a179228f91500137c9bc4b48e
+Commit cloned: 1b7e2ede42af8e2b9d6d1c44358851e9d4616db9 
 Deviations from this commit (see notes/deviations.md for full rationale):
   - Restored a stub read_cov_from_file() in crawler/general_functions.py
   - Reconstructed crawler/utils.py (originally missing from all commits, including HEAD)
