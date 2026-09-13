@@ -1,0 +1,54 @@
+======================================================================
+PER-RUN BREAKDOWN  (intermediate values preserved on disk)
+======================================================================
+
+File: dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789231509.txt
+  Raw summary field 'sql_injection_detected': 3  <- NOTE: this raw counter does not equal the derived metric; see report Q2/Q3.
+  Intermediate extracted section saved to: derived_output/dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789231509__extracted_section.txt
+  Per-endpoint raw-line trace saved to:    derived_output/dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789231509__classification_trace.txt
+  Known-SQLi endpoints detected (1/2):
+    - vulnerabilities/sqli_blind/  (SQLi (Blind))
+  Additional (non-counted) endpoints flagged (1):
+    - vulnerabilities/brute/
+
+File: dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434.txt
+  Raw summary field 'sql_injection_detected': 7  <- NOTE: this raw counter does not equal the derived metric; see report Q2/Q3.
+  Intermediate extracted section saved to: derived_output/dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434__extracted_section.txt
+  Per-endpoint raw-line trace saved to:    derived_output/dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434__classification_trace.txt
+  Known-SQLi endpoints detected (2/2):
+    - vulnerabilities/sqli/  (SQLi (regular/UNION-based))
+    - vulnerabilities/sqli_blind/  (SQLi (Blind))
+  Additional (non-counted) endpoints flagged (3):
+    - vulnerabilities/brute/
+    - vulnerabilities/csp/
+    - vulnerabilities/upload/
+
+File: dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789249064.txt
+  Raw summary field 'sql_injection_detected': 10  <- NOTE: this raw counter does not equal the derived metric; see report Q2/Q3.
+  Intermediate extracted section saved to: derived_output/dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789249064__extracted_section.txt
+  Per-endpoint raw-line trace saved to:    derived_output/dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789249064__classification_trace.txt
+  Known-SQLi endpoints detected (2/2):
+    - vulnerabilities/sqli/  (SQLi (regular/UNION-based))
+    - vulnerabilities/sqli_blind/  (SQLi (Blind))
+  Additional (non-counted) endpoints flagged (2):
+    - vulnerabilities/exec/
+    - vulnerabilities/upload/
+
+======================================================================
+COMPARISON TABLE (paper Table 4, row A1)
+======================================================================
+Run                                Known SQLi Detected   Match Paper (2/2)?  
+-----------------------------------------------------------------------------
+Paper (Table 4, A1)                2/2                   --                  
+dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789231509.txt1/2                   NO                  
+dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434.txt2/2                   YES                 
+dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789249064.txt2/2                   YES                 
+
+Wrote /home/emmalee/csec759-project/Assignment1_Baseline/derived_output/a1_comparison.csv
+
+======================================================================
+STABILITY CHECK vs. paper Section 5.5.4
+======================================================================
+VARIANCE DETECTED across identical re-runs (same command, no config change).
+Known-SQLi detected varied across runs: [1, 2, 2]
+This contradicts the paper's claim of 'no significant variance' upon repetition (Sec. 5.5.4).
