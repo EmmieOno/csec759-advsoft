@@ -1,0 +1,5 @@
+run,known_sqli_detected,known_sqli_total,matches_paper,additional_endpoints_detected
+paper_table4_A1,2,2,--,
+dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789231509.txt,1,2,no,vulnerabilities/brute/
+dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434.txt,2,2,yes,vulnerabilities/brute/;vulnerabilities/csp/;vulnerabilities/upload/
+dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789249064.txt,2,2,yes,vulnerabilities/exec/;vulnerabilities/upload/

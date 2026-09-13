@@ -1,0 +1,28 @@
+Source raw file: dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434.txt
+Extracted intermediate section: dvwa-bacfuzz-emmalee-VMware-Virtual-Platform-1789241434__extracted_section.txt
+
+KNOWN-SQLi ENDPOINTS (counted toward Table 4 A1 metric):
+
+  [vulnerabilities/sqli/]  -> SQLi (regular/UNION-based)
+    RAW LINE: 2. GET | http://localhost:8081/vulnerabilities/sqli/ | Submit=Submit&id=%27 |  ['] ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+
+  [vulnerabilities/sqli_blind/]  -> SQLi (Blind)
+    RAW LINE: 5. GET | http://localhost:8081/vulnerabilities/sqli_blind/ | Submit=Submit&id=%27 |  ['] ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+
+ADDITIONAL ENDPOINTS (flagged but NOT part of paper's counted metric):
+
+  [vulnerabilities/csp/]
+    RAW LINE: 4. POST | http://localhost:8081/vulnerabilities/csp/ |  | include=_ [_] ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+
+  [vulnerabilities/brute/]
+    RAW LINE: 1. GET | http://localhost:8081/vulnerabilities/brute/ | Login=Login&password=yjrtrzap&username=%27 |  ['] ==> select * from users where user = ''' and password = '69c2320b113ed9a653d735c70c24c910'; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '69c2320b113ed9a653d735c70c24c910'' at line 1
+
+  [vulnerabilities/upload/]
+    RAW LINE: 3. POST | http://localhost:8081/vulnerabilities/upload/ |  | MAX_FILE_SIZE=100000&Upload=Upload [;] ==> select first_name, last_name from users where user_id = '''; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''''' at line 1
+
+============================================================
+TOTALS
+============================================================
+Known-SQLi endpoints detected:  2 / 2
+Additional endpoints flagged:   3
+Total distinct endpoints in this section: 5
