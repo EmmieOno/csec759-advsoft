@@ -19,7 +19,7 @@ pip install -r requirement.txt
 - If SQLiFuzz/requirement.txt errors due to litellm, skip that dependency and openai using the requirements_actual.txt in ./environment/.
 6. Install system-level dependencies ```sudo apt install python-is-python3```
 7. Install Playwright's browser binaries ```sudo -E bash -c "source venv/bin/activate && playwright install"```
-8. Ensure .env from this repo has been downloaded and places in /SQLiFuzz
+8. Ensure .env from this repo has been downloaded and placed in /SQLiFuzz
 
 ## SMOKE TEST COMMANDS
 1. Bring up the DVWA containers and initialize the database
