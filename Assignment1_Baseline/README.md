@@ -14,8 +14,9 @@ function (the upstream version was removed without updating its caller in Input.
 ```
 python3 -m venv venv 
 source venv/bin/activate 
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
+- If requirement.txt errors due to litellm, skip that dependency and openai.
 6. Install system-level dependencies ```sudo apt install python-is-python3```
 7. Install Playwright's browser binaries ```sudo -E bash -c "source venv/bin/activate && playwright install"```
 8. Ensure .env from this repo has been downloaded and places in /SQLiFuzz
