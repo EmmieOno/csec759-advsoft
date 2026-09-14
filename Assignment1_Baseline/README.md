@@ -29,9 +29,7 @@ sudo docker compose --env-file ~/SQLiFuzz-a1/.env -f
 ```
 2. Set the environment variables
 ```
-env WUT_NAME=dvwa WUT_PORT=8081 HOST_NAME="$(hostname)" FUZZER_NAME=defense IDLE_TIMEOUT=10 
-mitmdump --mode reverse:http://localhost:8081 --flow-detail 0 --set flow_storage=memory-limited 
---listen-port 8888 -s sqlifuzz/mitmproxy_addon.py
+env WUT_NAME=dvwa WUT_PORT=8081 HOST_NAME="$(hostname)" FUZZER_NAME=defense IDLE_TIMEOUT=10 mitmdump --mode reverse:http://localhost:8081 --flow-detail 0 --set flow_storage=memory-limited --listen-port 8888 -s sqlifuzz/mitmproxy_addon.py
 ```
 3. In a second terminal, send one request
 ```COOKIE_HEADER=$(cat login_state/dvwa/Admin.txt)```
