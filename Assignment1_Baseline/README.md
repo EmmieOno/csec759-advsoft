@@ -43,11 +43,11 @@ sudo docker compose --env-file ~/SQLiFuzz-a1/.env -f ~/SQLiFuzz-a1/WUT/dvwa/dock
    ```
    env WUT_NAME=dvwa python login.py
    ```
-4. Navigate back to SQLiFuzz/
+3. Navigate back to SQLiFuzz/
    ```
    cd SQLiFuzz
    ```
-6. Set the environment variables and leave the terminal open
+4. Set the environment variables and leave the terminal open
 ```
 env WUT_NAME=dvwa WUT_PORT=8081 HOST_NAME="$(hostname)" FUZZER_NAME=defense IDLE_TIMEOUT=10 mitmdump --mode reverse:http://localhost:8081 --flow-detail 0 --set flow_storage=memory-limited --listen-port 8888 -s sqlifuzz/mitmproxy_addon.py
 ```
@@ -55,7 +55,7 @@ env WUT_NAME=dvwa WUT_PORT=8081 HOST_NAME="$(hostname)" FUZZER_NAME=defense IDLE
 ```
 COOKIE_HEADER=$(cat login_state/dvwa/Admin.txt)
 ```
-7. Then run this command:
+6. Then run this command:
 ```
 curl -s -H "$COOKIE_HEADER" "http://localhost:8888/vulnerabilities/sqli/?id=1&Submit=Submit" -o /dev/null -w "HTTP status: %{http_code}\n"
 ```
