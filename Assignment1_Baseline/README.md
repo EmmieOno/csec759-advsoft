@@ -24,21 +24,21 @@ pip install -r requirements_actual.txt
 ## SMOKE TEST COMMANDS
 1. Bring up the DVWA containers and initialize the database
 ```
-sudo docker compose --env-file ~/SQLiFuzz-a1/.env -f 
-~/SQLiFuzz-a1/WUT/dvwa/docker-compose.yaml up -d
+sudo docker compose --env-file ~/SQLiFuzz-a1/.env -f ~/SQLiFuzz-a1/WUT/dvwa/docker-compose.yaml up -d
 ```
-2. Set the environment variables
+2. Navigate to SQLiFuzz/crawler/ and run:
+   ```env WUT_NAME=dvwa python login.py```
+3. Set the environment variables and leave the terminal open
 ```
 env WUT_NAME=dvwa WUT_PORT=8081 HOST_NAME="$(hostname)" FUZZER_NAME=defense IDLE_TIMEOUT=10 mitmdump --mode reverse:http://localhost:8081 --flow-detail 0 --set flow_storage=memory-limited --listen-port 8888 -s sqlifuzz/mitmproxy_addon.py
 ```
-3. In a second terminal, send one request
+4. In a second terminal, send one request
 ```COOKIE_HEADER=$(cat login_state/dvwa/Admin.txt)```
-4. Then run this command:
+5. Then run this command:
 ```
-curl -s -H "$COOKIE_HEADER" "http://localhost:8888/vulnerabilities/sqli/?id=1&Submit=Submit" 
--o /dev/null -w "HTTP status: %{http_code}\n"
+curl -s -H "$COOKIE_HEADER" "http://localhost:8888/vulnerabilities/sqli/?id=1&Submit=Submit" -o /dev/null -w "HTTP status: %{http_code}\n"
 ```
-5. Go back to the first terminal and observe the final results.
+6. Go back to the first terminal and observe the final results.
    
 ## REPRODUCTION COMMANDS
 1. Navigate to the SQLiFuzz/scripts directory
