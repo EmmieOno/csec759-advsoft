@@ -9,13 +9,14 @@
   this module does not exist anywhere in the upstream repository's commit history)
   - Copy Assignment1_Baseline/scripts/general_functions.py to SQLiFuzz/crawler/general_functions.py to restore a stubbed ```read_cov_from_file()``` function (the upstream version was removed without updating its caller in Input.py)
   - Copy Assignment1_Baseline/scripts/docker-compose.yaml to SQLiFuzz/WUT/dvwa/docker-compose.yaml (this adds a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist)
+  - Copy Assignment1_Baseline/scripts/config.inc.php to SQLiFuzz/WUT/dvwa/config/config.inc.php
+  - Copy Assignment1_Baseline/environment/requirements_actual.txt to SQLiFuzz/
 5. Create and activate a Python virtual environment, then install dependencies
 ```
 python3 -m venv venv 
 source venv/bin/activate 
-pip install -r requirement.txt
+pip install -r requirements_actual.txt
 ```
-- If SQLiFuzz/requirement.txt errors due to litellm, skip that dependency and openai using the requirements_actual.txt in ./environment/.
 6. Install system-level dependencies ```sudo apt install python-is-python3```
 7. Install Playwright's browser binaries ```sudo -E bash -c "source venv/bin/activate && playwright install"```
 8. Ensure .env from this repo has been downloaded and placed in /SQLiFuzz
