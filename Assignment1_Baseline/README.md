@@ -7,9 +7,8 @@
 (missing in the upstream repo, causes the scripts to be misinterpreted by dash on Ubuntu)
   - Copy Assignment1_Baseline/scripts/utils.py into SQLiFuzz/crawler/utils.py (reconstructed — 
   this module does not exist anywhere in the upstream repository's commit history)
-  - Apply Assignment1_Baseline/scripts/general_functions.py to restore a stubbed ```read_cov_from_file()``` 
-function (the upstream version was removed without updating its caller in Input.py)
-  - Apply Assignment1_Baseline/scripts/docker-compose.yaml to SQLiFuzz/WUT/dvwa/docker-compose.yml, adding a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist
+  - Copy Assignment1_Baseline/scripts/general_functions.py to SQLiFuzz/crawler/general_functions.py to restore a stubbed ```read_cov_from_file()``` function (the upstream version was removed without updating its caller in Input.py)
+  - Copy Assignment1_Baseline/scripts/docker-compose.yaml to SQLiFuzz/WUT/dvwa/docker-compose.yaml (this adds a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist)
 5. Create and activate a Python virtual environment, then install dependencies
 ```
 python3 -m venv venv 
