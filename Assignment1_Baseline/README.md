@@ -1,7 +1,7 @@
 ## SETUP
 1. Clone the SQLiFuzz repo ```git clone https://github.com/websecfuzz/SQLiFuzz.git```
 2. Navigate to the directory ```cd SQLiFuzz```
-3. Grab the this specific commit ```git checkout 1b7e2ede42af8e2b9d6d1c44358851e9d4616db9```
+3. Grab this specific commit ```git checkout 1b7e2ede42af8e2b9d6d1c44358851e9d4616db9```
 4. Apply the following code fixes
   - Add ```#!/bin/bash``` as the first line of scripts/sqlifuzz.sh and scripts/bacfuzz.sh
 (missing in the upstream repo, causes the scripts to be misinterpreted by dash on Ubuntu)
