@@ -1,25 +1,38 @@
 ## SETUP
-1. Clone the SQLiFuzz repo ```git clone https://github.com/websecfuzz/SQLiFuzz.git```
-2. Navigate to the directory ```cd SQLiFuzz```
-3. Grab this specific commit ```git checkout 1b7e2ede42af8e2b9d6d1c44358851e9d4616db9```
-4. Apply the following code fixes
-  - Add ```#!/bin/bash``` as the first line of scripts/sqlifuzz.sh and scripts/bacfuzz.sh
-(missing in the upstream repo, causes the scripts to be misinterpreted by dash on Ubuntu)
-  - Copy Assignment1_Baseline/scripts/utils.py into SQLiFuzz/crawler/utils.py (reconstructed — 
-  this module does not exist anywhere in the upstream repository's commit history)
-  - Copy Assignment1_Baseline/scripts/general_functions.py to SQLiFuzz/crawler/general_functions.py to restore a stubbed ```read_cov_from_file()``` function (the upstream version was removed without updating its caller in Input.py)
-  - Copy Assignment1_Baseline/scripts/docker-compose.yaml to SQLiFuzz/WUT/dvwa/docker-compose.yaml (this adds a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist)
-  - Copy Assignment1_Baseline/scripts/config.inc.php to SQLiFuzz/WUT/dvwa/config/config.inc.php
-  - Copy Assignment1_Baseline/environment/requirements_actual.txt to SQLiFuzz/
+1. Clone the SQLiFuzz repo
+   ```
+   git clone https://github.com/websecfuzz/SQLiFuzz.git
+   ```
+3. Navigate to the directory
+   ```
+   cd SQLiFuzz
+   ```
+5. Grab this specific commit
+   ```
+   git checkout 1b7e2ede42af8e2b9d6d1c44358851e9d4616db9
+   ```
+7. Apply the following code fixes
+  - Add ```#!/bin/bash``` as the first line of ```scripts/sqlifuzz.sh``` and ```scripts/bacfuzz.sh```(missing in the upstream repo, causes the scripts to be misinterpreted by dash on Ubuntu)
+  - Copy ```Assignment1_Baseline/scripts/utils.py``` into ```SQLiFuzz/crawler/utils.py``` (reconstructed — this module does not exist anywhere in the upstream repository's commit history)
+  - Copy ``Assignment1_Baseline/scripts/general_functions.py`` to ```SQLiFuzz/crawler/general_functions.py``` to restore a stubbed ```read_cov_from_file()``` function (the upstream version was removed without updating its caller in Input.py)
+  - Copy ```Assignment1_Baseline/scripts/docker-compose.yaml``` to ```SQLiFuzz/WUT/dvwa/docker-compose.yaml``` (this adds a bind-mounted volumes: entry so DVWA's config.inc.php persists across container recreation instead of resetting to config.inc.php.dist)
+  - Copy ```Assignment1_Baseline/scripts/config.inc.php``` to ```SQLiFuzz/WUT/dvwa/config/config.inc.php```
+  - Copy ```Assignment1_Baseline/environment/requirements_actual.txt``` to ```SQLiFuzz/```
 5. Create and activate a Python virtual environment, then install dependencies
 ```
 python3 -m venv venv 
 source venv/bin/activate 
 pip install -r requirements_actual.txt
 ```
-6. Install system-level dependencies ```sudo apt install python-is-python3```
-7. Install Playwright's browser binaries ```sudo -E bash -c "source venv/bin/activate && playwright install"```
-8. Ensure .env from this repo has been downloaded and placed in /SQLiFuzz
+6. Install system-level dependencies
+   ```
+   sudo apt install python-is-python3
+   ```
+8. Install Playwright's browser binaries
+   ```
+   sudo -E bash -c "source venv/bin/activate && playwright install"
+   ```
+10. Ensure .env from this repo has been downloaded and placed in /SQLiFuzz
 
 ## SMOKE TEST COMMANDS
 1. Bring up the DVWA containers and initialize the database
@@ -27,21 +40,29 @@ pip install -r requirements_actual.txt
 sudo docker compose --env-file ~/SQLiFuzz-a1/.env -f ~/SQLiFuzz-a1/WUT/dvwa/docker-compose.yaml up -d
 ```
 2. Navigate to SQLiFuzz/crawler/ and run:
-   ```env WUT_NAME=dvwa python login.py```
-3. Set the environment variables and leave the terminal open
+   ```
+   env WUT_NAME=dvwa python login.py
+   ```
+4. Navigate back to SQLiFuzz/
+   ```
+   cd SQLiFuzz
+   ```
+6. Set the environment variables and leave the terminal open
 ```
 env WUT_NAME=dvwa WUT_PORT=8081 HOST_NAME="$(hostname)" FUZZER_NAME=defense IDLE_TIMEOUT=10 mitmdump --mode reverse:http://localhost:8081 --flow-detail 0 --set flow_storage=memory-limited --listen-port 8888 -s sqlifuzz/mitmproxy_addon.py
 ```
-4. In a second terminal, send one request
-```COOKIE_HEADER=$(cat login_state/dvwa/Admin.txt)```
-5. Then run this command:
+5. In a second terminal, send one request
+```
+COOKIE_HEADER=$(cat login_state/dvwa/Admin.txt)
+```
+7. Then run this command:
 ```
 curl -s -H "$COOKIE_HEADER" "http://localhost:8888/vulnerabilities/sqli/?id=1&Submit=Submit" -o /dev/null -w "HTTP status: %{http_code}\n"
 ```
-6. Go back to the first terminal and observe the final results.
+7. Go back to the first terminal and observe the final results.
    
 ## REPRODUCTION COMMANDS
-1. Navigate to the SQLiFuzz/scripts directory
+1. Navigate to the ```SQLiFuzz/scripts``` directory
 2. Run the command
 ```
 sudo -E bash -c "source ../venv/bin/activate && ./sqlifuzz.sh dvwa 8081 / openapi.json bacfuzz"
