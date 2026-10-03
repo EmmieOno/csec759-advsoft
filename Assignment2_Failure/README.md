@@ -1,5 +1,6 @@
 ## CONTRIBUTION
 Emmalee Carpenter (eoc7219) - Solo Contributor
+
 Baseline - https://github.com/websecfuzz/SQLiFuzz (1b7e2ede42af8e2b9d6d1c44358851e9d4616db9)
 
 ## SETUP
