@@ -1,0 +1,11 @@
+10-03-2026
+1:45PM EST
+
+
+Additional variant: a2_filtered_post.php
+- Identifcal filter and query logic to a2_filtered.php but the request method
+changed from GET to POST. 
+
+Prediction: SQLiFuzz will still fail to detect (0/3 runs), because
+the regex filter rejects SQLiFuzz's special-character mutation set before it
+reaches the query, independent of HTTP method. 

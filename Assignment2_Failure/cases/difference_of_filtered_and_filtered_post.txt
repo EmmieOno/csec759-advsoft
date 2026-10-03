@@ -1,0 +1,109 @@
+2d1
+< 
+4d2
+< 
+6d3
+< 
+9,18d5
+<  
+< 
+< // Additional variant of cases/boolean-oracle/a2_filtered.php.
+< 
+< // ONLY CHANGE FROM a2_filtered.php: request method GET -> POST
+< 
+< // (form method + $_GET -> $_POST). Filter logic, query construction,
+< 
+< // and all other behavior are identical to a2_filtered.php.
+< 
+21,22d7
+<  
+< 
+24d8
+< 
+26d9
+< 
+28d10
+< 
+30d11
+< 
+32d12
+< 
+34,36c14
+< 
+< <form method="POST">
+< 
+---
+> <form method="GET">
+38d15
+< 
+40d16
+< 
+42d17
+< 
+44,49c19,20
+< 
+< if (isset($_POST['Submit'])) {
+< 
+<     $id = $_POST['id'] ?? '';
+< 
+<  
+---
+> if (isset($_GET['Submit'])) {
+>     $id = $_GET['id'] ?? '';
+52d22
+< 
+54d23
+< 
+56d24
+< 
+59,65c27
+<  
+< 
+<     // Identical filter to a2_filtered.php: permits Boolean SQL expressions,
+< 
+<     // rejects everything else (including SQLiFuzz's special-character set).
+< 
+<  
+---
+>     // Intentionally flawed filter: permits Boolean SQL expressions.
+68,69d29
+<  
+< 
+71d30
+< 
+73d31
+< 
+75d32
+< 
+78,81c35
+<  
+< 
+<     // Identical vulnerable numeric SQL context to a2_filtered.php.
+< 
+---
+>     // Intentionally vulnerable numeric SQL context.
+83d36
+< 
+85d37
+< 
+88,89d39
+<  
+< 
+91d40
+< 
+93d41
+< 
+95d42
+< 
+97d43
+< 
+99d44
+< 
+101d45
+< 
+103d46
+< 
+105d47
+< 
+107d48
+< 
