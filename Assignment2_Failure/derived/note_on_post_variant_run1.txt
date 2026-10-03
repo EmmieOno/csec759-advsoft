@@ -1,0 +1,5 @@
+Post Variant Run 1
+
+The total run time is unreliable. The run did not take 19 hours, it took about 3-4 minutes like
+all of the other runs. I believe this discrepancy is due to the virtual machine updating its
+time or suspending briefly in the middle of the run.
