@@ -15,7 +15,9 @@ Request: id = 1 AND 1=1
 URL: http://localhost:8081/a2_filtered.php?id=1+AND+1%3D1&Submit=Submit
 ```
 **Result:** `ROWS=1`
-**Screenshot:** <img width="781" height="235" alt="image" src="https://github.com/user-attachments/assets/8a1e014c-c348-4384-b3ad-51f2b674490a" />
+**Screenshot:** 
+
+<img width="781" height="235" alt="image" src="https://github.com/user-attachments/assets/8a1e014c-c348-4384-b3ad-51f2b674490a" />
 
 ## Test 2 — false condition
 ```
@@ -23,7 +25,9 @@ Request: id = 1 AND 1=0
 URL: http://localhost:8081/a2_filtered.php?id=1+AND+1%3D0&Submit=Submit
 ```
 **Result:** `ROWS=0`
-**Screenshot:** <img width="780" height="247" alt="image" src="https://github.com/user-attachments/assets/f85dfa5b-616d-49b8-b1b8-46557c544300" />
+**Screenshot:** 
+
+<img width="780" height="247" alt="image" src="https://github.com/user-attachments/assets/f85dfa5b-616d-49b8-b1b8-46557c544300" />
 
 
 ## Interpretation
