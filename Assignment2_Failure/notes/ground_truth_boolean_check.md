@@ -34,9 +34,7 @@ URL: http://localhost:8081/a2_filtered.php?id=1+AND+1%3D0&Submit=Submit
 
 The two requests differ only in a boolean condition (`1=1` vs `1=0`) and
 produce different, observable outcomes (`ROWS=1` vs `ROWS=0`). This is the
-defining signature of boolean-blind SQL injection: an attacker who can
-distinguish these two response states can extract arbitrary data one
-true/false question at a time, without ever triggering a visible error.
+defining signature of boolean-blind SQL injection.
 
 Critically, **both payloads pass the page's input filter**, the regex
 ```
