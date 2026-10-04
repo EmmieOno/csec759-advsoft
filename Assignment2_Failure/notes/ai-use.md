@@ -3,6 +3,7 @@
 # ChatGPT Work
 - ChatGPT was used for the bulk of this assignment. It was used for troubleshooting and helping pivot to the regex filtering failure baseline.
 - ChatGPT gave most of the php files (a2_control.php and a2_filtered.php) and instructions with how to run the cases.
+- ChatGPT was also used to help during report writing and explaining my results back to me.
 
 # Summary from ChatGPT Work session:
 - Checking the working pipeline: helped identify the DB-log path issue and verify that SQLiFuzz detected both original DVWA SQLi cases when requests were supplied manually.
