@@ -30,9 +30,15 @@ mkdir -p final_result/FR
 5. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
 
 ## QUICK START
+
+1. Before anything, navigate to SQLiFuzz/WUT/dvwa and ensure the host name and wut name variables are set.
+```
+sudo env WUT_NAME=dvwa HOST_NAME="$(hostname)" docker compose up -d --no-deps --force-recreate dbproxy
+```
+
 Two scripts were created after manual runs to help speed up the reproduction process for the future. These were run_case.sh and reset_state.sh. These are located in the scripts/ directory.
 
-1. After setup run ```run_case.sh```
+2. After setup run ```run_case.sh```
 ```
 ./run_case.sh <case_id> <php_filename> <trial_number>
 ```
