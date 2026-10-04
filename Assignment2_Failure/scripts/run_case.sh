@@ -58,7 +58,7 @@ end_time="$(date -Is)"
 echo "end_time=${end_time}" >> "$trial_dir/meta.txt"
 echo "exit_status=${exit_status}" >> "$trial_dir/meta.txt"
 
-cp shared-data/mysql_proxy_dvwa*.log "$trial_dir/" 2>/dev/null || \
+cp shared-data/mysql_proxy_*.log "$trial_dir/" 2>/dev/null || \
   echo "WARNING: no mysql_proxy_dvwa*.log found to preserve" | tee -a "$trial_dir/meta.txt"
 
 echo "Trial complete. Evidence saved to: $trial_dir"
