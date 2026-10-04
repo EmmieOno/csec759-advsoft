@@ -30,6 +30,8 @@ mkdir final_result/FR
 5. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
 
 ## QUICK START
+Two scripts were created after manual runs to help speed up the reproduction process for the future. These were run_case.sh and reset_state.sh. These are located in the scripts/ directory.
+
 1. After setup run ```run_case.sh```
 ```
 ./run_case.sh <case_id> <php_filename> <trial_number>
@@ -44,14 +46,17 @@ For example, ```./run_case.sh filtered-get a2_filtered.php 1```
 ```
 4. Repeat for however many trials and cases.
 5. Ensure you save the Final Result documentation located in ```final_result/FR/FR-dvwa*.txt```
-6. All other output is located in ```SQLiFuzz/evidence/<case_id>/run#```
+```
+cp SQLiFuzz-a2/final_result/FR/<most recent run FR> SQLiFuzz-a2/evidence/<case_id>/run#
+```
+6. All other output is located in ```SQLiFuzz-a2/evidence/<case_id>/run#```
    
 ## EXACT CASE-RUN
 For how I ran each case...
 
 1. First I navigated to the SQLiFuzz main directory anhd activated my environment
 ```
-cd ~/SQLiFuzz
+cd ~/SQLiFuzz-a2
 source venv/bin/activate
 ```
 2. Then, I set environment variables.
@@ -84,7 +89,7 @@ mitmdump --mode reverse:http://localhost:8081 \
 - And copy the final_result documentation to the trial_dir
 
 ## ANALYSIS COMMANDS
-1. Navigate to Assignment2_Failure/scripts
+1. Navigate to Assignment2_Failure
 2. Run this command
 ```
 python3 scripts/derive_results.py --raw-dir raw --out derived/results_table.csv
