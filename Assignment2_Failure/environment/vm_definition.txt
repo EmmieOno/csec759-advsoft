@@ -1,0 +1,5 @@
+Hypervisor: VMware Workstation
+Guest OS: Ubuntu 24.04.5 LTS
+Allocated vCPUs: 4 (4 Processors x 1 core per processor)
+Allocated RAM: 8 GB
+Allocated disk: 60 GB

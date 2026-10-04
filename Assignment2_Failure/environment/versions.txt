@@ -1,0 +1,21 @@
+Version 1.45.1
+browser: chromium version 127.0.6533.17
+  Install location:    /home/emmalee/.cache/ms-playwright/chromium-1124
+  Download url:        https://playwright.azureedge.net/builds/chromium/1124/chromium-linux.zip
+  Download fallback 1: https://playwright-akamai.azureedge.net/builds/chromium/1124/chromium-linux.zip
+  Download fallback 2: https://playwright-verizon.azureedge.net/builds/chromium/1124/chromium-linux.zip
+
+browser: firefox version 127.0
+  Install location:    /home/emmalee/.cache/ms-playwright/firefox-1454
+  Download url:        https://playwright.azureedge.net/builds/firefox/1454/firefox-ubuntu-24.04.zip
+  Download fallback 1: https://playwright-akamai.azureedge.net/builds/firefox/1454/firefox-ubuntu-24.04.zip
+  Download fallback 2: https://playwright-verizon.azureedge.net/builds/firefox/1454/firefox-ubuntu-24.04.zip
+
+browser: webkit version 17.4
+  Install location:    /home/emmalee/.cache/ms-playwright/webkit-2035
+  Download url:        https://playwright.azureedge.net/builds/webkit/2035/webkit-ubuntu-24.04.zip
+  Download fallback 1: https://playwright-akamai.azureedge.net/builds/webkit/2035/webkit-ubuntu-24.04.zip
+  Download fallback 2: https://playwright-verizon.azureedge.net/builds/webkit/2035/webkit-ubuntu-24.04.zip
+
+browser: ffmpeg
+  Install location:    /home/emmalee/.cache/ms-playwright/ffmpeg-1009
