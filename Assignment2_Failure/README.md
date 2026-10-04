@@ -94,6 +94,7 @@ python3 scripts/derive_results.py --raw-dir raw --out derived/results_table.csv
 - final_result/FR/FR-dvwa*.txt — summary dict (total_req, sql_req, sql_injection_detected, etc.) plus a ###Matched SQL Injection Detected block listing each endpoint/parameter combination where a DBMS syntax error was triggered by a fuzzed value
 - terminal.log - full output of the terminal after running the above commands
 - mysql_proxy*.log - database logs
+- meta.txt - full metadata of the run
 
 ## RUNTIME ESTIMATE
 - A full run should take ~4 minutes.
