@@ -47,9 +47,9 @@ For example, ```./run_case.sh filtered-get a2_filtered.php 1```
 4. Repeat for however many trials and cases.
 5. Ensure you save the Final Result documentation located in ```final_result/FR/FR-dvwa*.txt```
 ```
-cp SQLiFuzz-a2/final_result/FR/<most recent run FR> SQLiFuzz-a2/evidence/<case_id>/run#
+cp SQLiFuzz-a2/final_result/FR/<most recent run FR> Assignment2_Failure/raw/<case_id>/run#
 ```
-6. All other output is located in ```SQLiFuzz-a2/evidence/<case_id>/run#```
+6. All other output is located in ```Assignment2_Failure/raw/<case_id>/run#```
    
 ## EXACT CASE-RUN
 For how I ran each case...
@@ -69,7 +69,7 @@ export IDLE_TIMEOUT=120
 ```
 3. Next I set what trial I was running and saved the configuration yaml to the trial output directory.
 ```
-trial_dir="evidence/boolean-oracle/control-run1"
+trial_dir="Assignment2_Failure/raw/control-run1"
 mkdir -p "$trial_dir"
 cp configs/config-general.yaml "$trial_dir/"
 ```
@@ -92,7 +92,7 @@ mitmdump --mode reverse:http://localhost:8081 \
 1. Navigate to Assignment2_Failure
 2. Run this command
 ```
-python3 scripts/derive_results.py --raw-dir raw --out derived/results_table.csv
+python3 scripts/derive_results.py --raw-dir raw --out Assignment2_Failure/derived/results_table.csv
 ```
 
 ## EXPECTED OUTPUTS
