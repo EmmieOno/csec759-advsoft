@@ -3,8 +3,8 @@
 | Case ID | Role | File | Request method | Expected behavior | Basis for expectation |
 |---|---|---|---|---|---|
 | `control` | Matched control | `a2_control.php` | GET | SQLiFuzz detects SQLi | Source: no input filtering; apostrophe reaches query unmodified, triggers MySQL syntax error |
-| `filtered-get` | Primary failed case | `a2_filtered.php` | GET | Page IS exploitable (boolean-blind); SQLiFuzz is expected to MISS it | `notes/ground_truth_boolean_check.md` — manual check independent of SQLiFuzz |
-| `filtered-post` | Additional variant | `a2_filtered_post.php` | POST | Same vulnerability/filter as filtered-get; method is the only intended change | Identical source logic to `a2_filtered.php`; see diff below |
+| `primary_case` | Primary failed case | `a2_filtered.php` | GET | Page IS exploitable (boolean-blind); SQLiFuzz is expected to MISS it | `notes/ground_truth_boolean_check.md` — manual check independent of SQLiFuzz |
+| `post-variant` | Additional variant | `a2_filtered_post.php` | POST | Same vulnerability/filter as primary_case; method is the only intended change | Identical source logic to `a2_filtered.php`; see diff below |
 
 ## Diff: `a2_control.php` → `a2_filtered.php`
 
