@@ -43,6 +43,7 @@ For example, ```./run_case.sh filtered-get a2_filtered.php 1```
 ```
 4. Repeat for however many trials and cases.
 5. Ensure you save the Final Result documentation located in ```final_result/FR/FR-dvwa*.txt```
+6. All other output is located in ```SQLiFuzz/evidence/<case_id>/run#```
    
 ## EXACT CASE-RUN
 For how I ran each case...
