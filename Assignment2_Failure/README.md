@@ -24,7 +24,7 @@ testloc = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "shared-
 ```
 3. Create the a required output directory in SQLiFuzz/
 ```
-mkdir final_result/FR
+mkdir -p final_result/FR
 ```
 4. Log into DVWA before submitting the test input and set the security level to low
 5. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
