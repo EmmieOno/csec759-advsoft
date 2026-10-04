@@ -8,7 +8,7 @@
 # Usage: ./reset_state.sh
 
 set -euo pipefail
-cd ~/SQLiFuzz-a2
+cd ~/SQLiFuzz
 
 echo "Killing any leftover mitmdump/proxy processes..."
 pkill -f mitmdump 2>/dev/null || true
