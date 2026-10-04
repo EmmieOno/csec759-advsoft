@@ -35,13 +35,13 @@ mkdir final_result/FR
 ./run_case.sh <case_id> <php_filename> <trial_number>
 ```
 For example, ```./run_case.sh filtered-get a2_filtered.php 1```
-
-2. If you want to run another trial, first run ```reset_state.sh```
+2. Follow the instructions in the terminal.
+3. If you want to run another trial, first run ```reset_state.sh```
 ```
 ./reset_state.sh
 ```
-3. Repeat for however many trials and cases.
-4. Ensure you save the Final Result documentation located in ```final_result/FR/FR-dvwa*.txt```
+4. Repeat for however many trials and cases.
+5. Ensure you save the Final Result documentation located in ```final_result/FR/FR-dvwa*.txt```
    
 ## EXACT CASE-RUN
 For how I ran each case...
