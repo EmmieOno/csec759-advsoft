@@ -30,7 +30,7 @@ export WUT_PORT=8081
 export FUZZER_NAME=manual
 export IDLE_TIMEOUT=120
 
-trial_dir="evidence/${CASE_ID}/run${TRIAL}"
+trial_dir="../raw/${CASE_ID}/run${TRIAL}"
 mkdir -p "$trial_dir"
 cp configs/config-general.yaml "$trial_dir/"
 
