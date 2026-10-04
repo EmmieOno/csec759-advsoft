@@ -41,5 +41,5 @@ as the single varied factor.
 ## Results summary
 
 See `derived/results_table.csv` for the full per-run results, and
-`notes/prediction-boolean-oracle-post-variant.md` for the prediction
-recorded before the `filtered-post` runs.
+`notes/additional_variant_prediction.txt` for the prediction
+recorded before the `post-variant` runs.
