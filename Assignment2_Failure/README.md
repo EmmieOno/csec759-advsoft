@@ -26,7 +26,8 @@ testloc = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "shared-
 ```
 mkdir -p final_result/FR
 ```
-4. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
+4. Log into DVWA before submitting the test input
+5. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
 
 ## QUICK START
 
