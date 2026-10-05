@@ -16,8 +16,9 @@ sleep 1
 
 echo "Archiving and clearing shared-data logs so the next trial starts clean..."
 if ls shared-data/mysql_proxy_dvwa*.log >/dev/null 2>&1; then
-  mkdir -p shared-data/_archived
-  mv shared-data/mysql_proxy_dvwa*.log shared-data/_archived/ 2>/dev/null || true
+  archive_dir="shared-data/_archived/$(date +%Y%m%d-%H%M%S)"
+  mkdir -p "$archive_dir"
+  mv -- shared-data/mysql_proxy_dvwa*.log "$archive_dir/"
 fi
 
 (
