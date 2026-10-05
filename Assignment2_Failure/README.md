@@ -42,7 +42,7 @@ Two scripts were created after manual runs to help speed up the reproduction pro
 ```
 ./run_case.sh <case_id> <php_filename> <trial_number>
 ```
-For example, ```./run_case.sh filtered-get a2_filtered.php 1```
+For example, ```./run_case.sh primary_case a2_filtered.php 1```
 
 2. Follow the instructions in the terminal.
 
@@ -76,6 +76,9 @@ export IDLE_TIMEOUT=120
 3. Next I set what trial I was running and saved the configuration yaml to the trial output directory.
 ```
 trial_dir="Assignment2_Failure/raw/control-run1"
+```
+*For re-run use ```trial_dir="$HOME/csec759-advsoft/Assignment2_Failure/raw/control/control-run1"```
+```
 mkdir -p "$trial_dir"
 cp configs/config-general.yaml "$trial_dir/"
 ```
@@ -98,7 +101,7 @@ mitmdump --mode reverse:http://localhost:8081 \
 1. Navigate to Assignment2_Failure
 2. Run this command
 ```
-python3 scripts/derive_results.py --raw-dir raw --out Assignment2_Failure/derived/results_table.csv
+python3 scripts/derive_results.py --raw-dir raw --out ../derived/results_table.csv
 ```
 
 ## EXPECTED OUTPUTS
