@@ -20,6 +20,12 @@ if ls shared-data/mysql_proxy_dvwa*.log >/dev/null 2>&1; then
   mv shared-data/mysql_proxy_dvwa*.log shared-data/_archived/ 2>/dev/null || true
 fi
 
+(
+  cd WUT/dvwa
+  sudo env WUT_NAME=dvwa HOST_NAME="$(hostname)" \
+    docker compose up -d --no-deps --force-recreate dbproxy
+)
+
 echo "Confirming DVWA container is up and responsive..."
 if ! sudo docker ps --filter "name=dvwa" --filter "status=running" | grep -q dvwa; then
   echo "DVWA container is not running — bringing it up..."
