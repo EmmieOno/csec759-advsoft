@@ -26,12 +26,11 @@ testloc = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "shared-
 ```
 mkdir -p final_result/FR
 ```
-4. Log into DVWA before submitting the test input and set the security level to low
-5. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
+4. Use port 8081 for direct ground-truth checks and 8888 for SQLiFuzz trials.
 
 ## QUICK START
 
-1. Before anything, navigate to SQLiFuzz/WUT/dvwa and ensure the host name and wut name variables are set.
+Before anything, navigate to SQLiFuzz/WUT/dvwa and ensure the host name and wut name variables are set.
 ```
 sudo env WUT_NAME=dvwa HOST_NAME="$(hostname)" docker compose up -d --no-deps --force-recreate dbproxy
 ```
