@@ -101,7 +101,7 @@ mitmdump --mode reverse:http://localhost:8081 \
 1. Navigate to Assignment2_Failure
 2. Run this command
 ```
-python3 scripts/derive_results.py --raw-dir raw --out ../derived/results_table.csv
+python3 scripts/derive_results.py --raw-dir raw --out derived/results_table.csv
 ```
 
 ## EXPECTED OUTPUTS
