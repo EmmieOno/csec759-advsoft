@@ -1,1 +1,1 @@
-Emmalee Carpenter contributed 100% to this assignment. This was a solo contribution.
+- Emmalee Carpenter performed the manual vulnerability checks, executed and collected the trial runs, reviewed the raw evidence and derived results, and wrote the report, with AI assistance disclosed in notes/ai-use.md.
