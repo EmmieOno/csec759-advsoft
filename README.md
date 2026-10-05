@@ -5,3 +5,4 @@ This repository will have folders corresponding to the semester project.
 
 ## Project Assignments Completed as of 9/13/2026:
 - Assignment 1 Baseline (see ./Assignment1_Baseline)
+- Assignment 2 Failure (see ./Assignment2_Failure)
