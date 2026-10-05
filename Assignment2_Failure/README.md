@@ -38,7 +38,9 @@ sudo env WUT_NAME=dvwa HOST_NAME="$(hostname)" docker compose up -d --no-deps --
 
 Two scripts were created after manual runs to help speed up the reproduction process for the future. These were run_case.sh and reset_state.sh. These are located in the scripts/ directory.
 
-2. After setup run ```run_case.sh```
+1. Navigate to ```Assignment2_Failure/scripts```
+
+2. After setup, run ```run_case.sh```
 ```
 ./run_case.sh <case_id> <php_filename> <trial_number>
 ```
