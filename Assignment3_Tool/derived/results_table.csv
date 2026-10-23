@@ -1,0 +1,13 @@
+trial,group,config,seed,detected,detection_path,fuzzed_req,processing_time_total_s,total_run_time_s,status,seed_applied
+control/baseline_run1,control,baseline,1,1,syntax_error,2,0.074314,140.038721,ok,yes
+control/baseline_run2,control,baseline,2,1,syntax_error,2,0.086147,140.033344,ok,yes
+control/baseline_run3,control,baseline,3,1,syntax_error,2,0.08927,140.034715,ok,yes
+control/prototype_run1,control,prototype,1,1,syntax_error,2,0.068503,140.033406,ok,yes
+control/prototype_run2,control,prototype,2,1,syntax_error,2,0.073635,140.034873,ok,yes
+control/prototype_run3,control,prototype,3,1,syntax_error,2,0.069147,140.043243,ok,yes
+primary_case/baseline_run1,primary_case,baseline,1,0,none,70,1.9467079999999999,201.559512,ok,yes
+primary_case/baseline_run2,primary_case,baseline,2,0,none,70,1.9919099999999996,200.826447,ok,yes
+primary_case/baseline_run3,primary_case,baseline,3,0,none,70,1.9604670000000004,200.843656,ok,yes
+primary_case/prototype_run1,primary_case,prototype,1,1,boolean_pair,10,0.346661,272.095868,ok,yes
+primary_case/prototype_run2,primary_case,prototype,2,1,boolean_pair,10,0.30950900000000003,140.035092,ok,yes
+primary_case/prototype_run3,primary_case,prototype,3,1,boolean_pair,10,0.3415620000000001,140.031544,ok,yes

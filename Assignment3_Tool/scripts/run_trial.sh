@@ -32,10 +32,10 @@ RAW_ROOT="${RAW_DIR:-$HOME/csec759-advsoft/Assignment3_Tool/raw}"
 if [ -n "${TRIAL_NUMBER:-}" ]; then
   N="$TRIAL_NUMBER"
 else
-  LAST=$(ls -1 "$RAW_ROOT/$GROUP" 2>/dev/null | sed -n 's/^run\([0-9][0-9]*\)$/\1/p' | sort -n | tail -1)
+  LAST=$(ls -1 "$RAW_ROOT/$GROUP" 2>/dev/null | sed -nE "s/^${CONFIG}_run([0-9]+)$/\1/p" | sort -n | tail -1)
   N=$(( ${LAST:-0} + 1 ))
 fi
-OUT="$RAW_ROOT/$GROUP/run$N"
+OUT="$RAW_ROOT/$GROUP/${CONFIG}_run$N"
 
 if [ -e "$OUT" ]; then
   echo "refusing to overwrite $OUT (rename or move the old run; keep failed runs)"; exit 2

@@ -1,0 +1,15 @@
+case=a2_filtered.php
+group=primary_case
+config=prototype
+seed=1
+boolean=1
+require_structure=1
+wut_name=dvwa
+start_utc=2026-10-22T18:06:31Z
+end_utc=2026-10-22T18:11:05Z
+mitmdump_exit=0
+driver_exit=0
+seed_line_in_terminal_log=yes
+git_commit=1b7e2ede42af8e2b9d6d1c44358851e9d4616db9
+SQLIFuzz_py_sha256=2c825c55684a9b1d185ee591f03795333c04cd94fbd2c86bffcab8540962f222
+boolean_probe_py_sha256=d91acab3ed98af0e086e75d1e14815ca22f034335fe117e41a665fbfba1a26dc

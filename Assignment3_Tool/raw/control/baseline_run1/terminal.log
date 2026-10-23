@@ -1,0 +1,243 @@
+[14:22:52.524] Loading script sqlifuzz/mitmproxy_addon.py
+[14:22:52.710] [CONFIG] A config file from configs/config-general.yaml is loaded.
+[14:22:52.710] [HOOK] Idle shutdown monitor started. Will check after 60s initial wait...
+[14:22:52.710] [HOOK] Idle shutdown monitor scheduled (timeout: 120s)
+[14:22:52.710] Starting Time: 2026-10-22 14:22:52.682089
+[14:22:52.710] Start MITM Addon with 10 max concurrent fuzzing tasks
+[14:22:52.711] [HOOK] Number response: 0 | Memory usage (MB): 81.0859375 PID: 69300
+[14:22:52.711] [STATS] {'total_req': 0, 'sql_req': 0, 'null_req': 0, 'not_sql_req': 0, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 0, 'processing_time_total': 0.0, 'processing_time_ave': 0.0, 'running_time': 'Not finished yet'}
+[14:22:52.713] reverse proxy to http://localhost:8081 listening at *:8888.
+[14:22:53.191][127.0.0.1:57020] client connect
+[14:22:53.195][127.0.0.1:57020] server connect localhost:8081 (127.0.0.1:8081)
+[14:22:53.197][127.0.0.1:57020] client disconnect
+[14:22:53.197][127.0.0.1:57020] server disconnect localhost:8081 (127.0.0.1:8081)
+[14:22:53.972][[::1]:47080] client connect
+[14:22:53.976][[::1]:47080] server connect localhost:8081 (127.0.0.1:8081)
+[14:22:54.000] [HOOK 77c] Check GET http://localhost:8081/login.php || 
+[14:22:54.000] [HTTPREQUEST 77c] Converting Request Entry to HTTP Request: caa87b96-9882-43dc-82a4-485b149d977c
+[14:22:54.000] [HTTPREQUEST 77c] No content-type is found
+[14:22:55.002] [SQLAnalysis] Read 872 new lines from SQL log file.
+[14:22:55.007] [SQLAnalysis] Appended 815 parsed entries.
+[14:22:55.008] [SQLAnalysis 77c] Extracted 815 Logs 2026-10-22 18:22:55.008062: [{'timestamp': '2026-10-22 18:22:53,989548', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 56966, 'sql': 'USE db *#*#OK'}]
+[14:22:55.010] [SQLAnalysis 77c] Checking Request: GET http://localhost:8081/login.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=none', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=login.php'] | None
+[14:22:55.010] [SQLAnalysis 77c] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'login.php'}
+[14:22:55.010] [SQLAnalysis 77c] Looked timestamp 2026-10-22 18:22:53.978000 -- 2026-10-22 18:22:53.998000
+[14:22:55.018] [SQLAnalysis 77c] query_array to be checked: ['use', 'db']
+[14:22:55.018] [SQLAnalysis 77c] normalized_query_array: ['use', 'db']
+[14:22:55.018] [HTTPREQUEST 77c] Getting null paramvals
+[14:22:55.018] [HOOK 77c] The request does not trigger SQL query. Drop it. GET http://localhost:8081/login.php || 
+[::1]:47080: GET http://localhost:8081/login.php
+          << 200 OK 598b
+[14:22:55.038][[::1]:47084] client connect
+[14:22:55.042][[::1]:47084] server connect localhost:8081 (127.0.0.1:8081)
+[14:22:55.046] [HOOK] Skip http://localhost:8081/dvwa/css/login.css because the content_type is text/css
+[::1]:47080: GET http://localhost:8081/dvwa/css/login.css
+          << 200 OK 400b
+[14:22:55.048] [HOOK] Skip http://localhost:8081/dvwa/images/login_logo.png because the content_type is image/png
+[::1]:47084: GET http://localhost:8081/dvwa/images/login_logo.png
+          << 200 OK 8.9k
+[14:22:55.235] [HOOK 504] Check POST http://localhost:8081/login.php || username=admin&password=password&Login=Login&user_token=fa5f955caf332eb6bd95b889f4a20f62
+[14:22:55.235] [HTTPREQUEST 504] Converting Request Entry to HTTP Request: 7fe4cf13-ead6-44dd-bd24-47b69f9b9504
+[14:22:55.235] [HTTPREQUEST 504] Seeing a post data with x-www-form-urlencoded content-type in 7fe4cf13-ead6-44dd-bd24-47b69f9b9504
+[14:22:55.235] [FUNCTION] Call parse_post_data for username=admin&password=password&Login=Login&user_token=fa5f955caf332eb6bd95b889f4a20f62
+[14:22:56.237] [SQLAnalysis] Read 6 new lines from SQL log file.
+[14:22:56.238] [SQLAnalysis] Appended 3 parsed entries.
+[14:22:56.238] [SQLAnalysis 504] Extracted 818 Logs 2026-10-22 18:22:56.238638: [{'timestamp': '2026-10-22 18:22:55,230701', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 56980, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[14:22:56.239] [SQLAnalysis 504] Checking Request: POST http://localhost:8081/login.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=login.php', '[string (False)(None)] username=admin', '[string (False)(None)] password=password', '[string (False)(None)] Login=Login', '[string (False)(None)] user_token=fa5f955caf332eb6bd95b889f4a20f62'] | None
+[14:22:56.239] [SQLAnalysis 504] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'login.php', 'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'fa5f955caf332eb6bd95b889f4a20f62'}
+[14:22:56.239] [SQLAnalysis 504] Looked timestamp 2026-10-22 18:22:55.214000 -- 2026-10-22 18:22:55.234000
+[14:22:56.248] [SQLAnalysis 504] query_array to be checked: ['use', 'db']
+[14:22:56.248] [SQLAnalysis 504] normalized_query_array: ['use', 'db']
+[14:22:56.249] [SQLAnalysis 504] query_array to be checked: ['select', 'table_schema', 'table_name', 'create_time']
+[14:22:56.249] [SQLAnalysis 504] normalized_query_array: ['select', 'tableschema', 'tablename', 'createtime']
+[14:22:56.249] [SQLAnalysis 504] query_array to be checked: ['select', '*', 'from', 'users', 'where', "user='admin'", 'and', "password='5f4dcc3b5aa765d61d8327deb882cf99'", '']
+[14:22:56.249] [SQLAnalysis 504] normalized_query_array: ['select', '', 'from', 'users', 'where', 'useradmin', 'and', 'password5f4dcc3b5aa765d61d8327deb882cf99', '']
+[14:22:56.249] [HTTPREQUEST 504] Getting null paramvals
+[14:22:56.249] [HOOK 504] The request does not trigger SQL query. Drop it. POST http://localhost:8081/login.php || username=admin&password=password&Login=Login&user_token=fa5f955caf332eb6bd95b889f4a20f62
+[::1]:47084: POST http://localhost:8081/login.php
+          << 302 Found 0b
+[14:22:56.264] [HOOK e5e] Check GET http://localhost:8081/index.php || 
+[14:22:56.264] [HTTPREQUEST e5e] Converting Request Entry to HTTP Request: 660968e4-81ca-4c1e-a5f6-ec0a7a426e5e
+[14:22:56.265] [HTTPREQUEST e5e] No content-type is found
+[14:22:57.266] [SQLAnalysis] No new lines in SQL log file.
+[14:22:57.267] [SQLAnalysis e5e] Extracted 818 Logs 2026-10-22 18:22:57.267403: [{'timestamp': '2026-10-22 18:22:55,230701', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 56980, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[14:22:57.268] [SQLAnalysis e5e] Checking Request: GET http://localhost:8081/index.php | ['[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[url (False)(None)] path0=index.php'] | None
+[14:22:57.268] [SQLAnalysis e5e] Updated param pairs: {'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'path0': 'index.php'}
+[14:22:57.268] [SQLAnalysis e5e] Looked timestamp 2026-10-22 18:22:56.256000 -- 2026-10-22 18:22:56.263000
+[14:22:57.278] [HTTPREQUEST e5e] Getting null paramvals
+[14:22:57.278] [HOOK e5e] The request does not trigger SQL query. Drop it. GET http://localhost:8081/index.php || 
+[::1]:47084: GET http://localhost:8081/index.php
+          << 200 OK 2.3k
+[14:22:57.296][[::1]:47098] client connect
+[14:22:57.306][[::1]:47102] client connect
+[14:22:57.313] [HOOK] Skip http://localhost:8081/dvwa/css/main.css because the content_type is text/css
+[::1]:47084: GET http://localhost:8081/dvwa/css/main.css
+          << 200 OK 1.2k
+[14:22:57.314][[::1]:47098] server connect localhost:8081 (127.0.0.1:8081)
+[14:22:57.317] [HOOK] Skip http://localhost:8081/dvwa/js/dvwapage.js because the content_type is text/javascript
+[::1]:47080: GET http://localhost:8081/dvwa/js/dvwaPage.js
+          << 200 OK 459b
+[14:22:57.320][[::1]:47102] server connect localhost:8081 (127.0.0.1:8081)
+[14:22:57.325] [HOOK] Skip http://localhost:8081/dvwa/images/logo.png because the content_type is image/png
+[::1]:47098: GET http://localhost:8081/dvwa/images/logo.png
+          << 200 OK 4.9k
+[14:22:57.328] [HOOK] Skip http://localhost:8081/dvwa/js/add_event_listeners.js because the content_type is text/javascript
+[::1]:47102: GET http://localhost:8081/dvwa/js/add_event_listeners.js
+          << 200 OK 276b
+[14:22:57.379] [HOOK 403] Check GET http://localhost:8081/a2_control.php || 
+[14:22:57.380] [HTTPREQUEST 403] Converting Request Entry to HTTP Request: db9759d0-1b14-445b-a05a-4d08d6dce403
+[14:22:57.380] [HTTPREQUEST 403] No content-type is found
+[14:22:58.381] [SQLAnalysis] Read 1 new lines from SQL log file.
+[14:22:58.381] [SQLAnalysis] Appended 1 parsed entries.
+[14:22:58.381] [SQLAnalysis 403] Extracted 819 Logs 2026-10-22 18:22:58.381937: [{'timestamp': '2026-10-22 18:22:57,371128', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57006, 'sql': 'USE db *#*#OK'}]
+[14:22:58.382] [SQLAnalysis 403] Checking Request: GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=none', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php'] | None
+[14:22:58.382] [SQLAnalysis 403] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'a2_control.php'}
+[14:22:58.382] [SQLAnalysis 403] Looked timestamp 2026-10-22 18:22:57.364000 -- 2026-10-22 18:22:57.379000
+[14:22:58.391] [SQLAnalysis 403] query_array to be checked: ['use', 'db']
+[14:22:58.391] [SQLAnalysis 403] normalized_query_array: ['use', 'db']
+[14:22:58.391] [HTTPREQUEST 403] Getting null paramvals
+[14:22:58.391] [HOOK 403] The request does not trigger SQL query. Drop it. GET http://localhost:8081/a2_control.php || 
+[::1]:47098: GET http://localhost:8081/a2_control.php
+          << 200 OK 142b
+[14:22:58.528] [HOOK a84] Check GET http://localhost:8081/a2_control.php?id=1&Submit=Submit || 
+[14:22:58.528] [HTTPREQUEST a84] Converting Request Entry to HTTP Request: 09a9886f-b2fa-4263-b55f-4e39cf851a84
+[14:22:58.528] [HTTPREQUEST a84] No content-type is found
+[14:22:59.530] [SQLAnalysis] Read 2 new lines from SQL log file.
+[14:22:59.530] [SQLAnalysis] Appended 2 parsed entries.
+[14:22:59.530] [SQLAnalysis a84] Extracted 821 Logs 2026-10-22 18:22:59.530627: [{'timestamp': '2026-10-22 18:22:58,524604', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57020, 'sql': 'SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set'}]
+[14:22:59.530] [SQLAnalysis a84] Checking Request: GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[14:22:59.531] [SQLAnalysis a84] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'a2_control.php', 'id': '1', 'Submit': 'Submit'}
+[14:22:59.531] [SQLAnalysis a84] Looked timestamp 2026-10-22 18:22:58.509000 -- 2026-10-22 18:22:58.527000
+[14:22:59.540] [SQLAnalysis a84] query_array to be checked: ['use', 'db']
+[14:22:59.540] [SQLAnalysis a84] normalized_query_array: ['use', 'db']
+[14:22:59.541] [SQLAnalysis a84] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', '1']
+[14:22:59.541] [SQLAnalysis a84] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1']
+[14:22:59.541] [SQLAnalysis a84] Getting Sec-Fetch-User==>?1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1']
+[14:22:59.541] [SQLAnalysis a84] Getting id==>1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1']
+[14:22:59.541] [HOOK a84] Get matching queries: ['select first_name, last_name from users where user_id = 1 *#*#result set', 'select first_name, last_name from users where user_id = 1 *#*#result set'] from GET http://localhost:8081/a2_control.php?id=1&Submit=Submit || 
+[14:22:59.541] [HOOK a84] Async callback triggered for: http://localhost:8081/a2_control.php?id=1&Submit=Submit
+[HOOK a84] Starting fuzz http://localhost:8081/a2_control.php?id=1&Submit=Submit (pending: 1 requests)
+[14:22:59.541] [HOOK a84] Starting fuzz (pending: 1)
+[14:22:59.541] [SQLiFuzz a84] Calling send_requests for: http://localhost:8081/a2_control.php?id=1&Submit=Submit
+[14:22:59.541] [SQLiFuzz a84] DEBUG Captured request body (truncated): 
+[14:22:59.541] [SQLiFuzz a84] DEBUG Captured request headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8888/a2_control.php', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'security=impossible; PHPSESSID=6e34e6301be043c8563107536f9c9f01'}
+[14:22:59.541] [SQLiFuzz a84] DEBUG Converted request.post_data_encoded (truncated): 
+[14:22:59.541] [SQLiFuzz a84] DEBUG Converted request.header: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8888/a2_control.php', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'security=impossible; PHPSESSID=6e34e6301be043c8563107536f9c9f01'}
+[14:22:59.541] [SQLiFuzz a84] DEBUG Converted request.content_type: None
+[::1]:47098: GET http://localhost:8081/a2_control.php?id=1&Submit=Submit
+          << 200 OK 155b
+[14:22:59.654][[::1]:47084] client disconnect
+[14:22:59.655][[::1]:47080] client disconnect
+[14:22:59.655][[::1]:47102] client disconnect
+[14:22:59.656][[::1]:47098] client disconnect
+[14:22:59.656][[::1]:47084] server disconnect localhost:8081 (127.0.0.1:8081)
+[14:22:59.657][[::1]:47080] server disconnect localhost:8081 (127.0.0.1:8081)
+[14:22:59.657][[::1]:47102] server disconnect localhost:8081 (127.0.0.1:8081)
+[14:22:59.658][[::1]:47098] server disconnect localhost:8081 (127.0.0.1:8081)
+[14:22:59.915] [SQLiFuzz a84] test_SQLi for GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[14:22:59.915] [SQLiFuzz a84] random seed set to 1
+[14:22:59.916] [SQLiFuzz a84] Getting prepared_target_request with ID 3dd for test_SQLi iteration 1/70
+[14:22:59.916] [SQLiFuzz 3dd] chosen_idx: 2 from 10
+[14:22:59.916] [HTTPREQUEST 3dd] Getting matched paramval from found values: ['?1', '1']
+[14:22:59.916] [HTTPREQUEST 3dd] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[14:22:59.916] [HTTPREQUEST 3dd] Found matched paramval: [int (False)(None)] id=1
+[14:22:59.916] [SQLiFuzz 3dd] Prioritize to fuzz matched SQL value first: [string (False)(None)] Sec-Fetch-User=?1
+[14:22:59.916] [SQLiFuzz 3dd] Mutation applied. old='?1' char=''' strategy='drop' new='''
+[14:22:59.916] [HTTPREQUEST 3dd] Update url and body param from paramvals:
+[14:22:59.916] [HTTPREQUEST None] New post_data_encoded: 
+[14:22:59.916] [HTTPREQUEST None] New param encoded: Submit=Submit&id=1
+[14:22:59.916] [GENERALFUNCTION 3dd] ---SENDING THE REQUEST [1792693379-f7f2f180-695f-4279-8ed1-4cf2b31f53dd] TO : [GET] http://localhost:8081/a2_control.php?Submit=Submit&id=1
+[14:22:59.916] [GENERALFUNCTION 3dd] Post data encoded: 
+[14:22:59.916] [GENERALFUNCTION 3dd] Adjusted Referer to http://localhost:8081/a2_control.php
+[14:22:59.916] [GENERALFUNCTION 3dd] DEBUG OUTGOING request.full_url: http://localhost:8081/a2_control.php?Submit=Submit&id=1
+[14:22:59.917] [GENERALFUNCTION 3dd] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': "'", 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/a2_control.php', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'security=impossible; PHPSESSID=6e34e6301be043c8563107536f9c9f01'}
+[14:22:59.917] [GENERALFUNCTION 3dd] DEBUG OUTGOING post_data_encoded (truncated): 
+[14:22:59.966] [SQLiFuzz 3dd] Response status: 200
+[14:22:59.966] [SQLiFuzz 3dd] Response URL: http://localhost:8081/a2_control.php?Submit=Submit&id=1
+[14:22:59.966] [SQLiFuzz 3dd] Was redirected: False
+[14:22:59.966] [SQLiFuzz 3dd] Getting response: <!doctype html>
+<html>
+<body>
+<form method="GET">
+  <label>User ID: <input type="text" name="id"></label>
+  <input type="submit" name="Submit" value="Submit">
+</form>
+<pre>ROWS=1</pre></body>
+</html>
+
+[14:23:00.967] [SQLAnalysis] Read 2 new lines from SQL log file.
+[14:23:00.968] [SQLAnalysis] Appended 2 parsed entries.
+[14:23:00.968] [SQLAnalysis 3dd] Extracted 823 Logs 2026-10-22 18:23:00.968194: [{'timestamp': '2026-10-22 18:22:59,949274', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57038, 'sql': 'SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set'}]
+[14:23:00.968] [SQLAnalysis 3dd] Updated param pairs: {'looked_value': "'"}
+[14:23:00.968] [SQLAnalysis 3dd] Looked timestamp 2026-10-22 18:22:59.917199 -- 2026-10-22 18:22:59.962162
+[14:23:00.978] [SQLAnalysis 3dd] query_array to be checked: ['use', 'db']
+[14:23:00.978] [SQLAnalysis 3dd] normalized_query_array: ['use', 'db']
+[14:23:00.978] [SQLAnalysis 3dd] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', '1']
+[14:23:00.978] [SQLAnalysis 3dd] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1']
+[14:23:00.978] [SQLiFuzz 3dd] No weird chars exist: GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', "[string (False)(None)] Sec-Fetch-User='", '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[14:23:00.979] [SQLiFuzz a84] Getting prepared_target_request with ID 7e0 for test_SQLi iteration 2/70
+[14:23:00.980] [SQLiFuzz 7e0] chosen_idx: 9 from 10
+[14:23:00.980] [HTTPREQUEST 7e0] Getting matched paramval from found values: ['?1', '1']
+[14:23:00.980] [HTTPREQUEST 7e0] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[14:23:00.980] [HTTPREQUEST 7e0] Found matched paramval: [int (False)(None)] id=1
+[14:23:00.980] [SQLiFuzz 7e0] Prioritize to fuzz matched SQL value first: [int (False)(None)] id=1
+[14:23:00.980] [SQLiFuzz 7e0] Mutation applied. old='1' char=''' strategy='tail' new='1''
+[14:23:00.980] [HTTPREQUEST 7e0] Update url and body param from paramvals:
+[14:23:00.980] [HTTPREQUEST None] New post_data_encoded: 
+[14:23:00.980] [HTTPREQUEST None] New param encoded: Submit=Submit&id=1%27
+[14:23:00.981] [GENERALFUNCTION 7e0] ---SENDING THE REQUEST [1792693380-4e8e2919-72e8-4a80-aa84-4d05d31657e0] TO : [GET] http://localhost:8081/a2_control.php?Submit=Submit&id=1%27
+[14:23:00.981] [GENERALFUNCTION 7e0] Post data encoded: 
+[14:23:00.981] [GENERALFUNCTION 7e0] Adjusted Referer to http://localhost:8081/a2_control.php
+[14:23:00.981] [GENERALFUNCTION 7e0] DEBUG OUTGOING request.full_url: http://localhost:8081/a2_control.php?Submit=Submit&id=1%27
+[14:23:00.981] [GENERALFUNCTION 7e0] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/a2_control.php', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'security=impossible; PHPSESSID=6e34e6301be043c8563107536f9c9f01'}
+[14:23:00.981] [GENERALFUNCTION 7e0] DEBUG OUTGOING post_data_encoded (truncated): 
+[14:23:01.015] [SQLiFuzz 7e0] Response status: 200
+[14:23:01.015] [SQLiFuzz 7e0] Response URL: http://localhost:8081/a2_control.php?Submit=Submit&id=1%27
+[14:23:01.015] [SQLiFuzz 7e0] Was redirected: False
+[14:23:01.015] [SQLiFuzz 7e0] Getting response: <!doctype html>
+<html>
+<body>
+<form method="GET">
+  <label>User ID: <input type="text" name="id"></label>
+  <input type="submit" name="Submit" value="Submit">
+</form>
+<pre>DB ERROR 1064</pre></body>
+</html>
+
+[14:23:02.016] [SQLAnalysis] Read 2 new lines from SQL log file.
+[14:23:02.016] [SQLAnalysis] Appended 2 parsed entries.
+[14:23:02.016] [SQLAnalysis 7e0] Extracted 825 Logs 2026-10-22 18:23:02.016614: [{'timestamp': '2026-10-22 18:23:01,004434', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57052, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = 1' *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1"}]
+[14:23:02.016] [SQLAnalysis 7e0] Updated param pairs: {'looked_value': "1'"}
+[14:23:02.016] [SQLAnalysis 7e0] Looked timestamp 2026-10-22 18:23:00.981474 -- 2026-10-22 18:23:01.010825
+[14:23:02.025] [SQLAnalysis 7e0] query_array to be checked: ['use', 'db']
+[14:23:02.025] [SQLAnalysis 7e0] normalized_query_array: ['use', 'db']
+[14:23:02.025] [SQLAnalysis 7e0] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "1'"]
+[14:23:02.025] [SQLAnalysis 7e0] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1']
+[14:23:02.026] [SQLAnalysis 7e0] Getting malformed looked_value==>1' in select first_name, last_name from users where user_id = 1' *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''' at line 1
+[14:23:02.026] [GENERALFUNC 7e0] Found Error Query: ["SELECT first_name, last_name FROM users WHERE user_id = 1' *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1"] from GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None
+[14:23:02.026] [GENERALFUNC 7e0] found_value: 1'
+[14:23:02.026] [SQLiFuzz 7e0] Weird chars is detected: GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None --> ["select first_name, last_name from users where user_id = 1' *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''' at line 1"]
+[14:23:02.026] [SQLiFuzz 7e0] SQL Injection is detected: GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None ==> select first_name, last_name from users where user_id = 1' *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''' at line 1
+[SQLiFuzz 7e0] SQL Injection is detected: GET http://localhost:8081/a2_control.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=a2_control.php', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None
+[14:23:02.026] [SQLICollection] Result will be saved in final_result/dvwa-manual-emmalee-VMware-Virtual-Platform-1792693372.txt
+[14:23:02.026] [SQLICollection] Statistics: {'total_req': 5, 'sql_req': 1, 'null_req': 0, 'not_sql_req': 4, 'sql_injection_detected': 1, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 2, 'processing_time_total': 0.074314, 'processing_time_ave': 0.037157, 'running_time': 'Not finished yet', 200: 4, 302: 1}
+[14:23:02.039] [HOOK a84] Completed fuzz (remaining: 0)
+[14:25:12.720] [HOOK] Idle timeout (120s) reached with no pending tasks. Initiating shutdown...
+[HOOK] Idle timeout reached. Saving results and shutting down...
+[14:25:12.720] 
+
+
+-----FINAL RESULT------
+FINAL RESULT
+[14:25:12.721] ###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+[14:25:12.721] 1. GET | http://localhost:8081/a2_control.php | Submit=Submit&id=1%27 |  [1'] ==> select first_name, last_name from users where user_id = 1' *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''' at line 1
+
+1. GET | http://localhost:8081/a2_control.php | Submit=Submit&id=1%27 |  [1'] ==> select first_name, last_name from users where user_id = 1' *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near ''' at line 1
+
+[14:25:12.721] [SQLICollection] Result will be saved in final_result/FR/FR-dvwa-manual-emmalee-VMware-Virtual-Platform-1792693372.txt
+[14:25:12.721] [SQLICollection] Statistics: {'total_req': 5, 'sql_req': 1, 'null_req': 0, 'not_sql_req': 4, 'sql_injection_detected': 1, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 2, 'processing_time_total': 0.074314, 'processing_time_ave': 0.037157, 'running_time': '0:02:20.038721', 200: 4, 302: 1}
+[14:25:12.722] [HOOK] FINISH on 2026-10-22 14:25:12.720810. Total run time: 0:02:20.038721
+[HOOK] FINISH on 2026-10-22 14:25:12.720810. Total run time: 0:02:20.038721

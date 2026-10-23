@@ -1,0 +1,14 @@
+2026-10-22 18:22:53,989548 [INFO] [('172.18.0.5', 56966)] ### USE db *#*#OK
+2026-10-22 18:22:55,220768 [INFO] [('172.18.0.5', 56980)] ### USE db *#*#OK
+2026-10-22 18:22:55,225547 [INFO] [('172.18.0.5', 56980)] ### SELECT table_schema, table_name, create_time
+				FROM information_schema.tables
+				WHERE table_schema='db' AND table_name='users'
+				LIMIT 1 *#*#Result Set
+2026-10-22 18:22:55,230701 [INFO] [('172.18.0.5', 56980)] ### SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set
+2026-10-22 18:22:57,371128 [INFO] [('172.18.0.5', 57006)] ### USE db *#*#OK
+2026-10-22 18:22:58,516480 [INFO] [('172.18.0.5', 57020)] ### USE db *#*#OK
+2026-10-22 18:22:58,524604 [INFO] [('172.18.0.5', 57020)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-10-22 18:22:59,945183 [INFO] [('172.18.0.5', 57038)] ### USE db *#*#OK
+2026-10-22 18:22:59,949274 [INFO] [('172.18.0.5', 57038)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-10-22 18:23:00,997997 [INFO] [('172.18.0.5', 57052)] ### USE db *#*#OK
+2026-10-22 18:23:01,004434 [INFO] [('172.18.0.5', 57052)] ### SELECT first_name, last_name FROM users WHERE user_id = 1' *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
