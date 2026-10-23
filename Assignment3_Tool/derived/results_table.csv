@@ -11,3 +11,10 @@ primary_case/baseline_run3,primary_case,baseline,3,0,none,70,1.9604670000000004,
 primary_case/prototype_run1,primary_case,prototype,1,1,boolean_pair,10,0.346661,272.095868,ok,yes
 primary_case/prototype_run2,primary_case,prototype,2,1,boolean_pair,10,0.30950900000000003,140.035092,ok,yes
 primary_case/prototype_run3,primary_case,prototype,3,1,boolean_pair,10,0.3415620000000001,140.031544,ok,yes
+variant/baseline_run1,variant,baseline,1,0,none,70,2.1389139999999998,220.374716,ok,yes
+variant/baseline_run2,variant,baseline,2,0,none,70,2.00527,201.185521,ok,yes
+variant/baseline_run3,variant,baseline,3,0,none,70,2.000086,201.149561,ok,yes
+variant/prototype_run1,variant,prototype,1,1,boolean_pair,10,0.296498,140.027307,ok,yes
+variant/prototype_run2,variant,prototype,2,1,boolean_pair,10,0.302751,140.028197,ok,yes
+variant/prototype_run3,variant,prototype,3,1,boolean_pair,10,0.187622,140.024597,ok,yes
+

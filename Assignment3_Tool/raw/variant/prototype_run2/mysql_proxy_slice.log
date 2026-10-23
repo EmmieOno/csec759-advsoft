@@ -1,0 +1,25 @@
+2026-10-23 19:13:29,257309 [INFO] [('172.18.0.5', 55356)] ### USE db *#*#OK
+2026-10-23 19:13:30,509929 [INFO] [('172.18.0.5', 55372)] ### USE db *#*#OK
+2026-10-23 19:13:30,514249 [INFO] [('172.18.0.5', 55372)] ### SELECT table_schema, table_name, create_time
+				FROM information_schema.tables
+				WHERE table_schema='db' AND table_name='users'
+				LIMIT 1 *#*#Result Set
+2026-10-23 19:13:30,516484 [INFO] [('172.18.0.5', 55372)] ### SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set
+2026-10-23 19:13:32,680612 [INFO] [('172.18.0.5', 55378)] ### USE db *#*#OK
+2026-10-23 19:13:33,857902 [INFO] [('172.18.0.5', 55408)] ### USE db *#*#OK
+2026-10-23 19:13:33,865355 [INFO] [('172.18.0.5', 55408)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-10-23 19:13:35,196218 [INFO] [('172.18.0.5', 55422)] ### USE db *#*#OK
+2026-10-23 19:13:35,199249 [INFO] [('172.18.0.5', 55422)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-10-23 19:13:36,261647 [INFO] [('172.18.0.5', 55434)] ### USE db *#*#OK
+2026-10-23 19:13:37,332819 [INFO] [('172.18.0.5', 55452)] ### USE db *#*#OK
+2026-10-23 19:13:38,398726 [INFO] [('172.18.0.5', 37600)] ### USE db *#*#OK
+2026-10-23 19:13:39,472440 [INFO] [('172.18.0.5', 37628)] ### USE db *#*#OK
+2026-10-23 19:13:40,532965 [INFO] [('172.18.0.5', 37636)] ### USE db *#*#OK
+2026-10-23 19:13:41,589855 [INFO] [('172.18.0.5', 37646)] ### USE db *#*#OK
+2026-10-23 19:13:41,600092 [INFO] [('172.18.0.5', 37646)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 OR 1=1 *#*#Result Set
+2026-10-23 19:13:42,658420 [INFO] [('172.18.0.5', 37670)] ### USE db *#*#OK
+2026-10-23 19:13:42,663991 [INFO] [('172.18.0.5', 37670)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 OR 1=0 *#*#Result Set
+2026-10-23 19:13:43,724154 [INFO] [('172.18.0.5', 37694)] ### USE db *#*#OK
+2026-10-23 19:13:43,734232 [INFO] [('172.18.0.5', 37694)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 OR 1=1 *#*#Result Set
+2026-10-23 19:13:44,797430 [INFO] [('172.18.0.5', 37714)] ### USE db *#*#OK
+2026-10-23 19:13:44,804933 [INFO] [('172.18.0.5', 37714)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 OR 1=0 *#*#Result Set

@@ -1,0 +1,15 @@
+case=a3_variant.php
+group=variant
+config=baseline
+seed=3
+boolean=0
+require_structure=1
+wut_name=dvwa
+start_utc=2026-10-23T19:15:52Z
+end_utc=2026-10-23T19:19:16Z
+mitmdump_exit=0
+driver_exit=0
+seed_line_in_terminal_log=yes
+git_commit=1b7e2ede42af8e2b9d6d1c44358851e9d4616db9
+SQLIFuzz_py_sha256=2c825c55684a9b1d185ee591f03795333c04cd94fbd2c86bffcab8540962f222
+boolean_probe_py_sha256=69a277b59fd2f8b89ee804a9b4dd0f50bf11b6ea427eb74ff78559f8d72ff054

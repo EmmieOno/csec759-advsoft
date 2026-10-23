@@ -10,3 +10,9 @@ control/run2  config=baseline  seed=2  boolean=0  require_structure=1  start=202
 control/run2  config=prototype  seed=2  boolean=1  require_structure=1  start=2026-10-22T18:30:07Z  mitmdump_exit=0
 control/run3  config=baseline  seed=3  boolean=0  require_structure=1  start=2026-10-22T18:32:32Z  mitmdump_exit=0
 control/run3  config=prototype  seed=3  boolean=1  require_structure=1  start=2026-10-22T18:34:58Z  mitmdump_exit=0
+variant/run1  config=baseline  seed=1  boolean=0  require_structure=1  start=2026-10-23T19:03:50Z  mitmdump_exit=0
+variant/run1  config=prototype  seed=1  boolean=1  require_structure=1  start=2026-10-23T19:07:36Z  mitmdump_exit=0
+variant/run2  config=baseline  seed=2  boolean=0  require_structure=1  start=2026-10-23T19:10:01Z  mitmdump_exit=0
+variant/run2  config=prototype  seed=2  boolean=1  require_structure=1  start=2026-10-23T19:13:27Z  mitmdump_exit=0
+variant/run3  config=baseline  seed=3  boolean=0  require_structure=1  start=2026-10-23T19:15:52Z  mitmdump_exit=0
+variant/run3  config=prototype  seed=3  boolean=1  require_structure=1  start=2026-10-23T19:19:19Z  mitmdump_exit=0
