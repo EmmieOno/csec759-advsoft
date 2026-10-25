@@ -36,7 +36,7 @@ URL: http://localhost:8081/a3_variant.php?id=1+OR+1%3D1&Submit=Submit
 **Result:** `ROWS=5`
 **Screenshot:** 
 
-<img width="937" height="371" alt="Screenshot 2026-10-23 170318" src="https://github.com/user-attachments/assets/6d75d179-7eed-49a1-9b8d-f73eff8712ac" />
+![True OR probe returns five rows](OR_boolean_check_rows5.png)
 
 
 ## Test 2
@@ -47,7 +47,7 @@ URL: http://localhost:8081/a3_variant.php?id=1+OR+1%3D0&Submit=Submit
 **Result:** `ROWS=1`
 **Screenshot:** 
 
-<img width="921" height="387" alt="Screenshot 2026-10-23 170336" src="https://github.com/user-attachments/assets/7f462c02-3c52-41ed-bda8-1df55564def2" />
+![True OR probe returns five rows](OR_boolean_check_rows1.png)
 
 
 ## Interpretation
