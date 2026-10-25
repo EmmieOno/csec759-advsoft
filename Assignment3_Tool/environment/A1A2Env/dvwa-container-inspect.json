@@ -1,0 +1,265 @@
+[
+    {
+        "Id": "64bd7ce7f8801df3dee4cda560163538314bcc9bbacc9955c8e1241f99ed2bbe",
+        "Created": "2026-09-12T22:04:58.32142504Z",
+        "Path": "/entrypoint.sh",
+        "Args": [
+            "/usr/sbin/apache2ctl",
+            "-D",
+            "FOREGROUND"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 79154,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-09-12T22:05:19.122184942Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:d583f5d52c21f769e749b263a1de0fc6f66e6c716a1fa9eb28cc862f0a868944",
+        "ResolvConfPath": "/var/lib/docker/containers/64bd7ce7f8801df3dee4cda560163538314bcc9bbacc9955c8e1241f99ed2bbe/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/64bd7ce7f8801df3dee4cda560163538314bcc9bbacc9955c8e1241f99ed2bbe/hostname",
+        "HostsPath": "/var/lib/docker/containers/64bd7ce7f8801df3dee4cda560163538314bcc9bbacc9955c8e1241f99ed2bbe/hosts",
+        "LogPath": "/var/lib/docker/containers/64bd7ce7f8801df3dee4cda560163538314bcc9bbacc9955c8e1241f99ed2bbe/64bd7ce7f8801df3dee4cda560163538314bcc9bbacc9955c8e1241f99ed2bbe-json.log",
+        "Name": "/dvwa",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/emmalee/SQLiFuzz-a1/WUT/dvwa/config/config.inc.php:/var/www/html/config/config.inc.php:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "dvwa_default",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8081"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/emmalee/SQLiFuzz-a1/WUT/dvwa/config/config.inc.php",
+                "Destination": "/var/www/html/config/config.inc.php",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "64bd7ce7f880",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/composer/vendor/bin",
+                "PHPIZE_DEPS=autoconf \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkg-config \t\tre2c",
+                "PHP_INI_DIR=/usr/local/etc/php",
+                "APACHE_CONFDIR=/etc/apache2",
+                "APACHE_ENVVARS=/etc/apache2/envvars",
+                "PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+                "PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+                "PHP_LDFLAGS=-Wl,-O1 -pie",
+                "GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD",
+                "PHP_VERSION=8.1.34",
+                "PHP_URL=https://www.php.net/distributions/php-8.1.34.tar.xz",
+                "PHP_ASC_URL=https://www.php.net/distributions/php-8.1.34.tar.xz.asc",
+                "PHP_SHA256=ffa9e0982e82eeaea848f57687b425ed173aa278fe563001310ae2638db5c251",
+                "COMPOSER_ALLOW_SUPERUSER=1",
+                "COMPOSER_HOME=/root/composer",
+                "WUT_NAME=dvwa"
+            ],
+            "Cmd": [
+                "/usr/sbin/apache2ctl",
+                "-D",
+                "FOREGROUND"
+            ],
+            "Image": "dvwa-dvwa",
+            "Volumes": null,
+            "WorkingDir": "/var/www/html",
+            "Entrypoint": [
+                "/entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "d2b266961e91deb32cda04203cf9af8d5655a74d59980b7b58186a9391293ee1",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "db:service_healthy:false",
+                "com.docker.compose.image": "sha256:b6ba842bd028e3a5dbbb2db541abf8c5b22679cb1bd9317e383100093ccfb99e",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "dvwa",
+                "com.docker.compose.project.config_files": "/home/emmalee/SQLiFuzz-a1/WUT/dvwa/docker-compose.yaml",
+                "com.docker.compose.project.environment_file": "/home/emmalee/SQLiFuzz-a1/.env",
+                "com.docker.compose.project.working_dir": "/home/emmalee/SQLiFuzz-a1/WUT/dvwa",
+                "com.docker.compose.service": "dvwa",
+                "com.docker.compose.version": "5.5.1",
+                "maintainer": "dev@chialab.io"
+            },
+            "StopSignal": "SIGWINCH"
+        },
+        "NetworkSettings": {
+            "SandboxID": "139245fad5dc9e0aedfc927dc041a002d07fb5657407aae00363e1bc462a4f8f",
+            "SandboxKey": "/var/run/docker/netns/139245fad5dc",
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8081"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8081"
+                    }
+                ]
+            },
+            "Networks": {
+                "dvwa_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "dvwa",
+                        "dvwa"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "1b674194a250d0bcd43ca921701da7ce6797bca613ea66cade76fd314bcfde9c",
+                    "EndpointID": "fe4c952dea9ffd4cdde7c78d8cc9adb06816c86ef3720c9ca7d7822f7f651187",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.5",
+                    "MacAddress": "ea:c7:96:c7:5f:0c",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "dvwa",
+                        "64bd7ce7f880"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:b6ba842bd028e3a5dbbb2db541abf8c5b22679cb1bd9317e383100093ccfb99e",
+            "size": 4653,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
