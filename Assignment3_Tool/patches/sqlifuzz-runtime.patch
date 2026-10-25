@@ -1,0 +1,147 @@
+diff --git a/WUT/dvwa/docker-compose.yaml b/WUT/dvwa/docker-compose.yaml
+index 52c86fdbe..80e019d6c 100644
+--- a/WUT/dvwa/docker-compose.yaml
++++ b/WUT/dvwa/docker-compose.yaml
+@@ -54,6 +54,8 @@ services:
+     command: ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+     ports:
+       - "8081:80"
++    volumes:
++      - ./config/config.inc.php:/var/www/html/config/config.inc.php
+     depends_on:
+       db:
+         condition: service_healthy
+diff --git a/crawler/general_functions.py b/crawler/general_functions.py
+index e72998531..461857ab5 100644
+--- a/crawler/general_functions.py
++++ b/crawler/general_functions.py
+@@ -172,6 +172,11 @@ def manually_save_credentials(playwright, path):
+     context.close()
+     browser.close()
+ 
++def read_cov_from_file(coverage_file_path):
++    if not os.path.exists(coverage_file_path):
++        print("[GENERALFUNCTION] Path does not exist: ", coverage_file_path)
++        return 0, 0
++    # NOTE: full coverage-parsing depends on a missing 'utils.py' module not present in the public repo
+ 
+ import re
+ 
+@@ -620,4 +625,4 @@ def check_SQL_response(request, looked_value=None):
+         request.matched_payload = found_value
+         return True
+     else:
+-        return False
+\ No newline at end of file
++        return False
+diff --git a/scripts/bacfuzz.sh b/scripts/bacfuzz.sh
+index 298faa81f..cacedabe2 100644
+--- a/scripts/bacfuzz.sh
++++ b/scripts/bacfuzz.sh
+@@ -1,3 +1,4 @@
++#!/bin/bash
+ timestamp=$(date +%s)
+ TARGET_PROXY_URL="${1:-http://localhost:8888}"
+ 
+diff --git a/scripts/sqlifuzz.sh b/scripts/sqlifuzz.sh
+index 04e4536fa..f7afc032c 100644
+--- a/scripts/sqlifuzz.sh
++++ b/scripts/sqlifuzz.sh
+@@ -1,3 +1,4 @@
++#!/bin/bash
+ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+ 
+ ## HOW TO USE: ./sh <WUT_NAME> <PORT> <HOME_URL> <OPENAPIFILENAME> <FUZZER_NAME>>
+diff --git a/sqlifuzz/SQLIFuzz.py b/sqlifuzz/SQLIFuzz.py
+index b05d1e151..79e506abe 100644
+--- a/sqlifuzz/SQLIFuzz.py
++++ b/sqlifuzz/SQLIFuzz.py
+@@ -4,7 +4,9 @@ import os
+ import random
+ 
+ import asyncio
++import json
+ 
++from boolean_probe import boolean_pair_probe
+ from playwright.async_api import async_playwright
+ from requests import request
+ 
+@@ -204,6 +206,12 @@ async def test_SQLi(page, req, request_context=None):
+     prepared_target_request = None
+     chosen_pvs_idx = 0
+ 
++    _seed = os.environ.get("SQLIFUZZ_SEED")
++
++    if _seed is not None:
++        random.seed(int(_seed))
++        logger.info(f"[SQLiFuzz {req.id[-3:]}] random seed set to {_seed}")
++
+     def get_mutation_strategy(iteration):
+         # 0-2: apostrophe
+         # 3-5: star
+@@ -243,7 +251,14 @@ async def test_SQLi(page, req, request_context=None):
+             insert_pos = random.randint(0, len(old_value))
+             return old_value[:insert_pos] + injected_char + old_value[insert_pos:]
+ 
++    skip = 0
++    boolean_tried = False
++
+     for x in range(70):
++        if skip > 0:
++            skip -= 1
++            continue
++
+         chosen_req = req
+ 
+         prepared_target_request = copy.deepcopy(chosen_req)
+@@ -345,5 +360,21 @@ async def test_SQLi(page, req, request_context=None):
+             sqli_request_collection.add(prepared_target_request)
+             sqli_request_collection.save_result()
+ 
++        if x == 5 and not boolean_tried and os.environ.get("SQLIFUZZ_BOOLEAN", "1") != "0":
++            boolean_tried = True
++            verdict, ev, preq = await boolean_pair_probe(page, req, request_context, require_structure=os.environ.get("SQLIFUZZ_REQUIRE_STRUCTURE", "1") != "0")
++            logger.info(f"[SQLiFuzz {req.id[-3:]}] Boolean pair probe verdict: {verdict} | {ev}")
++            skip = ev.get("requests_sent", 0)
++
++            if verdict == "confirmed":
++                preq.SQL_injection_detected = True
++                preq.SQL_injection_proof = "BOOLEAN_PAIR | " + json.dumps(ev)
++                stats['sql_injection_detected'] += 1
++                logger.info(f"[SQLiFuzz {preq.id[-3:]}] FOUND SQLi (boolean pair)! ==> %s", preq.SQL_injection_proof)
++                print(f"[SQLiFuzz {preq.id[-3:]}] FOUND SQLi (boolean pair)! {preq}")
++                sqli_request_collection.add(preq)
++                sqli_request_collection.save_result()
++                return preq
++
+     logger.info(f"[SQLiFuzz {prepared_target_request.id[-3:]}] No SQL Injection. Drop it. {prepared_target_request}")
+     stats['sql_req_not_detected'] += 1
+diff --git a/sqlifuzz/sql_analysis.py b/sqlifuzz/sql_analysis.py
+index 5c066ade2..092e59abd 100644
+--- a/sqlifuzz/sql_analysis.py
++++ b/sqlifuzz/sql_analysis.py
+@@ -24,7 +24,7 @@ def new_get_log():
+     if WUT_NAME==None:
+         WUT_NAME = config.data['PROJECT_NAME']
+ 
+-    testloc = "/projects/fuzzing/SQLIFuzz/shared-data"
++    testloc = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "shared-data"))
+     log_file = os.path.join(testloc,f"mysql_proxy_{WUT_NAME}{HOST_NAME}.log")
+ 
+     if not hasattr(new_get_log, "parsed_logs"):
+@@ -98,7 +98,7 @@ def get_log():
+     if WUT_NAME==None:
+         WUT_NAME = config.data['PROJECT_NAME']
+ 
+-    testloc = "/projects/fuzzing/SQLIFuzz/shared-data"
++    testloc = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "shared-data"))
+     log_file = os.path.join(testloc,f"mysql_proxy_{WUT_NAME}.log")
+ 
+     # Regex pattern
+@@ -391,4 +391,4 @@ def get_param_val_request_entry(entry):
+             except Exception:
+                 body_params = {"_raw": body_text}
+ 
+-    return pairs
+\ No newline at end of file
++    return pairs
