@@ -9,7 +9,7 @@ control/prototype_run1  config=prototype  seed=1  boolean=1  require_structure=1
 control/baseline_run2  config=baseline  seed=2  boolean=0  require_structure=1  start=2026-10-22T18:27:42Z  mitmdump_exit=0
 control/prototype_run2  config=prototype  seed=2  boolean=1  require_structure=1  start=2026-10-22T18:30:07Z  mitmdump_exit=0
 control/baseline_run3  config=baseline  seed=3  boolean=0  require_structure=1  start=2026-10-22T18:32:32Z  mitmdump_exit=0
-control/prototyperun3  config=prototype  seed=3  boolean=1  require_structure=1  start=2026-10-22T18:34:58Z  mitmdump_exit=0
+control/prototype_run3  config=prototype  seed=3  boolean=1  require_structure=1  start=2026-10-22T18:34:58Z  mitmdump_exit=0
 variant/baseline_run1  config=baseline  seed=1  boolean=0  require_structure=1  start=2026-10-23T19:03:50Z  mitmdump_exit=0
 variant/prototype_run1  config=prototype  seed=1  boolean=1  require_structure=1  start=2026-10-23T19:07:36Z  mitmdump_exit=0
 variant/baseline_run2  config=baseline  seed=2  boolean=0  require_structure=1  start=2026-10-23T19:10:01Z  mitmdump_exit=0
