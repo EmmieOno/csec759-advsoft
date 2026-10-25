@@ -60,7 +60,8 @@ for _ in $(seq 1 60); do
   sleep 0.5
 done
 
-python3 scripts/drive_browser.py "$PAGE" > "$OUT/driver.log" 2>&1
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$SCRIPT_DIR/drive_browser.py" "$PAGE" > "$OUT/driver.log" 2>&1
 DRV=$?
 if [ "$DRV" -ne 0 ]; then
   echo "browser driver failed (exit $DRV), see $OUT/driver.log"
