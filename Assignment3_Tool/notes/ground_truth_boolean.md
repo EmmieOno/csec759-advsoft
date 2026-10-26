@@ -1,6 +1,6 @@
 # Ground Truth: Boolean-Blind Injection on the Variant Page (OR)
 
-This establishes the expected behavior of `a2_filtered.php` **independently
+This establishes the expected behavior of `a3_variant.php` **independently
 of SQLiFuzz**.
 
 ## Method
