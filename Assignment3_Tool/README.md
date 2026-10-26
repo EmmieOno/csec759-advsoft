@@ -6,13 +6,14 @@ Baseline - https://github.com/websecfuzz/SQLiFuzz (1b7e2ede42af8e2b9d6d1c4435885
 Dharmaadi, I. P. A., Pham, V.-T., Mohsen, F., & Turkmen, F. (2026, June 30). SQLiFuzz: Uncovering SQL Injection in Any Web Applications. ACM Digital Library. Retrieved September 13, 2026, from https://dl.acm.org/doi/pdf/10.1145/3808149
 
 ## SETUP
-Follow the setup instructions in ../Assignment2_Failure/README.md, when cloning SQLiFuzz rename the directory to SQLiFuzz-a3.
 
 1. Clone SQLiFuzz and check out commit 1b7e2ede42af8e2b9d6d1c44358851e9d4616db9.
-2. Apply patches/sqlifuzz-runtime.patch with ```git apply```.
+2. Apply patches/sqlifuzz-runtime.patch with ```git apply <patch file>```.
 3. Copy the reconstructed crawler/utils.py into place.
 4. Install the AND/OR Boolean helper as sqlifuzz/boolean_probe.py and sqlifuzz/boolean_probe_OR.py.
-5. Navigate to SQLiFuzz-a3/WUT/dvwa and set WUT_NAME and HOST_NAME and start the docker containers.
+5. Create python environment and install requirements using requirements_actual.txt
+6. Copy Assignment1_Baseline/scripts/config.inc.php to SQLiFuzz/WUT/dvwa/config/
+7. Navigate to SQLiFuzz-a3/WUT/dvwa and set WUT_NAME and HOST_NAME and start the docker containers.
   - ```sudo env WUT_NAME=dvwa HOST_NAME="$(hostname)" docker compose up```
 7. Deploy the PHP cases into DVWA.
 
@@ -66,7 +67,9 @@ These tests exercise helper functions using constructed inputs. They do not laun
 
 ## SHORT TEST
 
-This test requires the configured DVWA/database-proxy services, deployed PHP cases, installed dependencies, and patched SQLiFuzz checkout. Export `WUT_NAME`, `HOST_NAME` if required, `DVWA_USER="admin"`, and `DVWA_PASS="password"` first.
+This test requires the configured DVWA/database-proxy services, deployed PHP cases, installed dependencies, and patched SQLiFuzz checkout. 
+
+Export `WUT_NAME`, `HOST_NAME`, `DVWA_USER="admin"`, and `DVWA_PASS="password"` first.
 
 From the SQLiFuzz runtime checkout, select the AND helper and run one prototype trial:
 
