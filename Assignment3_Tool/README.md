@@ -66,7 +66,7 @@ These tests exercise helper functions using constructed inputs. They do not laun
 
 ## SHORT TEST
 
-This test requires the configured DVWA/database-proxy services, deployed PHP cases, installed dependencies, and patched SQLiFuzz checkout. Export `WUT_NAME`, `HOST_NAME` if required, `WUT_USER="admin"`, and `WUT_PASS="password"` first.
+This test requires the configured DVWA/database-proxy services, deployed PHP cases, installed dependencies, and patched SQLiFuzz checkout. Export `WUT_NAME`, `HOST_NAME` if required, `DVWA_USER="admin"`, and `DVWA_PASS="password"` first.
 
 From the SQLiFuzz runtime checkout, select the AND helper and run one prototype trial:
 
@@ -112,7 +112,7 @@ Check `terminal.log`, `meta.txt`, and the reports in `final_result/`. Both `mitm
 Allow approximately 2–5 minutes on the pilot environment. The runtime includes the 120-second idle shutdown delay; the outer timeout is 900 seconds.
 
 ## REPRODUCE PILOT
-Complete the setup instructions and export WUT_NAME, HOST_NAME if required, WUT_USER, and WUT_PASS first. Stop any existing mitmdump process.
+Complete the setup instructions and export WUT_NAME, HOST_NAME if required, DVWA_USER, and DVWA_PASS first. Stop any existing mitmdump process.
 
 Run these commands from the configured SQLiFuzz checkout:
 
