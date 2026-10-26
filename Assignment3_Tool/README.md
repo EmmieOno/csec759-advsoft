@@ -71,6 +71,8 @@ This test requires the configured DVWA/database-proxy services, deployed PHP cas
 
 Export `WUT_NAME`, `HOST_NAME`, `DVWA_USER="admin"`, and `DVWA_PASS="password"` first.
 
+If SQLiFuzz/final_result/FR is not created make sure to mkdir.
+
 From the SQLiFuzz runtime checkout, select the AND helper and run one prototype trial:
 
 ```bash
