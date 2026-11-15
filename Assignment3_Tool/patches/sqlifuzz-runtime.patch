@@ -135,7 +135,8 @@ index 5c066ade2..092e59abd 100644
  
 -    testloc = "/projects/fuzzing/SQLIFuzz/shared-data"
 +    testloc = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "shared-data"))
-     log_file = os.path.join(testloc,f"mysql_proxy_{WUT_NAME}.log")
+-    log_file = os.path.join(testloc,f"mysql_proxy_{WUT_NAME}.log")
++    log_file = os.path.join(testloc,f"mysql_proxy_{WUT_NAME}{HOST_NAME}.log")
  
      # Regex pattern
 @@ -391,4 +391,4 @@ def get_param_val_request_entry(entry):
