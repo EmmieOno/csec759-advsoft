@@ -1,0 +1,19 @@
+{'total_req': 5, 'sql_req': 1, 'null_req': 0, 'not_sql_req': 4, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 1, 'error_req': 0, 'fuzzed_req': 70, 'processing_time_total': 2.2857740000000004, 'processing_time_ave': 0.03265391428571429, 'running_time': '0:03:20.856821', 200: 4, 302: 1}
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQLi_DETECTED]
+No SQL Injection Detected.
+
+
+
+
+
+##################################################:
+
+###Matched but Different SQL Error:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###SQL Error but No Matched Strings:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###Matched Strings but No SQL error:
+1. GET | http://localhost:8081/n1_safe_reflect.php | Submit=Submit&id=%2C |  [,] ==> ['select first_name, last_name from users where user_id = 0 *#*#result set'] 

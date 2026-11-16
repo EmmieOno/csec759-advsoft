@@ -1,0 +1,19 @@
+{'total_req': 9, 'sql_req': 2, 'null_req': 0, 'not_sql_req': 7, 'sql_injection_detected': 2, 'another_sql_error_detected': 1, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 4, 'processing_time_total': 2.205902, 'processing_time_ave': 0.5514755, 'running_time': 'Not finished yet', 200: 7, 302: 2}
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQLi_DETECTED]
+1. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=1 ['] ==> select first_name, last_name from users where user_id = 1\'; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'' at line 1
+
+
+
+
+
+##################################################:
+
+###Matched but Different SQL Error:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###SQL Error but No Matched Strings:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+1. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=1%27 ==> [] || ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+
+###Matched Strings but No SQL error:

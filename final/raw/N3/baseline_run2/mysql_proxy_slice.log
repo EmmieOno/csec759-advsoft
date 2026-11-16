@@ -1,0 +1,25 @@
+2026-11-16 01:58:42,067262 [INFO] [('172.18.0.5', 33912)] ### USE db *#*#OK
+2026-11-16 01:58:43,304700 [INFO] [('172.18.0.5', 33926)] ### USE db *#*#OK
+2026-11-16 01:58:43,309034 [INFO] [('172.18.0.5', 33926)] ### SELECT table_schema, table_name, create_time
+				FROM information_schema.tables
+				WHERE table_schema='db' AND table_name='users'
+				LIMIT 1 *#*#Result Set
+2026-11-16 01:58:43,311540 [INFO] [('172.18.0.5', 33926)] ### SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set
+2026-11-16 01:58:48,787391 [INFO] [('172.18.0.5', 39116)] ### USE db *#*#OK
+2026-11-16 01:58:48,792882 [INFO] [('172.18.0.5', 39116)] ### SELECT COUNT(*) FROM users; *#*#Result Set
+2026-11-16 01:58:49,961682 [INFO] [('172.18.0.5', 39136)] ### USE db *#*#OK
+2026-11-16 01:58:49,965475 [INFO] [('172.18.0.5', 39136)] ### SELECT first_name, last_name FROM users WHERE user_id = 1; *#*#Result Set
+2026-11-16 01:58:49,966463 [INFO] [('172.18.0.5', 39136)] ### SELECT COUNT(*) FROM users; *#*#Result Set
+2026-11-16 01:58:51,127321 [INFO] [('172.18.0.5', 39162)] ### USE db *#*#OK
+2026-11-16 01:58:51,130060 [INFO] [('172.18.0.5', 39162)] ### SELECT first_name, last_name FROM users WHERE user_id = 1; *#*#Result Set
+2026-11-16 01:58:51,131175 [INFO] [('172.18.0.5', 39162)] ### SELECT COUNT(*) FROM users; *#*#Result Set
+2026-11-16 01:58:52,249883 [INFO] [('172.18.0.5', 39182)] ### USE db *#*#OK
+2026-11-16 01:58:52,254667 [INFO] [('172.18.0.5', 39182)] ### SELECT first_name, last_name FROM users WHERE user_id = 1; *#*#Result Set
+2026-11-16 01:58:52,255380 [INFO] [('172.18.0.5', 39182)] ### SELECT COUNT(*) FROM users; *#*#Result Set
+2026-11-16 01:58:53,328641 [INFO] [('172.18.0.5', 39188)] ### USE db *#*#OK
+2026-11-16 01:58:53,334385 [INFO] [('172.18.0.5', 39188)] ### SELECT first_name, last_name FROM users WHERE user_id = 1\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'' at line 1
+2026-11-16 01:58:53,368801 [INFO] [('172.18.0.5', 39208)] ### USE db *#*#OK
+2026-11-16 01:58:53,374524 [INFO] [('172.18.0.5', 39208)] ### SELECT first_name, last_name FROM users WHERE user_id = 1; *#*#Result Set
+2026-11-16 01:58:53,375705 [INFO] [('172.18.0.5', 39208)] ### SELECT COUNT(*) FROM users; *#*#Result Set
+2026-11-16 01:58:54,422029 [INFO] [('172.18.0.5', 39222)] ### USE db *#*#OK
+2026-11-16 01:58:54,429829 [INFO] [('172.18.0.5', 39222)] ### SELECT first_name, last_name FROM users WHERE user_id = \'1; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'1' at line 1

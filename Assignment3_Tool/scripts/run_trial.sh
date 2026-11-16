@@ -26,7 +26,7 @@ PAGE="$1"; GROUP="$2"; CONFIG="$3"; SEED="$4"; BOOL="$5"; STRUCT="${6:-1}"
 : "${DVWA_PASS:?export DVWA_PASS first}"
 TIMEOUT="${TRIAL_TIMEOUT:-900}"
 SHARED="${SHARED_DATA:-./shared-data}"
-RAW_ROOT="${RAW_DIR:-$HOME/csec759-advsoft/Assignment3_Tool/raw}"
+RAW_ROOT="${RAW_DIR:-$HOME/csec759-advsoft/final/raw}"
 
 # Run number: TRIAL_NUMBER if you set it, otherwise the next free number in this group's folder.
 if [ -n "${TRIAL_NUMBER:-}" ]; then

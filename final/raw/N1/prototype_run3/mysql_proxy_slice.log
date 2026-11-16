@@ -1,0 +1,150 @@
+2026-11-15 21:32:22,400687 [INFO] [('172.18.0.5', 54124)] ### USE db *#*#OK
+2026-11-15 21:32:23,662001 [INFO] [('172.18.0.5', 54140)] ### USE db *#*#OK
+2026-11-15 21:32:23,667407 [INFO] [('172.18.0.5', 54140)] ### SELECT table_schema, table_name, create_time
+				FROM information_schema.tables
+				WHERE table_schema='db' AND table_name='users'
+				LIMIT 1 *#*#Result Set
+2026-11-15 21:32:23,670295 [INFO] [('172.18.0.5', 54140)] ### SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set
+2026-11-15 21:32:25,813637 [INFO] [('172.18.0.5', 54158)] ### USE db *#*#OK
+2026-11-15 21:32:26,989510 [INFO] [('172.18.0.5', 54170)] ### USE db *#*#OK
+2026-11-15 21:32:26,995909 [INFO] [('172.18.0.5', 54170)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:28,345669 [INFO] [('172.18.0.5', 39198)] ### USE db *#*#OK
+2026-11-15 21:32:28,348791 [INFO] [('172.18.0.5', 39198)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:29,391106 [INFO] [('172.18.0.5', 39214)] ### USE db *#*#OK
+2026-11-15 21:32:29,398358 [INFO] [('172.18.0.5', 39214)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:30,459616 [INFO] [('172.18.0.5', 39238)] ### USE db *#*#OK
+2026-11-15 21:32:30,468086 [INFO] [('172.18.0.5', 39238)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:31,523002 [INFO] [('172.18.0.5', 39268)] ### USE db *#*#OK
+2026-11-15 21:32:31,530131 [INFO] [('172.18.0.5', 39268)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:32,570721 [INFO] [('172.18.0.5', 39284)] ### USE db *#*#OK
+2026-11-15 21:32:32,577799 [INFO] [('172.18.0.5', 39284)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:33,636478 [INFO] [('172.18.0.5', 39292)] ### USE db *#*#OK
+2026-11-15 21:32:33,654714 [INFO] [('172.18.0.5', 39292)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:34,695511 [INFO] [('172.18.0.5', 39314)] ### USE db *#*#OK
+2026-11-15 21:32:34,702202 [INFO] [('172.18.0.5', 39314)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:35,766063 [INFO] [('172.18.0.5', 39322)] ### USE db *#*#OK
+2026-11-15 21:32:35,772697 [INFO] [('172.18.0.5', 39322)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:36,816839 [INFO] [('172.18.0.5', 39336)] ### USE db *#*#OK
+2026-11-15 21:32:36,823928 [INFO] [('172.18.0.5', 39336)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:37,878051 [INFO] [('172.18.0.5', 57872)] ### USE db *#*#OK
+2026-11-15 21:32:37,886676 [INFO] [('172.18.0.5', 57872)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:38,934487 [INFO] [('172.18.0.5', 57890)] ### USE db *#*#OK
+2026-11-15 21:32:38,940143 [INFO] [('172.18.0.5', 57890)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:39,993321 [INFO] [('172.18.0.5', 57904)] ### USE db *#*#OK
+2026-11-15 21:32:39,999432 [INFO] [('172.18.0.5', 57904)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:41,034517 [INFO] [('172.18.0.5', 57912)] ### USE db *#*#OK
+2026-11-15 21:32:41,041800 [INFO] [('172.18.0.5', 57912)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:42,092598 [INFO] [('172.18.0.5', 57930)] ### USE db *#*#OK
+2026-11-15 21:32:42,098567 [INFO] [('172.18.0.5', 57930)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:43,148754 [INFO] [('172.18.0.5', 57948)] ### USE db *#*#OK
+2026-11-15 21:32:43,156392 [INFO] [('172.18.0.5', 57948)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:44,214615 [INFO] [('172.18.0.5', 57962)] ### USE db *#*#OK
+2026-11-15 21:32:44,222816 [INFO] [('172.18.0.5', 57962)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:45,272722 [INFO] [('172.18.0.5', 57978)] ### USE db *#*#OK
+2026-11-15 21:32:45,279943 [INFO] [('172.18.0.5', 57978)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:46,327991 [INFO] [('172.18.0.5', 58010)] ### USE db *#*#OK
+2026-11-15 21:32:46,336562 [INFO] [('172.18.0.5', 58010)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:47,391635 [INFO] [('172.18.0.5', 58038)] ### USE db *#*#OK
+2026-11-15 21:32:47,400544 [INFO] [('172.18.0.5', 58038)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:48,454619 [INFO] [('172.18.0.5', 34426)] ### USE db *#*#OK
+2026-11-15 21:32:48,463833 [INFO] [('172.18.0.5', 34426)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:49,507511 [INFO] [('172.18.0.5', 34440)] ### USE db *#*#OK
+2026-11-15 21:32:49,514412 [INFO] [('172.18.0.5', 34440)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:50,565950 [INFO] [('172.18.0.5', 34452)] ### USE db *#*#OK
+2026-11-15 21:32:50,575881 [INFO] [('172.18.0.5', 34452)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:51,629018 [INFO] [('172.18.0.5', 34468)] ### USE db *#*#OK
+2026-11-15 21:32:51,636570 [INFO] [('172.18.0.5', 34468)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:52,691540 [INFO] [('172.18.0.5', 34484)] ### USE db *#*#OK
+2026-11-15 21:32:52,698294 [INFO] [('172.18.0.5', 34484)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:53,755741 [INFO] [('172.18.0.5', 34494)] ### USE db *#*#OK
+2026-11-15 21:32:53,765397 [INFO] [('172.18.0.5', 34494)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:54,801799 [INFO] [('172.18.0.5', 34504)] ### USE db *#*#OK
+2026-11-15 21:32:54,806831 [INFO] [('172.18.0.5', 34504)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:55,863570 [INFO] [('172.18.0.5', 34530)] ### USE db *#*#OK
+2026-11-15 21:32:55,871271 [INFO] [('172.18.0.5', 34530)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:56,921337 [INFO] [('172.18.0.5', 34552)] ### USE db *#*#OK
+2026-11-15 21:32:56,928215 [INFO] [('172.18.0.5', 34552)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:32:57,987096 [INFO] [('172.18.0.5', 56862)] ### USE db *#*#OK
+2026-11-15 21:32:57,994486 [INFO] [('172.18.0.5', 56862)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:32:59,046104 [INFO] [('172.18.0.5', 56872)] ### USE db *#*#OK
+2026-11-15 21:32:59,052141 [INFO] [('172.18.0.5', 56872)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:00,092374 [INFO] [('172.18.0.5', 56900)] ### USE db *#*#OK
+2026-11-15 21:33:00,100857 [INFO] [('172.18.0.5', 56900)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:01,161595 [INFO] [('172.18.0.5', 56916)] ### USE db *#*#OK
+2026-11-15 21:33:01,170316 [INFO] [('172.18.0.5', 56916)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:02,228833 [INFO] [('172.18.0.5', 56938)] ### USE db *#*#OK
+2026-11-15 21:33:02,235601 [INFO] [('172.18.0.5', 56938)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:03,293129 [INFO] [('172.18.0.5', 56946)] ### USE db *#*#OK
+2026-11-15 21:33:03,300310 [INFO] [('172.18.0.5', 56946)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:04,344200 [INFO] [('172.18.0.5', 56970)] ### USE db *#*#OK
+2026-11-15 21:33:04,352306 [INFO] [('172.18.0.5', 56970)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:05,406331 [INFO] [('172.18.0.5', 56984)] ### USE db *#*#OK
+2026-11-15 21:33:05,412177 [INFO] [('172.18.0.5', 56984)] ### SELECT first_name, last_name FROM users WHERE user_id = -1 *#*#Result Set
+2026-11-15 21:33:06,470195 [INFO] [('172.18.0.5', 57012)] ### USE db *#*#OK
+2026-11-15 21:33:06,479380 [INFO] [('172.18.0.5', 57012)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:07,538214 [INFO] [('172.18.0.5', 57020)] ### USE db *#*#OK
+2026-11-15 21:33:07,544656 [INFO] [('172.18.0.5', 57020)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:08,586973 [INFO] [('172.18.0.5', 37808)] ### USE db *#*#OK
+2026-11-15 21:33:08,593464 [INFO] [('172.18.0.5', 37808)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:09,630351 [INFO] [('172.18.0.5', 37840)] ### USE db *#*#OK
+2026-11-15 21:33:09,640217 [INFO] [('172.18.0.5', 37840)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:10,693291 [INFO] [('172.18.0.5', 37870)] ### USE db *#*#OK
+2026-11-15 21:33:10,698846 [INFO] [('172.18.0.5', 37870)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:11,741378 [INFO] [('172.18.0.5', 37890)] ### USE db *#*#OK
+2026-11-15 21:33:11,747503 [INFO] [('172.18.0.5', 37890)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:12,806828 [INFO] [('172.18.0.5', 37902)] ### USE db *#*#OK
+2026-11-15 21:33:12,813134 [INFO] [('172.18.0.5', 37902)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:13,867059 [INFO] [('172.18.0.5', 37916)] ### USE db *#*#OK
+2026-11-15 21:33:13,873022 [INFO] [('172.18.0.5', 37916)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:14,938132 [INFO] [('172.18.0.5', 37938)] ### USE db *#*#OK
+2026-11-15 21:33:14,945934 [INFO] [('172.18.0.5', 37938)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:15,996920 [INFO] [('172.18.0.5', 37958)] ### USE db *#*#OK
+2026-11-15 21:33:16,003033 [INFO] [('172.18.0.5', 37958)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:17,051599 [INFO] [('172.18.0.5', 37978)] ### USE db *#*#OK
+2026-11-15 21:33:17,056889 [INFO] [('172.18.0.5', 37978)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:18,113145 [INFO] [('172.18.0.5', 56332)] ### USE db *#*#OK
+2026-11-15 21:33:18,119665 [INFO] [('172.18.0.5', 56332)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:19,176181 [INFO] [('172.18.0.5', 56352)] ### USE db *#*#OK
+2026-11-15 21:33:19,182576 [INFO] [('172.18.0.5', 56352)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:20,232509 [INFO] [('172.18.0.5', 56374)] ### USE db *#*#OK
+2026-11-15 21:33:20,238378 [INFO] [('172.18.0.5', 56374)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:21,300207 [INFO] [('172.18.0.5', 56398)] ### USE db *#*#OK
+2026-11-15 21:33:21,306114 [INFO] [('172.18.0.5', 56398)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:22,353876 [INFO] [('172.18.0.5', 56424)] ### USE db *#*#OK
+2026-11-15 21:33:22,360132 [INFO] [('172.18.0.5', 56424)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:23,409782 [INFO] [('172.18.0.5', 56456)] ### USE db *#*#OK
+2026-11-15 21:33:23,416341 [INFO] [('172.18.0.5', 56456)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:24,462002 [INFO] [('172.18.0.5', 56466)] ### USE db *#*#OK
+2026-11-15 21:33:24,467840 [INFO] [('172.18.0.5', 56466)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:25,512154 [INFO] [('172.18.0.5', 56474)] ### USE db *#*#OK
+2026-11-15 21:33:25,519049 [INFO] [('172.18.0.5', 56474)] ### SELECT first_name, last_name FROM users WHERE user_id = -1 *#*#Result Set
+2026-11-15 21:33:26,579478 [INFO] [('172.18.0.5', 56494)] ### USE db *#*#OK
+2026-11-15 21:33:26,586284 [INFO] [('172.18.0.5', 56494)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:27,638357 [INFO] [('172.18.0.5', 43676)] ### USE db *#*#OK
+2026-11-15 21:33:27,644451 [INFO] [('172.18.0.5', 43676)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:28,732891 [INFO] [('172.18.0.5', 43686)] ### USE db *#*#OK
+2026-11-15 21:33:28,739777 [INFO] [('172.18.0.5', 43686)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:29,797955 [INFO] [('172.18.0.5', 43702)] ### USE db *#*#OK
+2026-11-15 21:33:29,804627 [INFO] [('172.18.0.5', 43702)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:30,863297 [INFO] [('172.18.0.5', 43712)] ### USE db *#*#OK
+2026-11-15 21:33:30,871449 [INFO] [('172.18.0.5', 43712)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:31,924689 [INFO] [('172.18.0.5', 43726)] ### USE db *#*#OK
+2026-11-15 21:33:31,930489 [INFO] [('172.18.0.5', 43726)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:32,979827 [INFO] [('172.18.0.5', 43736)] ### USE db *#*#OK
+2026-11-15 21:33:32,985453 [INFO] [('172.18.0.5', 43736)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:34,032436 [INFO] [('172.18.0.5', 43754)] ### USE db *#*#OK
+2026-11-15 21:33:34,038812 [INFO] [('172.18.0.5', 43754)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:35,102312 [INFO] [('172.18.0.5', 43780)] ### USE db *#*#OK
+2026-11-15 21:33:35,110632 [INFO] [('172.18.0.5', 43780)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:36,157056 [INFO] [('172.18.0.5', 43790)] ### USE db *#*#OK
+2026-11-15 21:33:36,163277 [INFO] [('172.18.0.5', 43790)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:37,213719 [INFO] [('172.18.0.5', 43808)] ### USE db *#*#OK
+2026-11-15 21:33:37,221526 [INFO] [('172.18.0.5', 43808)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:38,283372 [INFO] [('172.18.0.5', 44028)] ### USE db *#*#OK
+2026-11-15 21:33:38,290189 [INFO] [('172.18.0.5', 44028)] ### SELECT first_name, last_name FROM users WHERE user_id = 0 *#*#Result Set
+2026-11-15 21:33:39,339812 [INFO] [('172.18.0.5', 44044)] ### USE db *#*#OK
+2026-11-15 21:33:39,348084 [INFO] [('172.18.0.5', 44044)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:40,411635 [INFO] [('172.18.0.5', 44070)] ### USE db *#*#OK
+2026-11-15 21:33:40,418373 [INFO] [('172.18.0.5', 44070)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set
+2026-11-15 21:33:41,474892 [INFO] [('172.18.0.5', 44078)] ### USE db *#*#OK
+2026-11-15 21:33:41,480664 [INFO] [('172.18.0.5', 44078)] ### SELECT first_name, last_name FROM users WHERE user_id = 1 *#*#Result Set

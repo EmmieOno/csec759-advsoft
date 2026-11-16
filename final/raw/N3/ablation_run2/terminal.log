@@ -1,0 +1,501 @@
+[21:04:38.022] Loading script sqlifuzz/mitmproxy_addon.py
+[21:04:38.158] [CONFIG] A config file from configs/config-general.yaml is loaded.
+[21:04:38.159] [HOOK] Idle shutdown monitor started. Will check after 60s initial wait...
+[21:04:38.159] [HOOK] Idle shutdown monitor scheduled (timeout: 120s)
+[21:04:38.159] Starting Time: 2026-11-15 21:04:38.142105
+[21:04:38.159] Start MITM Addon with 10 max concurrent fuzzing tasks
+[21:04:38.159] [HOOK] Number response: 0 | Memory usage (MB): 81.83203125 PID: 62226
+[21:04:38.159] [STATS] {'total_req': 0, 'sql_req': 0, 'null_req': 0, 'not_sql_req': 0, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 0, 'processing_time_total': 0.0, 'processing_time_ave': 0.0, 'running_time': 'Not finished yet'}
+[21:04:38.160] reverse proxy to http://localhost:8081 listening at *:8888.
+[21:04:38.419][127.0.0.1:47732] client connect
+[21:04:38.425][127.0.0.1:47732] server connect localhost:8081 (127.0.0.1:8081)
+[21:04:38.427][127.0.0.1:47732] client disconnect
+[21:04:38.428][127.0.0.1:47732] server disconnect localhost:8081 (127.0.0.1:8081)
+[21:04:39.001][[::1]:57854] client connect
+[21:04:39.006][[::1]:57854] server connect localhost:8081 (127.0.0.1:8081)
+[21:04:39.020] [HOOK 20f] Check GET http://localhost:8081/login.php || 
+[21:04:39.020] [HTTPREQUEST 20f] Converting Request Entry to HTTP Request: 94cdbdd8-3a7a-454b-b833-285bc2db820f
+[21:04:39.020] [HTTPREQUEST 20f] No content-type is found
+[21:04:40.022] [SQLAnalysis] Read 2912 new lines from SQL log file.
+[21:04:40.039] [SQLAnalysis] Appended 2804 parsed entries.
+[21:04:40.039] [SQLAnalysis 20f] Extracted 2804 Logs 2026-11-16 02:04:40.039747: [{'timestamp': '2026-11-16 02:04:39,013433', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57532, 'sql': 'USE db *#*#OK'}]
+[21:04:40.043] [SQLAnalysis 20f] Checking Request: GET http://localhost:8081/login.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=none', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=login.php'] | None
+[21:04:40.043] [SQLAnalysis 20f] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'login.php'}
+[21:04:40.043] [SQLAnalysis 20f] Looked timestamp 2026-11-16 02:04:39.008000 -- 2026-11-16 02:04:39.018000
+[21:04:40.069] [SQLAnalysis 20f] query_array to be checked: ['use', 'db']
+[21:04:40.069] [SQLAnalysis 20f] normalized_query_array: ['use', 'db']
+[21:04:40.069] [HTTPREQUEST 20f] Getting null paramvals
+[21:04:40.069] [HOOK 20f] The request does not trigger SQL query. Drop it. GET http://localhost:8081/login.php || 
+[::1]:57854: GET http://localhost:8081/login.php
+          << 200 OK 597b
+[21:04:40.083][[::1]:57856] client connect
+[21:04:40.089] [HOOK] Skip http://localhost:8081/dvwa/css/login.css because the content_type is text/css
+[::1]:57854: GET http://localhost:8081/dvwa/css/login.css
+          << 200 OK 400b
+[21:04:40.091][[::1]:57856] server connect localhost:8081 (127.0.0.1:8081)
+[21:04:40.094] [HOOK] Skip http://localhost:8081/dvwa/images/login_logo.png because the content_type is image/png
+[::1]:57856: GET http://localhost:8081/dvwa/images/login_logo.png
+          << 200 OK 8.9k
+[21:04:40.250] [HOOK dd0] Check POST http://localhost:8081/login.php || username=admin&password=password&Login=Login&user_token=eb4c0bccdd7b946eae5ee76b49992c53
+[21:04:40.250] [HTTPREQUEST dd0] Converting Request Entry to HTTP Request: ff3dec66-0b00-4cc1-8913-4db25fa8fdd0
+[21:04:40.251] [HTTPREQUEST dd0] Seeing a post data with x-www-form-urlencoded content-type in ff3dec66-0b00-4cc1-8913-4db25fa8fdd0
+[21:04:40.251] [FUNCTION] Call parse_post_data for username=admin&password=password&Login=Login&user_token=eb4c0bccdd7b946eae5ee76b49992c53
+[21:04:41.253] [SQLAnalysis] Read 6 new lines from SQL log file.
+[21:04:41.253] [SQLAnalysis] Appended 3 parsed entries.
+[21:04:41.254] [SQLAnalysis dd0] Extracted 2807 Logs 2026-11-16 02:04:41.254017: [{'timestamp': '2026-11-16 02:04:40,245010', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57550, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[21:04:41.254] [SQLAnalysis dd0] Checking Request: POST http://localhost:8081/login.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=login.php', '[string (False)(None)] username=admin', '[string (False)(None)] password=password', '[string (False)(None)] Login=Login', '[string (False)(None)] user_token=eb4c0bccdd7b946eae5ee76b49992c53'] | None
+[21:04:41.254] [SQLAnalysis dd0] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'login.php', 'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'eb4c0bccdd7b946eae5ee76b49992c53'}
+[21:04:41.254] [SQLAnalysis dd0] Looked timestamp 2026-11-16 02:04:40.220000 -- 2026-11-16 02:04:40.249000
+[21:04:41.284] [SQLAnalysis dd0] query_array to be checked: ['use', 'db']
+[21:04:41.284] [SQLAnalysis dd0] normalized_query_array: ['use', 'db']
+[21:04:41.284] [SQLAnalysis dd0] query_array to be checked: ['select', 'table_schema', 'table_name', 'create_time']
+[21:04:41.284] [SQLAnalysis dd0] normalized_query_array: ['select', 'tableschema', 'tablename', 'createtime']
+[21:04:41.284] [SQLAnalysis dd0] query_array to be checked: ['select', '*', 'from', 'users', 'where', "user='admin'", 'and', "password='5f4dcc3b5aa765d61d8327deb882cf99'", '']
+[21:04:41.284] [SQLAnalysis dd0] normalized_query_array: ['select', '', 'from', 'users', 'where', 'useradmin', 'and', 'password5f4dcc3b5aa765d61d8327deb882cf99', '']
+[21:04:41.284] [HTTPREQUEST dd0] Getting null paramvals
+[21:04:41.285] [HOOK dd0] The request does not trigger SQL query. Drop it. POST http://localhost:8081/login.php || username=admin&password=password&Login=Login&user_token=eb4c0bccdd7b946eae5ee76b49992c53
+[::1]:57856: POST http://localhost:8081/login.php
+          << 302 Found 0b
+[21:04:41.296] [HOOK c9b] Check GET http://localhost:8081/index.php || 
+[21:04:41.296] [HTTPREQUEST c9b] Converting Request Entry to HTTP Request: 3c6d5468-7ae4-46b7-b152-591dcd1bac9b
+[21:04:41.297] [HTTPREQUEST c9b] No content-type is found
+[21:04:42.297] [SQLAnalysis] No new lines in SQL log file.
+[21:04:42.298] [SQLAnalysis c9b] Extracted 2807 Logs 2026-11-16 02:04:42.298144: [{'timestamp': '2026-11-16 02:04:40,245010', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57550, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[21:04:42.298] [SQLAnalysis c9b] Checking Request: GET http://localhost:8081/index.php | ['[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[url (False)(None)] path0=index.php'] | None
+[21:04:42.298] [SQLAnalysis c9b] Updated param pairs: {'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'path0': 'index.php'}
+[21:04:42.298] [SQLAnalysis c9b] Looked timestamp 2026-11-16 02:04:41.292000 -- 2026-11-16 02:04:41.295000
+[21:04:42.326] [HTTPREQUEST c9b] Getting null paramvals
+[21:04:42.326] [HOOK c9b] The request does not trigger SQL query. Drop it. GET http://localhost:8081/index.php || 
+[::1]:57856: GET http://localhost:8081/index.php
+          << 200 OK 2.3k
+[21:04:42.342][[::1]:57864] client connect
+[21:04:42.343][[::1]:57876] client connect
+[21:04:42.352] [HOOK] Skip http://localhost:8081/dvwa/css/main.css because the content_type is text/css
+[::1]:57856: GET http://localhost:8081/dvwa/css/main.css
+          << 200 OK 1.2k
+[21:04:42.353][[::1]:57864] server connect localhost:8081 (127.0.0.1:8081)
+[21:04:42.353][[::1]:57876] server connect localhost:8081 (127.0.0.1:8081)
+[21:04:42.355] [HOOK] Skip http://localhost:8081/dvwa/js/dvwapage.js because the content_type is text/javascript
+[::1]:57854: GET http://localhost:8081/dvwa/js/dvwaPage.js
+          << 200 OK 459b
+[21:04:42.366] [HOOK] Skip http://localhost:8081/dvwa/js/add_event_listeners.js because the content_type is text/javascript
+[::1]:57876: GET http://localhost:8081/dvwa/js/add_event_listeners.js
+          << 200 OK 276b
+[21:04:42.367] [HOOK] Skip http://localhost:8081/dvwa/images/logo.png because the content_type is image/png
+[::1]:57864: GET http://localhost:8081/dvwa/images/logo.png
+          << 200 OK 4.9k
+[21:04:42.400] [HOOK 8c0] Check GET http://localhost:8081/security.php || 
+[21:04:42.400] [HTTPREQUEST 8c0] Converting Request Entry to HTTP Request: c223fac9-81d9-4418-9664-32c3d301a8c0
+[21:04:42.400] [HTTPREQUEST 8c0] No content-type is found
+[21:04:43.401] [SQLAnalysis] No new lines in SQL log file.
+[21:04:43.401] [SQLAnalysis 8c0] Extracted 2807 Logs 2026-11-16 02:04:43.401911: [{'timestamp': '2026-11-16 02:04:40,245010', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57550, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[21:04:43.402] [SQLAnalysis 8c0] Checking Request: GET http://localhost:8081/security.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=none', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=security.php'] | None
+[21:04:43.402] [SQLAnalysis 8c0] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'security.php'}
+[21:04:43.402] [SQLAnalysis 8c0] Looked timestamp 2026-11-16 02:04:42.396000 -- 2026-11-16 02:04:42.399000
+[21:04:43.443] [HTTPREQUEST 8c0] Getting null paramvals
+[21:04:43.443] [HOOK 8c0] The request does not trigger SQL query. Drop it. GET http://localhost:8081/security.php || 
+[::1]:57864: GET http://localhost:8081/security.php
+          << 200 OK 1.7k
+[21:04:43.470] [HOOK] Skip http://localhost:8081/dvwa/images/lock.png because the content_type is image/png
+[::1]:57864: GET http://localhost:8081/dvwa/images/lock.png
+          << 200 OK 761b
+[21:04:43.553] [HOOK aaf] Check POST http://localhost:8081/security.php || security=medium&seclev_submit=Submit&user_token=46d31d8a2a93a980d909c18b82b6be4a
+[21:04:43.553] [HTTPREQUEST aaf] Converting Request Entry to HTTP Request: cf721505-78f7-49d4-b921-b6a0e797eaaf
+[21:04:43.553] [HTTPREQUEST aaf] Seeing a post data with x-www-form-urlencoded content-type in cf721505-78f7-49d4-b921-b6a0e797eaaf
+[21:04:43.553] [FUNCTION] Call parse_post_data for security=medium&seclev_submit=Submit&user_token=46d31d8a2a93a980d909c18b82b6be4a
+[21:04:44.554] [SQLAnalysis] No new lines in SQL log file.
+[21:04:44.555] [SQLAnalysis aaf] Extracted 2807 Logs 2026-11-16 02:04:44.555163: [{'timestamp': '2026-11-16 02:04:40,245010', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57550, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[21:04:44.555] [SQLAnalysis aaf] Checking Request: POST http://localhost:8081/security.php | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[url (False)(None)] path0=security.php', '[string (False)(None)] security=medium', '[string (False)(None)] seclev_submit=Submit', '[string (False)(None)] user_token=46d31d8a2a93a980d909c18b82b6be4a'] | None
+[21:04:44.556] [SQLAnalysis aaf] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path0': 'security.php', 'security': 'medium', 'seclev_submit': 'Submit', 'user_token': '46d31d8a2a93a980d909c18b82b6be4a'}
+[21:04:44.557] [SQLAnalysis aaf] Looked timestamp 2026-11-16 02:04:43.549000 -- 2026-11-16 02:04:43.552000
+[21:04:44.606] [HTTPREQUEST aaf] Getting null paramvals
+[21:04:44.606] [HOOK aaf] The request does not trigger SQL query. Drop it. POST http://localhost:8081/security.php || security=medium&seclev_submit=Submit&user_token=46d31d8a2a93a980d909c18b82b6be4a
+[::1]:57864: POST http://localhost:8081/security.php
+          << 302 Found 0b
+[21:04:44.625] [HOOK 314] Check GET http://localhost:8081/security.php || 
+[21:04:44.625] [HTTPREQUEST 314] Converting Request Entry to HTTP Request: 2f15eb63-f4dc-4818-b5b2-511a591cd314
+[21:04:44.626] [HTTPREQUEST 314] No content-type is found
+[21:04:45.627] [SQLAnalysis] No new lines in SQL log file.
+[21:04:45.628] [SQLAnalysis 314] Extracted 2807 Logs 2026-11-16 02:04:45.628029: [{'timestamp': '2026-11-16 02:04:40,245010', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 57550, 'sql': "SELECT * FROM `users` WHERE user='admin' AND password='5f4dcc3b5aa765d61d8327deb882cf99'; *#*#Result Set"}]
+[21:04:45.628] [SQLAnalysis 314] Checking Request: GET http://localhost:8081/security.php | ['[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[url (False)(None)] path0=security.php'] | None
+[21:04:45.628] [SQLAnalysis 314] Updated param pairs: {'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'path0': 'security.php'}
+[21:04:45.629] [SQLAnalysis 314] Looked timestamp 2026-11-16 02:04:44.618000 -- 2026-11-16 02:04:44.624000
+[21:04:45.673] [HTTPREQUEST 314] Getting null paramvals
+[21:04:45.673] [HOOK 314] The request does not trigger SQL query. Drop it. GET http://localhost:8081/security.php || 
+[::1]:57864: GET http://localhost:8081/security.php
+          << 200 OK 1.7k
+[21:04:45.758] [HOOK a10] Check GET http://localhost:8081/vulnerabilities/sqli/ || 
+[21:04:45.758] [HTTPREQUEST a10] Converting Request Entry to HTTP Request: 5abe824d-6e49-4201-b1dd-216381999a10
+[21:04:45.758] [HTTPREQUEST a10] No content-type is found
+[21:04:46.760] [SQLAnalysis] Read 2 new lines from SQL log file.
+[21:04:46.760] [SQLAnalysis] Appended 2 parsed entries.
+[21:04:46.760] [SQLAnalysis a10] Extracted 2809 Logs 2026-11-16 02:04:46.760863: [{'timestamp': '2026-11-16 02:04:45,753552', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53502, 'sql': 'SELECT COUNT(*) FROM users; *#*#Result Set'}]
+[21:04:46.761] [SQLAnalysis a10] Checking Request: GET http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=none', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli'] | None
+[21:04:46.761] [SQLAnalysis a10] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path1': 'sqli'}
+[21:04:46.761] [SQLAnalysis a10] Looked timestamp 2026-11-16 02:04:45.744000 -- 2026-11-16 02:04:45.758000
+[21:04:46.794] [SQLAnalysis a10] query_array to be checked: ['use', 'db']
+[21:04:46.794] [SQLAnalysis a10] normalized_query_array: ['use', 'db']
+[21:04:46.794] [SQLAnalysis a10] query_array to be checked: ['select', 'count(*)', 'from', 'users', '']
+[21:04:46.794] [SQLAnalysis a10] normalized_query_array: ['select', 'count', 'from', 'users', '']
+[21:04:46.794] [HTTPREQUEST a10] Getting null paramvals
+[21:04:46.794] [HOOK a10] The request does not trigger SQL query. Drop it. GET http://localhost:8081/vulnerabilities/sqli/ || 
+[::1]:57864: GET http://localhost:8081/vulnerabilities/sqli/
+          << 200 OK 1.3k
+[21:04:46.926] [HOOK f53] Check POST http://localhost:8081/vulnerabilities/sqli/ || id=1&Submit=Submit
+[21:04:46.926] [HTTPREQUEST f53] Converting Request Entry to HTTP Request: 2ebf946c-1f65-492a-8e0b-3d680a4fbf53
+[21:04:46.926] [HTTPREQUEST f53] Seeing a post data with x-www-form-urlencoded content-type in 2ebf946c-1f65-492a-8e0b-3d680a4fbf53
+[21:04:46.926] [FUNCTION] Call parse_post_data for id=1&Submit=Submit
+[21:04:47.928] [SQLAnalysis] Read 3 new lines from SQL log file.
+[21:04:47.929] [SQLAnalysis] Appended 3 parsed entries.
+[21:04:47.930] [SQLAnalysis f53] Extracted 2812 Logs 2026-11-16 02:04:47.929998: [{'timestamp': '2026-11-16 02:04:46,923249', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53522, 'sql': 'SELECT COUNT(*) FROM users; *#*#Result Set'}]
+[21:04:47.930] [SQLAnalysis f53] Checking Request: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[21:04:47.930] [SQLAnalysis f53] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path1': 'sqli', 'id': '1', 'Submit': 'Submit'}
+[21:04:47.931] [SQLAnalysis f53] Looked timestamp 2026-11-16 02:04:46.914000 -- 2026-11-16 02:04:46.926000
+[21:04:47.985] [SQLAnalysis f53] query_array to be checked: ['use', 'db']
+[21:04:47.985] [SQLAnalysis f53] normalized_query_array: ['use', 'db']
+[21:04:47.985] [SQLAnalysis f53] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', '1', '']
+[21:04:47.985] [SQLAnalysis f53] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:47.986] [SQLAnalysis f53] Getting Sec-Fetch-User==>?1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:47.986] [SQLAnalysis f53] Getting id==>1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:47.986] [SQLAnalysis f53] query_array to be checked: ['select', 'count(*)', 'from', 'users', '']
+[21:04:47.986] [SQLAnalysis f53] normalized_query_array: ['select', 'count', 'from', 'users', '']
+[21:04:47.986] [HOOK f53] Get matching queries: ['select first_name, last_name from users where user_id = 1; *#*#result set', 'select first_name, last_name from users where user_id = 1; *#*#result set'] from POST http://localhost:8081/vulnerabilities/sqli/ || id=1&Submit=Submit
+[21:04:47.986] [HOOK f53] Async callback triggered for: http://localhost:8081/vulnerabilities/sqli/
+[HOOK f53] Starting fuzz http://localhost:8081/vulnerabilities/sqli/ (pending: 1 requests)
+[21:04:47.986] [HOOK f53] Starting fuzz (pending: 1)
+[21:04:47.986] [SQLiFuzz f53] Calling send_requests for: http://localhost:8081/vulnerabilities/sqli/
+[21:04:47.986] [SQLiFuzz f53] DEBUG Captured request body (truncated): id=1&Submit=Submit
+[21:04:47.986] [SQLiFuzz f53] DEBUG Captured request headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '18', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8888', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8888/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:47.986] [SQLiFuzz f53] DEBUG Converted request.post_data_encoded (truncated): id=1&Submit=Submit
+[21:04:47.986] [SQLiFuzz f53] DEBUG Converted request.header: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '18', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8888', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8888/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:47.986] [SQLiFuzz f53] DEBUG Converted request.content_type: application/x-www-form-urlencoded
+[::1]:57864: POST http://localhost:8081/vulnerabilities/sqli/
+          << 200 OK 1.4k
+[21:04:47.991][[::1]:57856] server disconnect localhost:8081 (127.0.0.1:8081)
+[21:04:47.991][[::1]:57854] server disconnect localhost:8081 (127.0.0.1:8081)
+[21:04:47.991][[::1]:57876] server disconnect localhost:8081 (127.0.0.1:8081)
+[21:04:48.108] [HOOK ebc] Check POST http://localhost:8081/vulnerabilities/sqli/ || id=1&Submit=Submit
+[21:04:48.108] [HTTPREQUEST ebc] Converting Request Entry to HTTP Request: 3d890190-e97d-4b4a-a599-dfe3d2623ebc
+[21:04:48.108] [HTTPREQUEST ebc] Seeing a post data with x-www-form-urlencoded content-type in 3d890190-e97d-4b4a-a599-dfe3d2623ebc
+[21:04:48.109] [FUNCTION] Call parse_post_data for id=1&Submit=Submit
+[21:04:49.110] [SQLAnalysis] Read 3 new lines from SQL log file.
+[21:04:49.111] [SQLAnalysis] Appended 3 parsed entries.
+[21:04:49.111] [SQLAnalysis ebc] Extracted 2815 Logs 2026-11-16 02:04:49.111765: [{'timestamp': '2026-11-16 02:04:48,104876', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53540, 'sql': 'SELECT COUNT(*) FROM users; *#*#Result Set'}]
+[21:04:49.112] [SQLAnalysis ebc] Checking Request: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[21:04:49.113] [SQLAnalysis ebc] Updated param pairs: {'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'path1': 'sqli', 'id': '1', 'Submit': 'Submit'}
+[21:04:49.113] [SQLAnalysis ebc] Looked timestamp 2026-11-16 02:04:48.095000 -- 2026-11-16 02:04:48.107000
+[21:04:49.156] [SQLAnalysis ebc] query_array to be checked: ['use', 'db']
+[21:04:49.156] [SQLAnalysis ebc] normalized_query_array: ['use', 'db']
+[21:04:49.156] [SQLAnalysis ebc] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', '1', '']
+[21:04:49.156] [SQLAnalysis ebc] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:49.156] [SQLAnalysis ebc] Getting Sec-Fetch-User==>?1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:49.156] [SQLAnalysis ebc] Getting id==>1 [1] in ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:49.156] [SQLAnalysis ebc] query_array to be checked: ['select', 'count(*)', 'from', 'users', '']
+[21:04:49.156] [SQLAnalysis ebc] normalized_query_array: ['select', 'count', 'from', 'users', '']
+[21:04:49.156] [HOOK ebc] Get matching queries: ['select first_name, last_name from users where user_id = 1; *#*#result set', 'select first_name, last_name from users where user_id = 1; *#*#result set'] from POST http://localhost:8081/vulnerabilities/sqli/ || id=1&Submit=Submit
+[21:04:49.156] [HOOK ebc] Async callback triggered for: http://localhost:8081/vulnerabilities/sqli/
+[HOOK ebc] Starting fuzz http://localhost:8081/vulnerabilities/sqli/ (pending: 2 requests)
+[21:04:49.156] [HOOK ebc] Starting fuzz (pending: 2)
+[21:04:49.156] [SQLiFuzz ebc] Calling send_requests for: http://localhost:8081/vulnerabilities/sqli/
+[21:04:49.156] [SQLiFuzz ebc] DEBUG Captured request body (truncated): id=1&Submit=Submit
+[21:04:49.156] [SQLiFuzz ebc] DEBUG Captured request headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '18', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8888', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8888/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:49.157] [SQLiFuzz ebc] DEBUG Converted request.post_data_encoded (truncated): id=1&Submit=Submit
+[21:04:49.157] [SQLiFuzz ebc] DEBUG Converted request.header: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '18', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8888', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8888/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:49.157] [SQLiFuzz ebc] DEBUG Converted request.content_type: application/x-www-form-urlencoded
+[::1]:57864: POST http://localhost:8081/vulnerabilities/sqli/
+          << 200 OK 1.4k
+[21:04:49.187] [SQLiFuzz f53] test_SQLi for POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[21:04:49.187] [SQLiFuzz f53] random seed set to 2
+[21:04:49.188] [SQLiFuzz f53] Getting prepared_target_request with ID 333 for test_SQLi iteration 1/70
+[21:04:49.188] [SQLiFuzz 333] chosen_idx: 0 from 10
+[21:04:49.188] [HTTPREQUEST 333] Getting matched paramval from found values: ['?1', '1']
+[21:04:49.188] [HTTPREQUEST 333] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:49.188] [HTTPREQUEST 333] Found matched paramval: [int (False)(None)] id=1
+[21:04:49.188] [SQLiFuzz 333] Prioritize to fuzz matched SQL value first: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:49.188] [SQLiFuzz 333] Mutation applied. old='?1' char=''' strategy='drop' new='''
+[21:04:49.188] [HTTPREQUEST 333] Update url and body param from paramvals:
+[21:04:49.188] [HTTPREQUEST None] New post_data_encoded: Submit=Submit&id=1
+[21:04:49.188] [HTTPREQUEST None] New param encoded: 
+[21:04:49.188] [GENERALFUNCTION 333] ---SENDING THE REQUEST [1794794689-63875906-ad8f-4cfc-8f1f-310a5674f333] TO : [POST] http://localhost:8081/vulnerabilities/sqli/
+[21:04:49.188] [GENERALFUNCTION 333] Post data encoded: Submit=Submit&id=1
+[21:04:49.188] [GENERALFUNCTION 333] Adjusted Content-Length to 18
+[21:04:49.188] [GENERALFUNCTION 333] Adjusted Origin to http://localhost:8081
+[21:04:49.188] [GENERALFUNCTION 333] Adjusted Referer to http://localhost:8081/vulnerabilities/sqli/
+[21:04:49.188] [GENERALFUNCTION 333] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/
+[21:04:49.188] [GENERALFUNCTION 333] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '18', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8081', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': "'", 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:49.189] [GENERALFUNCTION 333] DEBUG OUTGOING post_data_encoded (truncated): Submit=Submit&id=1
+[21:04:49.189] [GENERALFUNCTION 333] DEBUG OUTGOING body_param_dict: {'Submit': 'Submit', 'id': '1'}
+[21:04:49.241][[::1]:57856] client disconnect
+[21:04:49.241][[::1]:57854] client disconnect
+[21:04:49.241][[::1]:57876] client disconnect
+[21:04:49.242][[::1]:57864] client disconnect
+[21:04:49.242][[::1]:57864] server disconnect localhost:8081 (127.0.0.1:8081)
+[21:04:49.253] [SQLiFuzz 333] Response status: 200
+[21:04:49.253] [SQLiFuzz 333] Response URL: http://localhost:8081/vulnerabilities/sqli/
+[21:04:49.253] [SQLiFuzz 333] Was redirected: False
+[21:04:49.253] [SQLiFuzz 333] Getting response: <!DOCTYPE html>
+
+<html lang="en-GB">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA)</title>
+
+		<link rel="stylesheet" type="text/css" href="../../dvwa/css/main.css" />
+
+		<link rel="icon" type="\image/ico" href="../../favicon.ico" />
+
+		<script type="text/javascript" src="../../dvwa/j
+[21:04:50.254] [SQLAnalysis] Read 3 new lines from SQL log file.
+[21:04:50.257] [SQLAnalysis] Appended 3 parsed entries.
+[21:04:50.257] [SQLAnalysis 333] Extracted 2818 Logs 2026-11-16 02:04:50.257928: [{'timestamp': '2026-11-16 02:04:49,225706', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53566, 'sql': 'SELECT COUNT(*) FROM users; *#*#Result Set'}]
+[21:04:50.258] [SQLAnalysis 333] Updated param pairs: {'looked_value': "'"}
+[21:04:50.258] [SQLAnalysis 333] Looked timestamp 2026-11-16 02:04:49.189116 -- 2026-11-16 02:04:49.248248
+[21:04:50.290] [SQLAnalysis 333] query_array to be checked: ['use', 'db']
+[21:04:50.290] [SQLAnalysis 333] normalized_query_array: ['use', 'db']
+[21:04:50.290] [SQLAnalysis 333] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', '1', '']
+[21:04:50.290] [SQLAnalysis 333] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:50.290] [SQLAnalysis 333] query_array to be checked: ['select', 'count(*)', 'from', 'users', '']
+[21:04:50.290] [SQLAnalysis 333] normalized_query_array: ['select', 'count', 'from', 'users', '']
+[21:04:50.290] [SQLiFuzz 333] No weird chars exist: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', "[string (False)(None)] Sec-Fetch-User='", '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[21:04:50.291] [SQLiFuzz f53] Getting prepared_target_request with ID 828 for test_SQLi iteration 2/70
+[21:04:50.291] [SQLiFuzz 828] chosen_idx: 1 from 10
+[21:04:50.291] [HTTPREQUEST 828] Getting matched paramval from found values: ['?1', '1']
+[21:04:50.291] [HTTPREQUEST 828] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:50.291] [HTTPREQUEST 828] Found matched paramval: [int (False)(None)] id=1
+[21:04:50.291] [SQLiFuzz 828] Prioritize to fuzz matched SQL value first: [int (False)(None)] id=1
+[21:04:50.291] [SQLiFuzz 828] Mutation applied. old='1' char=''' strategy='tail' new='1''
+[21:04:50.292] [HTTPREQUEST 828] Update url and body param from paramvals:
+[21:04:50.292] [HTTPREQUEST None] New post_data_encoded: Submit=Submit&id=1%27
+[21:04:50.292] [HTTPREQUEST None] New param encoded: 
+[21:04:50.292] [GENERALFUNCTION 828] ---SENDING THE REQUEST [1794794690-efbe0da0-8d0f-4074-a4bb-7d1d9f936828] TO : [POST] http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.292] [GENERALFUNCTION 828] Post data encoded: Submit=Submit&id=1%27
+[21:04:50.292] [GENERALFUNCTION 828] Adjusted Content-Length to 21
+[21:04:50.292] [GENERALFUNCTION 828] Adjusted Origin to http://localhost:8081
+[21:04:50.292] [GENERALFUNCTION 828] Adjusted Referer to http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.292] [GENERALFUNCTION 828] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.292] [GENERALFUNCTION 828] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '21', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8081', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:50.292] [GENERALFUNCTION 828] DEBUG OUTGOING post_data_encoded (truncated): Submit=Submit&id=1%27
+[21:04:50.293] [GENERALFUNCTION 828] DEBUG OUTGOING body_param_dict: {'Submit': 'Submit', 'id': "1'"}
+[21:04:50.317] [SQLiFuzz ebc] test_SQLi for POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[21:04:50.317] [SQLiFuzz ebc] random seed set to 2
+[21:04:50.317] [SQLiFuzz ebc] Getting prepared_target_request with ID 5c2 for test_SQLi iteration 1/70
+[21:04:50.317] [SQLiFuzz 5c2] chosen_idx: 0 from 10
+[21:04:50.317] [HTTPREQUEST 5c2] Getting matched paramval from found values: ['?1', '1']
+[21:04:50.317] [HTTPREQUEST 5c2] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:50.317] [HTTPREQUEST 5c2] Found matched paramval: [int (False)(None)] id=1
+[21:04:50.318] [SQLiFuzz 5c2] Prioritize to fuzz matched SQL value first: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:50.318] [SQLiFuzz 5c2] Mutation applied. old='?1' char=''' strategy='drop' new='''
+[21:04:50.318] [HTTPREQUEST 5c2] Update url and body param from paramvals:
+[21:04:50.318] [HTTPREQUEST None] New post_data_encoded: Submit=Submit&id=1
+[21:04:50.318] [HTTPREQUEST None] New param encoded: 
+[21:04:50.318] [GENERALFUNCTION 5c2] ---SENDING THE REQUEST [1794794690-8dbda507-e8b6-48b5-9aa9-db16611c95c2] TO : [POST] http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.318] [GENERALFUNCTION 5c2] Post data encoded: Submit=Submit&id=1
+[21:04:50.318] [GENERALFUNCTION 5c2] Adjusted Content-Length to 18
+[21:04:50.318] [GENERALFUNCTION 5c2] Adjusted Origin to http://localhost:8081
+[21:04:50.318] [GENERALFUNCTION 5c2] Adjusted Referer to http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.318] [GENERALFUNCTION 5c2] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.318] [GENERALFUNCTION 5c2] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '18', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8081', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': "'", 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:50.318] [GENERALFUNCTION 5c2] DEBUG OUTGOING post_data_encoded (truncated): Submit=Submit&id=1
+[21:04:50.318] [GENERALFUNCTION 5c2] DEBUG OUTGOING body_param_dict: {'Submit': 'Submit', 'id': '1'}
+[21:04:50.326] [SQLiFuzz 828] Response status: 200
+[21:04:50.326] [SQLiFuzz 828] Response URL: http://localhost:8081/vulnerabilities/sqli/
+[21:04:50.326] [SQLiFuzz 828] Was redirected: False
+[21:04:50.326] [SQLiFuzz 828] Getting response: <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'' at line 1 in /var/www/html/vulnerabilities/sqli/source/medium.php:12
+Stack trace:
+#0 /var/www/html/vulnerabilities/sqli/source/medium.php(12): mysqli_query(Object(mysqli), 'SELECT first_na...')
+#1 /var/
+[21:04:51.328] [SQLAnalysis] Read 5 new lines from SQL log file.
+[21:04:51.328] [SQLAnalysis] Appended 5 parsed entries.
+[21:04:51.329] [SQLAnalysis 828] Extracted 2823 Logs 2026-11-16 02:04:51.329235: [{'timestamp': '2026-11-16 02:04:50,345747', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53612, 'sql': 'SELECT COUNT(*) FROM users; *#*#Result Set'}]
+[21:04:51.330] [SQLAnalysis 828] Updated param pairs: {'looked_value': "1'"}
+[21:04:51.330] [SQLAnalysis 828] Looked timestamp 2026-11-16 02:04:50.293161 -- 2026-11-16 02:04:50.322876
+[21:04:51.374] [SQLAnalysis 828] query_array to be checked: ['use', 'db']
+[21:04:51.374] [SQLAnalysis 828] normalized_query_array: ['use', 'db']
+[21:04:51.374] [SQLAnalysis 828] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "1\\'", '']
+[21:04:51.374] [SQLAnalysis 828] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:51.374] [GENERALFUNC 828] Found Error Query: ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"] from POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None
+[21:04:51.374] [SQLiFuzz 828] No weird chars exist: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None
+[21:04:51.374] [SQLiFuzz 828] Unmatched SQL Error is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None ==> ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+[21:04:51.374] [SQLICollection] Result will be saved in final_result/dvwa--emmalee-VMware-Virtual-Platform-1794794678.txt
+[21:04:51.374] [SQLICollection] Statistics: {'total_req': 9, 'sql_req': 2, 'null_req': 0, 'not_sql_req': 7, 'sql_injection_detected': 0, 'another_sql_error_detected': 1, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 2, 'processing_time_total': 0.088847, 'processing_time_ave': 0.0444235, 'running_time': 'Not finished yet', 200: 7, 302: 2}
+[21:04:51.375] [SQLiFuzz f53] Getting prepared_target_request with ID 0ff for test_SQLi iteration 3/70
+[21:04:51.375] [SQLiFuzz 0ff] chosen_idx: 1 from 10
+[21:04:51.375] [HTTPREQUEST 0ff] Getting matched paramval from found values: ['?1', '1']
+[21:04:51.375] [HTTPREQUEST 0ff] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:51.375] [HTTPREQUEST 0ff] Found matched paramval: [int (False)(None)] id=1
+[21:04:51.375] [SQLiFuzz 0ff] Prioritize to fuzz matched SQL value first: [int (False)(None)] id=1
+[21:04:51.375] [SQLiFuzz 0ff] Mutation applied. old='1' char=''' strategy='front' new=''1'
+[21:04:51.375] [HTTPREQUEST 0ff] Update url and body param from paramvals:
+[21:04:51.375] [HTTPREQUEST None] New post_data_encoded: Submit=Submit&id=%271
+[21:04:51.375] [HTTPREQUEST None] New param encoded: 
+[21:04:51.375] [GENERALFUNCTION 0ff] ---SENDING THE REQUEST [1794794691-610e5b68-08d2-40c8-962c-3a33eff540ff] TO : [POST] http://localhost:8081/vulnerabilities/sqli/
+[21:04:51.375] [GENERALFUNCTION 0ff] Post data encoded: Submit=Submit&id=%271
+[21:04:51.376] [GENERALFUNCTION 0ff] Adjusted Content-Length to 21
+[21:04:51.376] [GENERALFUNCTION 0ff] Adjusted Origin to http://localhost:8081
+[21:04:51.376] [GENERALFUNCTION 0ff] Adjusted Referer to http://localhost:8081/vulnerabilities/sqli/
+[21:04:51.376] [GENERALFUNCTION 0ff] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/
+[21:04:51.376] [GENERALFUNCTION 0ff] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '21', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8081', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:51.376] [GENERALFUNCTION 0ff] DEBUG OUTGOING post_data_encoded (truncated): Submit=Submit&id=%271
+[21:04:51.376] [GENERALFUNCTION 0ff] DEBUG OUTGOING body_param_dict: {'Submit': 'Submit', 'id': "'1"}
+[21:04:51.401] [SQLiFuzz 5c2] Response status: 200
+[21:04:51.401] [SQLiFuzz 5c2] Response URL: http://localhost:8081/vulnerabilities/sqli/
+[21:04:51.401] [SQLiFuzz 5c2] Was redirected: False
+[21:04:51.401] [SQLiFuzz 5c2] Getting response: <!DOCTYPE html>
+
+<html lang="en-GB">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA)</title>
+
+		<link rel="stylesheet" type="text/css" href="../../dvwa/css/main.css" />
+
+		<link rel="icon" type="\image/ico" href="../../favicon.ico" />
+
+		<script type="text/javascript" src="../../dvwa/j
+[21:04:52.403] [SQLAnalysis] Read 2 new lines from SQL log file.
+[21:04:52.404] [SQLAnalysis] Appended 2 parsed entries.
+[21:04:52.404] [SQLAnalysis 5c2] Extracted 2825 Logs 2026-11-16 02:04:52.404810: [{'timestamp': '2026-11-16 02:04:51,405249', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53634, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = \\'1; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'1' at line 1"}]
+[21:04:52.405] [SQLAnalysis 5c2] Updated param pairs: {'looked_value': "'"}
+[21:04:52.405] [SQLAnalysis 5c2] Looked timestamp 2026-11-16 02:04:50.318690 -- 2026-11-16 02:04:51.392682
+[21:04:52.453] [SQLAnalysis 5c2] query_array to be checked: ['use', 'db']
+[21:04:52.453] [SQLAnalysis 5c2] normalized_query_array: ['use', 'db']
+[21:04:52.453] [SQLAnalysis 5c2] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', '1', '']
+[21:04:52.453] [SQLAnalysis 5c2] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:52.453] [SQLAnalysis 5c2] query_array to be checked: ['select', 'count(*)', 'from', 'users', '']
+[21:04:52.453] [SQLAnalysis 5c2] normalized_query_array: ['select', 'count', 'from', 'users', '']
+[21:04:52.453] [SQLiFuzz 5c2] No weird chars exist: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', "[string (False)(None)] Sec-Fetch-User='", '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', '[int (False)(None)] id=1', '[string (False)(None)] Submit=Submit'] | None
+[21:04:52.454] [SQLiFuzz ebc] Getting prepared_target_request with ID 8bd for test_SQLi iteration 2/70
+[21:04:52.454] [SQLiFuzz 8bd] chosen_idx: 1 from 10
+[21:04:52.454] [HTTPREQUEST 8bd] Getting matched paramval from found values: ['?1', '1']
+[21:04:52.454] [HTTPREQUEST 8bd] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:52.454] [HTTPREQUEST 8bd] Found matched paramval: [int (False)(None)] id=1
+[21:04:52.454] [SQLiFuzz 8bd] Prioritize to fuzz matched SQL value first: [int (False)(None)] id=1
+[21:04:52.454] [SQLiFuzz 8bd] Mutation applied. old='1' char=''' strategy='tail' new='1''
+[21:04:52.454] [HTTPREQUEST 8bd] Update url and body param from paramvals:
+[21:04:52.454] [HTTPREQUEST None] New post_data_encoded: Submit=Submit&id=1%27
+[21:04:52.454] [HTTPREQUEST None] New param encoded: 
+[21:04:52.454] [GENERALFUNCTION 8bd] ---SENDING THE REQUEST [1794794692-a568da2a-e781-43d5-a24f-cc366f0ed8bd] TO : [POST] http://localhost:8081/vulnerabilities/sqli/
+[21:04:52.454] [GENERALFUNCTION 8bd] Post data encoded: Submit=Submit&id=1%27
+[21:04:52.454] [GENERALFUNCTION 8bd] Adjusted Content-Length to 21
+[21:04:52.455] [GENERALFUNCTION 8bd] Adjusted Origin to http://localhost:8081
+[21:04:52.455] [GENERALFUNCTION 8bd] Adjusted Referer to http://localhost:8081/vulnerabilities/sqli/
+[21:04:52.455] [GENERALFUNCTION 8bd] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/
+[21:04:52.455] [GENERALFUNCTION 8bd] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '21', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8081', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:52.455] [GENERALFUNCTION 8bd] DEBUG OUTGOING post_data_encoded (truncated): Submit=Submit&id=1%27
+[21:04:52.455] [GENERALFUNCTION 8bd] DEBUG OUTGOING body_param_dict: {'Submit': 'Submit', 'id': "1'"}
+[21:04:52.465] [SQLiFuzz 0ff] Response status: 200
+[21:04:52.465] [SQLiFuzz 0ff] Response URL: http://localhost:8081/vulnerabilities/sqli/
+[21:04:52.465] [SQLiFuzz 0ff] Was redirected: False
+[21:04:52.466] [SQLiFuzz 0ff] Getting response: <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'1' at line 1 in /var/www/html/vulnerabilities/sqli/source/medium.php:12
+Stack trace:
+#0 /var/www/html/vulnerabilities/sqli/source/medium.php(12): mysqli_query(Object(mysqli), 'SELECT first_na...')
+#1 /var
+[21:04:53.467] [SQLAnalysis] Read 2 new lines from SQL log file.
+[21:04:53.469] [SQLAnalysis] Appended 2 parsed entries.
+[21:04:53.469] [SQLAnalysis 0ff] Extracted 2827 Logs 2026-11-16 02:04:53.469559: [{'timestamp': '2026-11-16 02:04:52,480234', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53646, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"}]
+[21:04:53.470] [SQLAnalysis 0ff] Updated param pairs: {'looked_value': "'1"}
+[21:04:53.471] [SQLAnalysis 0ff] Looked timestamp 2026-11-16 02:04:51.377054 -- 2026-11-16 02:04:52.461271
+[21:04:53.507] [SQLAnalysis 0ff] query_array to be checked: ['use', 'db']
+[21:04:53.507] [SQLAnalysis 0ff] normalized_query_array: ['use', 'db']
+[21:04:53.507] [SQLAnalysis 0ff] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "\\'1", '']
+[21:04:53.507] [SQLAnalysis 0ff] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:53.507] [SQLAnalysis 0ff] Getting malformed looked_value==>'1 in select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+[21:04:53.508] [GENERALFUNC 0ff] Found Error Query: ["SELECT first_name, last_name FROM users WHERE user_id = \\'1; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'1' at line 1"] from POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None
+[21:04:53.508] [GENERALFUNC 0ff] found_value: '1
+[21:04:53.508] [SQLiFuzz 0ff] Weird chars is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None --> ["select first_name, last_name from users where user_id = \\'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\\'1' at line 1"]
+[21:04:53.508] [SQLiFuzz 0ff] SQL Injection is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None ==> select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+[SQLiFuzz 0ff] SQL Injection is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None
+[21:04:53.508] [SQLICollection] Result will be saved in final_result/dvwa--emmalee-VMware-Virtual-Platform-1794794678.txt
+[21:04:53.508] [SQLICollection] Statistics: {'total_req': 9, 'sql_req': 2, 'null_req': 0, 'not_sql_req': 7, 'sql_injection_detected': 1, 'another_sql_error_detected': 1, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 4, 'processing_time_total': 2.2470559999999997, 'processing_time_ave': 0.5617639999999999, 'running_time': 'Not finished yet', 200: 7, 302: 2}
+[21:04:53.516] [SQLiFuzz 8bd] Response status: 200
+[21:04:53.516] [SQLiFuzz 8bd] Response URL: http://localhost:8081/vulnerabilities/sqli/
+[21:04:53.517] [SQLiFuzz 8bd] Was redirected: False
+[21:04:53.517] [SQLiFuzz 8bd] Getting response: <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'' at line 1 in /var/www/html/vulnerabilities/sqli/source/medium.php:12
+Stack trace:
+#0 /var/www/html/vulnerabilities/sqli/source/medium.php(12): mysqli_query(Object(mysqli), 'SELECT first_na...')
+#1 /var/
+[21:04:54.519] [SQLAnalysis] No new lines in SQL log file.
+[21:04:54.519] [SQLAnalysis 8bd] Extracted 2827 Logs 2026-11-16 02:04:54.519480: [{'timestamp': '2026-11-16 02:04:52,480234', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 53646, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"}]
+[21:04:54.520] [SQLAnalysis 8bd] Updated param pairs: {'looked_value': "1'"}
+[21:04:54.520] [SQLAnalysis 8bd] Looked timestamp 2026-11-16 02:04:52.455280 -- 2026-11-16 02:04:53.510403
+[21:04:54.549] [SQLAnalysis 8bd] query_array to be checked: ['use', 'db']
+[21:04:54.549] [SQLAnalysis 8bd] normalized_query_array: ['use', 'db']
+[21:04:54.549] [SQLAnalysis 8bd] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "1\\'", '']
+[21:04:54.549] [SQLAnalysis 8bd] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:54.550] [GENERALFUNC 8bd] Found Error Query: ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"] from POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None
+[21:04:54.550] [SQLiFuzz 8bd] No weird chars exist: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None
+[21:04:54.550] [SQLiFuzz 8bd] Unmatched SQL Error is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id=1'", '[string (False)(None)] Submit=Submit'] | None ==> ["SELECT first_name, last_name FROM users WHERE user_id = 1\\'; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'' at line 1"]
+[21:04:54.550] [SQLICollection] Result will be saved in final_result/dvwa--emmalee-VMware-Virtual-Platform-1794794678.txt
+[21:04:54.550] [SQLICollection] Statistics: {'total_req': 9, 'sql_req': 2, 'null_req': 0, 'not_sql_req': 7, 'sql_injection_detected': 1, 'another_sql_error_detected': 2, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 5, 'processing_time_total': 3.3021789999999998, 'processing_time_ave': 0.6604357999999999, 'running_time': 'Not finished yet', 200: 7, 302: 2}
+[21:04:54.551] [SQLiFuzz ebc] Getting prepared_target_request with ID d8c for test_SQLi iteration 3/70
+[21:04:54.551] [SQLiFuzz d8c] chosen_idx: 5 from 10
+[21:04:54.551] [HTTPREQUEST d8c] Getting matched paramval from found values: ['?1', '1']
+[21:04:54.552] [HTTPREQUEST d8c] Found matched paramval: [string (False)(None)] Sec-Fetch-User=?1
+[21:04:54.552] [HTTPREQUEST d8c] Found matched paramval: [int (False)(None)] id=1
+[21:04:54.552] [SQLiFuzz d8c] Prioritize to fuzz matched SQL value first: [int (False)(None)] id=1
+[21:04:54.552] [SQLiFuzz d8c] Mutation applied. old='1' char=''' strategy='front' new=''1'
+[21:04:54.552] [HTTPREQUEST d8c] Update url and body param from paramvals:
+[21:04:54.552] [HTTPREQUEST None] New post_data_encoded: Submit=Submit&id=%271
+[21:04:54.552] [HTTPREQUEST None] New param encoded: 
+[21:04:54.552] [GENERALFUNCTION d8c] ---SENDING THE REQUEST [1794794694-1f62d14e-b72b-4fb3-86b2-ff45b0fe4d8c] TO : [POST] http://localhost:8081/vulnerabilities/sqli/
+[21:04:54.552] [GENERALFUNCTION d8c] Post data encoded: Submit=Submit&id=%271
+[21:04:54.552] [GENERALFUNCTION d8c] Adjusted Content-Length to 21
+[21:04:54.552] [GENERALFUNCTION d8c] Adjusted Origin to http://localhost:8081
+[21:04:54.552] [GENERALFUNCTION d8c] Adjusted Referer to http://localhost:8081/vulnerabilities/sqli/
+[21:04:54.552] [GENERALFUNCTION d8c] DEBUG OUTGOING request.full_url: http://localhost:8081/vulnerabilities/sqli/
+[21:04:54.552] [GENERALFUNCTION d8c] DEBUG OUTGOING headers: {'Host': 'localhost:8081', 'Connection': 'keep-alive', 'Content-Length': '21', 'Cache-Control': 'max-age=0', 'sec-ch-ua': '"Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Linux"', 'Upgrade-Insecure-Requests': '1', 'Origin': 'http://localhost:8081', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/127.0.6533.17 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://localhost:8081/vulnerabilities/sqli/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Cookie': 'PHPSESSID=89851e70925dc4900f177d5267ee8fb6; security=medium'}
+[21:04:54.552] [GENERALFUNCTION d8c] DEBUG OUTGOING post_data_encoded (truncated): Submit=Submit&id=%271
+[21:04:54.553] [GENERALFUNCTION d8c] DEBUG OUTGOING body_param_dict: {'Submit': 'Submit', 'id': "'1"}
+[21:04:54.562] [HOOK f53] Completed fuzz (remaining: 1)
+[21:04:54.580] [SQLiFuzz d8c] Response status: 200
+[21:04:54.580] [SQLiFuzz d8c] Response URL: http://localhost:8081/vulnerabilities/sqli/
+[21:04:54.580] [SQLiFuzz d8c] Was redirected: False
+[21:04:54.580] [SQLiFuzz d8c] Getting response: <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'1' at line 1 in /var/www/html/vulnerabilities/sqli/source/medium.php:12
+Stack trace:
+#0 /var/www/html/vulnerabilities/sqli/source/medium.php(12): mysqli_query(Object(mysqli), 'SELECT first_na...')
+#1 /var
+[21:04:55.581] [SQLAnalysis] Read 2 new lines from SQL log file.
+[21:04:55.584] [SQLAnalysis] Appended 2 parsed entries.
+[21:04:55.584] [SQLAnalysis d8c] Extracted 2829 Logs 2026-11-16 02:04:55.584315: [{'timestamp': '2026-11-16 02:04:54,573428', 'level': 'INFO', 'ip': '172.18.0.5', 'port': 42582, 'sql': "SELECT first_name, last_name FROM users WHERE user_id = \\'1; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'1' at line 1"}]
+[21:04:55.584] [SQLAnalysis d8c] Updated param pairs: {'looked_value': "'1"}
+[21:04:55.584] [SQLAnalysis d8c] Looked timestamp 2026-11-16 02:04:54.553094 -- 2026-11-16 02:04:54.577439
+[21:04:55.631] [SQLAnalysis d8c] query_array to be checked: ['use', 'db']
+[21:04:55.631] [SQLAnalysis d8c] normalized_query_array: ['use', 'db']
+[21:04:55.631] [SQLAnalysis d8c] query_array to be checked: ['select', 'first_name', 'last_name', 'from', 'users', 'where', 'user_id', '=', "\\'1", '']
+[21:04:55.631] [SQLAnalysis d8c] normalized_query_array: ['select', 'firstname', 'lastname', 'from', 'users', 'where', 'userid', '', '1', '']
+[21:04:55.631] [SQLAnalysis d8c] Getting malformed looked_value==>'1 in select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+[21:04:55.631] [GENERALFUNC d8c] Found Error Query: ["SELECT first_name, last_name FROM users WHERE user_id = \\'1; *#*#ERROR 1064: 2000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\\'1' at line 1"] from POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None
+[21:04:55.631] [GENERALFUNC d8c] found_value: '1
+[21:04:55.631] [SQLiFuzz d8c] Weird chars is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None --> ["select first_name, last_name from users where user_id = \\'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\\'1' at line 1"]
+[21:04:55.631] [SQLiFuzz d8c] SQL Injection is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None ==> select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+[SQLiFuzz d8c] SQL Injection is detected: POST http://localhost:8081/vulnerabilities/sqli/ | ['[string (False)(None)] sec-ch-ua="Not)A;Brand";v="99", "HeadlessChrome";v="127", "Chromium";v="127"', '[string (False)(None)] sec-ch-ua-mobile=?0', '[string (False)(None)] sec-ch-ua-platform="Linux"', '[string (False)(None)] Sec-Fetch-Site=same-origin', '[string (False)(None)] Sec-Fetch-Mode=navigate', '[string (False)(None)] Sec-Fetch-User=?1', '[string (False)(None)] Sec-Fetch-Dest=document', '[string (False)(None)] path1=sqli', "[int (False)(None)] id='1", '[string (False)(None)] Submit=Submit'] | None
+[21:04:55.631] [SQLICollection] Result will be saved in final_result/dvwa--emmalee-VMware-Virtual-Platform-1794794678.txt
+[21:04:55.632] [SQLICollection] Statistics: {'total_req': 9, 'sql_req': 2, 'null_req': 0, 'not_sql_req': 7, 'sql_injection_detected': 2, 'another_sql_error_detected': 2, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 6, 'processing_time_total': 3.3265239999999996, 'processing_time_ave': 0.5544206666666666, 'running_time': 'Not finished yet', 200: 7, 302: 2}
+[21:04:55.641] [HOOK ebc] Completed fuzz (remaining: 0)
+[21:06:58.169] [HOOK] Idle timeout (120s) reached with no pending tasks. Initiating shutdown...
+[HOOK] Idle timeout reached. Saving results and shutting down...
+[21:06:58.169] 
+
+
+-----FINAL RESULT------
+FINAL RESULT
+[21:06:58.170] ###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+[21:06:58.170] 1. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=%271 ['1] ==> select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+
+1. POST | http://localhost:8081/vulnerabilities/sqli/ |  | Submit=Submit&id=%271 ['1] ==> select first_name, last_name from users where user_id = \'1; *#*#error 1064: 2000you have an error in your sql syntax; check the manual that corresponds to your mysql server version for the right syntax to use near '\'1' at line 1
+
+[21:06:58.170] [SQLICollection] Result will be saved in final_result/FR/FR-dvwa--emmalee-VMware-Virtual-Platform-1794794678.txt
+[21:06:58.171] [SQLICollection] Statistics: {'total_req': 9, 'sql_req': 2, 'null_req': 0, 'not_sql_req': 7, 'sql_injection_detected': 2, 'another_sql_error_detected': 2, 'sql_req_not_detected': 0, 'error_req': 0, 'fuzzed_req': 6, 'processing_time_total': 3.3265239999999996, 'processing_time_ave': 0.5544206666666666, 'running_time': '0:02:20.027721', 200: 7, 302: 2}
+[21:06:58.172] [HOOK] FINISH on 2026-11-15 21:06:58.169826. Total run time: 0:02:20.027721
+[HOOK] FINISH on 2026-11-15 21:06:58.169826. Total run time: 0:02:20.027721
