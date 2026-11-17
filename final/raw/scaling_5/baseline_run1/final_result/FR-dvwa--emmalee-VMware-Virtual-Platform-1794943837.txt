@@ -1,0 +1,18 @@
+{'total_req': 13, 'sql_req': 5, 'null_req': 0, 'not_sql_req': 8, 'sql_injection_detected': 0, 'another_sql_error_detected': 0, 'sql_req_not_detected': 5, 'error_req': 0, 'fuzzed_req': 350, 'processing_time_total': 12.806690999999981, 'processing_time_ave': 0.03659054571428566, 'running_time': '0:08:52.023986', 200: 12, 302: 1}
+
+###Matched SQL Injection Detected: [METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQLi_DETECTED]
+No SQL Injection Detected.
+
+
+
+
+
+##################################################:
+
+###Matched but Different SQL Error:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###SQL Error but No Matched Strings:
+###[METHOD] | [URL] | [PARAMS] | [POST_DATA] [MATCHED_PAYLOAD] ==> [SQL_DETECTED] || [ERROR_SQL_DETECTED]
+
+###Matched Strings but No SQL error:
